@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>Vesper &amp; Loom — Contemporary Atelier &amp; Curated Living</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root{
+  --bg:#f8f7f4;
+  --surface:#ffffff;
+  --surface-alt:#f1efe9;
+  --text:#1a1916;
+  --muted:#6b675e;
+  --accent:#9c6644; /* Warm Chestnut / Terracotta Bronze */
+  --accent-hover:#7f5235;
+  --border:#e4e0d5;
+  --max:1160px;
+}
+
+*, *::before, *::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body{
+  margin:0; padding:0; width:100%; min-width:0; overflow-x:hidden;
+  background:var(--bg); color:var(--text); font-family:'Plus Jakarta Sans',sans-serif; line-height:1.75;
+}
+a{ color:inherit; text-decoration:none; }
+button, a{ -webkit-tap-highlight-color:transparent; }
+
+/* Sticky Glassmorphism Header */
+.site-header{
+  position:sticky; top:0; z-index:999; width:100%;
+  background:rgba(248, 247, 244, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+.header-inner{
+  width:100%; max-width:1240px; height:84px; margin:0 auto; padding:0 36px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.brand-logo{
+  font-family:'Instrument Serif',Georgia,serif; font-size:32px; font-weight:400; font-style:italic; color:var(--text);
+  letter-spacing:0.5px; white-space:nowrap; display:flex; align-items:center; gap:8px;
+}
+.brand-logo span{ color:var(--accent); font-style:normal; font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:22px; }
+
+/* Header Navigation */
+.header-nav{
+  display:flex; align-items:center; gap:28px; font-size:13.5px; font-weight:500; color:var(--muted);
+}
+.header-nav a{ transition:color 0.2s ease; white-space:nowrap; }
+.header-nav a:hover{ color:var(--accent); }
+.header-nav .highlight-btn{
+  background:var(--text); color:#ffffff; padding:11px 22px; border-radius:50px; font-weight:500;
+  transition:background 0.2s ease, transform 0.2s ease;
+}
+.header-nav .highlight-btn:hover{ background:var(--accent); transform:translateY(-1px); }
+
+/* Hero Section */
+.hero{
+  width:100%; max-width:var(--max); margin:0 auto; padding:90px 24px 60px; text-align:center;
+}
+.hero-tag{
+  color:var(--accent); font-size:12px; font-weight:600; letter-spacing:2.5px;
+  text-transform:uppercase; margin-bottom:20px; display:inline-block;
+  background:rgba(156, 102, 68, 0.08); padding:8px 22px; border-radius:50px;
+  border:1px solid rgba(156, 102, 68, 0.18);
+}
+.hero h1{
+  font-family:'Instrument Serif',Georgia,serif; font-size:clamp(46px, 7.5vw, 76px);
+  line-height:1.1; margin:0 0 22px; color:var(--text); font-weight:400; font-style:normal;
+}
+.hero h1 i{
+  font-style:italic; color:var(--accent);
+}
+.hero p{
+  color:var(--muted); font-size:clamp(16px, 2.2vw, 19px); max-width:640px; margin:0 auto 42px; line-height:1.8; font-weight:300;
+}
+
+/* Main Container */
+.container{
+  width:100%; max-width:var(--max); margin:0 auto; padding:0 24px 90px;
+}
+.section-title{
+  font-family:'Instrument Serif',Georgia,serif; font-size:32px; color:var(--text); font-weight:400;
+  margin-bottom:36px; border-bottom:1px solid var(--border); padding-bottom:16px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.section-title span{ font-size:12px; font-family:'Plus Jakarta Sans',sans-serif; color:var(--accent); font-weight:600; letter-spacing:2px; text-transform:uppercase; }
+
+/* 6 Niches Grid Cards */
+.grid-cards{
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(340px, 1fr)); gap:28px; margin-bottom:60px;
+}
+.card{
+  background:var(--surface); border:1px solid var(--border); border-radius:20px;
+  padding:40px; transition:transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display:flex; flex-direction:column; justify-content:space-between;
+  box-shadow:0 10px 30px rgba(0,0,0,0.02);
+  position:relative; overflow:hidden;
+}
+.card::before{
+  content:''; position:absolute; top:0; left:0; width:100%; height:3px;
+  background:transparent; transition:background 0.3s ease;
+}
+.card:hover{
+  transform:translateY(-6px); box-shadow:0 20px 45px rgba(156,102,68,0.08); border-color:#d4cfc2;
+}
+.card:hover::before{
+  background:var(--accent);
+}
+.card-category{
+  font-size:11.5px; font-weight:600; color:var(--accent); text-transform:uppercase; letter-spacing:2px; margin-bottom:14px;
+}
+.card h3{
+  font-family:'Instrument Serif',Georgia,serif; font-size:28px; color:var(--text); margin:0 0 14px; line-height:1.2; font-weight:400;
+}
+.card p{
+  color:var(--muted); font-size:15px; margin:0 0 30px; line-height:1.75; font-weight:300;
+}
+.card-link{
+  font-size:13.5px; font-weight:600; color:var(--text); display:inline-flex; align-items:center; gap:8px;
+  transition:color 0.2s ease, transform 0.2s ease;
+}
+.card-link:hover{ color:var(--accent); transform:translateX(3px); }
+
+/* Feature Banner */
+.feature-banner{
+  background:linear-gradient(135deg, #f2efe9, #e8e4db);
+  border:1px solid #d8d2c4; border-radius:24px;
+  padding:60px 40px; text-align:center; margin-bottom:50px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.03);
+}
+.feature-banner h2{
+  font-family:'Instrument Serif',Georgia,serif; font-size:36px; color:var(--text); margin:0 0 14px; font-weight:400;
+}
+.feature-banner p{
+  color:var(--muted); font-size:16px; max-width:580px; margin:0 auto 34px; font-weight:300; line-height:1.8;
+}
+.banner-btn{
+  display:inline-block; background:var(--accent); color:#ffffff; font-weight:500; font-size:14.5px;
+  padding:16px 36px; border-radius:50px; transition:transform 0.2s ease, background 0.2s ease;
+  box-shadow:0 6px 20px rgba(156,102,68,0.25);
+}
+.banner-btn:hover{ background:var(--accent-hover); transform:translateY(-2px); }
+
+/* Footer */
+.site-footer{
+  width:100%; border-top:1px solid var(--border); background:var(--surface-alt);
+  padding:70px 24px; text-align:center; color:var(--muted); font-size:13px;
+}
+.footer-links{
+  display:flex; justify-content:center; flex-wrap:wrap; gap:32px; margin-bottom:24px; font-weight:500;
+}
+.footer-links a{ color:var(--muted); transition:color 0.2s ease; }
+.footer-links a:hover{ color:var(--accent); }
+.disclaimer{ max-width:760px; margin:20px auto 0; font-size:11.5px; color:#858074; line-height:1.7; font-weight:300; }
+
+/* Responsive Adjustments */
+@media(max-width:950px){
+  .header-nav{ gap:16px; font-size:12.5px; }
+}
+@media(max-width:650px){
+  .header-inner{ padding:0 20px; height:76px; }
+  .brand-logo{ font-size:26px; }
+  .header-nav{ gap:14px; font-size:12px; overflow-x:auto; padding-bottom:4px; }
+  .header-nav::-webkit-scrollbar{ display:none; }
+  .hero{ padding:60px 20px 40px; }
+  .container{ padding:0 20px 60px; }
+  .grid-cards{ grid-template-columns:1fr; gap:20px; }
+  .card{ padding:30px; }
+  .feature-banner{ padding:44px 24px; }
+}
+</style>
+</head>
+
+<body>
+
+  <script src="header.js" defer></script>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <span class="hero-tag">High Atelier &amp; Modern Craft</span>
+    <h1>Refined Spaces for <i>Intentional</i> Living</h1>
+    <p>Discover expert essays on artisan spatial design, bespoke apparel collections, remote sanctuary travel, and timeless reflections.</p>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="container">
+
+    <div class="section-title">
+      Curated Editions <span>6 Specialized Focuses</span>
+    </div>
+
+    <!-- 6 Niches Grid Cards -->
+    <div class="grid-cards">
+      <div class="card">
+        <div>
+          <div class="card-category">Wisdom &amp; Poetry</div>
+          <h3>Timeless Quotes &amp; Reflections</h3>
+          <p>Carefully curated literary passages, philosophical aphorisms, and profound reflections designed to inspire and anchor your everyday life.</p>
+        </div>
+        <a href="quotes.html" class="card-link">Explore Edition →</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-category">Architecture</div>
+          <h3>Sculptural Home Environments</h3>
+          <p>Monolithic concrete accents, textural warmth, and balanced spatial architecture that redefine residential sanctuary living.</p>
+        </div>
+        <a href="decor.html" class="card-link">Explore Edition →</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-category">Garment Craft</div>
+          <h3>Bespoke Capsule Wardrobes</h3>
+          <p>High-grade organic wools, architectural outerwear silhouettes, and precise tailoring designed for effortless daily styling.</p>
+        </div>
+        <a href="fashion.html" class="card-link">Explore Edition →</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-category">Expeditions</div>
+          <h3>Remote Architectural Retreats</h3>
+          <p>Immersive visual documentations of secluded forest glasshouses, off-grid coastal cabins, and untouched wilderness hideaways.</p>
+        </div>
+        <a href="travel.html" class="card-link">Explore Edition →</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-category">Gastronomy</div>
+          <h3>Handcrafted Culinary Arts</h3>
+          <p>Heirloom seasonal ingredients, cast-iron preparation rituals, and beautifully composed dining experiences shared among creators.</p>
+        </div>
+        <a href="culinary.html" class="card-link">Explore Edition →</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-category">Ecology &amp; Matter</div>
+          <h3>Organic Botany &amp; Form</h3>
+          <p>Integrating raw sculptural driftwood, rare botanical specimens, and earthen clay elements into contemporary indoor spaces.</p>
+        </div>
+        <a href="nature.html" class="card-link">Explore Edition →</a>
+      </div>
+    </div>
+
+    <!-- Special Partner Offer Banner -->
+    <div class="feature-banner">
+      <h2>The Atelier Curated Archive &amp; Resources</h2>
+      <p>Receive immediate entry to our private repository of downloadable design guides, custom capsule lookbooks, and curated creator perks.</p>
+      <a href="offer.html" class="banner-btn">Unlock Archive Access →</a>
+    </div>
+
+  </main>
+
+  <script src="footer.js" defer></script>
+
+</body>
+</html>

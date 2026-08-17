@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+
+<title>Curated Offers &amp; Resources — Willow &amp; Heaven</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root{
+  --bg:#f8f7f4;
+  --surface:#ffffff;
+  --surface-alt:#f1efe9;
+  --text:#1a1916;
+  --muted:#6b675e;
+  --accent:#9c6644;
+  --accent-hover:#7f5235;
+  --border:#e4e0d5;
+  --max:980px;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  padding:0;
+  width:100%;
+  min-width:0;
+  overflow-x:hidden;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Plus Jakarta Sans',Arial,sans-serif;
+  line-height:1.75;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+a,
+button{
+  -webkit-tap-highlight-color:transparent;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.offers-container{
+  width:100%;
+  max-width:var(--max);
+  margin:0 auto;
+  padding:60px 24px 82px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.offers-header{
+  text-align:center;
+  margin-bottom:44px;
+}
+
+.offers-tag{
+  display:inline-block;
+  color:var(--accent);
+  font-size:11.5px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  margin-bottom:14px;
+  padding:6px 18px;
+  border-radius:30px;
+  background:rgba(156,102,68,.08);
+  border:1px solid rgba(156,102,68,.18);
+}
+
+.offers-header h1{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:clamp(42px,6vw,64px);
+  line-height:1.1;
+  font-weight:400;
+  color:var(--text);
+  margin:0 0 16px;
+}
+
+.offers-header p{
+  max-width:650px;
+  margin:0 auto;
+  color:var(--muted);
+  font-size:15.5px;
+  line-height:1.75;
+  font-weight:300;
+}
+
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.section-heading{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.section-heading h2{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:32px;
+  line-height:1.2;
+  font-weight:400;
+  margin:0 0 7px;
+}
+
+.section-heading p{
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+  font-weight:300;
+}
+
+
+/* =========================
+   OFFER GRID
+========================= */
+
+.offer-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.offer-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:15px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    border-color .2s ease;
+}
+
+.offer-card:hover{
+  transform:translateY(-3px);
+  border-color:#d4cfc2;
+  box-shadow:0 10px 30px rgba(0,0,0,.045);
+}
+
+.offer-img-wrapper{
+  width:100%;
+  height:180px;
+  background:var(--surface-alt);
+  position:relative;
+  overflow:hidden;
+}
+
+.offer-img-wrapper img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .5s ease;
+}
+
+.offer-card:hover .offer-img-wrapper img{
+  transform:scale(1.03);
+}
+
+.offer-badge{
+  position:absolute;
+  top:12px;
+  left:12px;
+  background:rgba(26,25,22,.85);
+  backdrop-filter:blur(8px);
+  color:#fff;
+  font-size:10.5px;
+  font-weight:500;
+  padding:3px 10px;
+  border-radius:50px;
+  letter-spacing:.5px;
+}
+
+.offer-content{
+  padding:24px 26px 25px;
+  display:flex;
+  flex-direction:column;
+  flex-grow:1;
+}
+
+.offer-number{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:32px;
+  height:32px;
+  margin-bottom:14px;
+  border-radius:50%;
+  background:var(--surface-alt);
+  color:var(--accent);
+  font-size:11px;
+  font-weight:600;
+}
+
+.offer-card h3{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:26px;
+  line-height:1.25;
+  font-weight:400;
+  color:var(--text);
+  margin:0 0 8px;
+}
+
+.offer-card p{
+  color:var(--muted);
+  font-size:13.5px;
+  line-height:1.65;
+  font-weight:300;
+  margin:0 0 20px;
+  flex-grow:1;
+}
+
+.offer-link{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  color:var(--accent);
+  font-size:12.5px;
+  font-weight:600;
+  transition:color .2s ease;
+  margin-top:auto;
+}
+
+.offer-link span{
+  transition:transform .2s ease;
+}
+
+.offer-card:hover .offer-link span{
+  transform:translateX(4px);
+}
+
+.offer-link:hover{
+  color:var(--accent-hover);
+}
+
+
+/* =========================
+   FEATURED
+========================= */
+
+.featured-offer{
+  grid-column:1 / -1;
+  margin-top:2px;
+  border-radius:17px;
+  border:1px solid #d8d2c4;
+  background:linear-gradient(135deg,#f1efe9,#e8e4dc);
+  display:flex;
+  align-items:stretch;
+  overflow:hidden;
+}
+
+.featured-content-wrapper{
+  padding:31px 29px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  flex-grow:1;
+}
+
+.featured-label{
+  color:var(--accent);
+  font-size:10.5px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:9px;
+}
+
+.featured-offer h3{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:30px;
+  line-height:1.2;
+  font-weight:400;
+  margin:0 0 8px;
+}
+
+.featured-offer p{
+  color:var(--muted);
+  font-size:13.5px;
+  line-height:1.65;
+  font-weight:300;
+  margin:0 0 20px;
+}
+
+.featured-link{
+  display:inline-block;
+  background:var(--text);
+  color:#fff;
+  padding:12px 20px;
+  border-radius:7px;
+  font-size:12.5px;
+  font-weight:500;
+  width:fit-content;
+  transition:
+    background .2s ease,
+    transform .2s ease;
+}
+
+.featured-link:hover{
+  background:var(--accent);
+  transform:translateY(-2px);
+}
+
+.featured-img-wrapper{
+  width:40%;
+  min-height:240px;
+  position:relative;
+}
+
+.featured-img-wrapper img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+
+/* =========================
+   TRANSPARENCY
+========================= */
+
+.transparency-note{
+  max-width:680px;
+  margin:27px auto 0;
+  text-align:center;
+  color:#858074;
+  font-size:11.5px;
+  line-height:1.65;
+  font-weight:300;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+  .offers-container{
+    padding:42px 16px 65px;
+  }
+
+  .offers-header{
+    margin-bottom:35px;
+  }
+
+  .offers-header h1{
+    font-size:40px;
+  }
+
+  .offers-header p{
+    font-size:14px;
+  }
+
+  .offer-grid{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  .featured-offer{
+    flex-direction:column-reverse;
+  }
+
+  .featured-img-wrapper{
+    width:100%;
+    height:200px;
+    min-height:0;
+  }
+
+  .featured-content-wrapper{
+    padding:27px 22px;
+  }
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media(max-width:380px){
+
+  .offers-header h1{
+    font-size:34px;
+  }
+
+  .offer-content{
+    padding:21px;
+  }
+
+  .offer-card h3{
+    font-size:23px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- =========================================
+     SHARED HEADER
+========================================= -->
+
+<script src="header.js" defer></script>
+
+
+<main class="offers-container">
+
+
+  <!-- =========================================
+       HERO
+  ========================================= -->
+
+  <header class="offers-header">
+
+    <span class="offers-tag">
+      Curated Resources &amp; Offers
+    </span>
+
+    <h1>
+      Explore Our Collections
+    </h1>
+
+    <p>
+      Browse selected resources across food, nature, travel, home, fashion,
+      and everyday lifestyle categories. Choose a collection below to explore
+      the options available for your interests.
+    </p>
+
+  </header>
+
+
+  <!-- =========================================
+       COLLECTIONS
+  ========================================= -->
+
+  <section>
+
+    <div class="section-heading">
+
+      <h2>
+        Browse by Category
+      </h2>
+
+      <p>
+        Select a category to view its dedicated resources and current offers.
+      </p>
+
+    </div>
+
+
+    <div class="offer-grid">
+
+
+      <!-- =====================
+           01 — FOOD
+      ====================== -->
+
+      <article class="offer-card">
+
+        <div class="offer-img-wrapper">
+
+          <span class="offer-badge">
+            Food
+          </span>
+
+          <img
+            src="https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=800&q=80"
+            alt="Food and meal ideas"
+            loading="lazy"
+          >
+
+        </div>
+
+        <div class="offer-content">
+
+          <span class="offer-number">
+            01
+          </span>
+
+          <h3>
+            Food &amp; Meals
+          </h3>
+
+          <p>
+            Explore meal ideas, food resources, delivery options, and
+            selected opportunities for discovering new food choices.
+          </p>
+
+          <a
+            href="foodoff.html"
+            class="offer-link"
+          >
+            Explore Food Resources <span>→</span>
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- =====================
+           02 — NATURE
+      ====================== -->
+
+      <article class="offer-card">
+
+        <div class="offer-img-wrapper">
+
+          <span class="offer-badge">
+            Nature
+          </span>
+
+          <img
+            src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=800&q=80"
+            alt="Nature and botanical landscape"
+            loading="lazy"
+          >
+
+        </div>
+
+        <div class="offer-content">
+
+          <span class="offer-number">
+            02
+          </span>
+
+          <h3>
+            Nature &amp; Outdoors
+          </h3>
+
+          <p>
+            Discover nature-inspired ideas, outdoor resources, botanical
+            collections, and ways to explore the natural world.
+          </p>
+
+          <a
+            href="natureoff.html"
+            class="offer-link"
+          >
+            Explore Nature Resources <span>→</span>
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- =====================
+           03 — TRAVEL
+      ====================== -->
+
+      <article class="offer-card">
+
+        <div class="offer-img-wrapper">
+
+          <span class="offer-badge">
+            Travel
+          </span>
+
+          <img
+            src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80"
+            alt="Travel destination"
+            loading="lazy"
+          >
+
+        </div>
+
+        <div class="offer-content">
+
+          <span class="offer-number">
+            03
+          </span>
+
+          <h3>
+            Travel &amp; Getaways
+          </h3>
+
+          <p>
+            Browse destination inspiration, trip planning resources,
+            accommodation ideas, and selected travel opportunities.
+          </p>
+
+          <a
+            href="traveloff.html"
+            class="offer-link"
+          >
+            Explore Travel Resources <span>→</span>
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- =====================
+           04 — HOME & DECOR
+      ====================== -->
+
+      <article class="offer-card">
+
+        <div class="offer-img-wrapper">
+
+          <span class="offer-badge">
+            Home
+          </span>
+
+          <img
+            src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=80"
+            alt="Home decor and interior design"
+            loading="lazy"
+          >
+
+        </div>
+
+        <div class="offer-content">
+
+          <span class="offer-number">
+            04
+          </span>
+
+          <h3>
+            Home &amp; Decor
+          </h3>
+
+          <p>
+            Discover interior inspiration, decorative accents, everyday
+            essentials, and selected home finds.
+          </p>
+
+          <a
+            href="decooff.html"
+            class="offer-link"
+          >
+            Explore Home Finds <span>→</span>
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- =====================
+           05 — FASHION
+      ====================== -->
+
+      <article class="offer-card">
+
+        <div class="offer-img-wrapper">
+
+          <span class="offer-badge">
+            Fashion
+          </span>
+
+          <img
+            src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=800&q=80"
+            alt="Fashion and clothing"
+            loading="lazy"
+          >
+
+        </div>
+
+        <div class="offer-content">
+
+          <span class="offer-number">
+            05
+          </span>
+
+          <h3>
+            Fashion &amp; Style
+          </h3>
+
+          <p>
+            Explore clothing ideas, wardrobe essentials, seasonal styles,
+            accessories, and selected fashion finds.
+          </p>
+
+          <a
+            href="fashoff.html"
+            class="offer-link"
+          >
+            Explore Style Resources <span>→</span>
+          </a>
+
+        </div>
+
+      </article>
+
+
+     
+
+
+      <!-- =====================
+           FEATURED
+      ====================== -->
+
+      <article class="featured-offer">
+
+        <div class="featured-content-wrapper">
+
+          <div class="featured-label">
+            Featured Collection
+          </div>
+
+          <h3>
+            The Everyday Collection
+          </h3>
+
+          <p>
+            Explore a selection of our most popular lifestyle categories,
+            from fashion and home inspiration to food, travel, and everyday
+            resources.
+          </p>
+
+          <a
+            href="fashoff.html"
+            class="featured-link"
+          >
+            Explore Featured Resources →
+          </a>
+
+        </div>
+
+        <div class="featured-img-wrapper">
+
+          <img
+            src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=800&q=80"
+            alt="Curated lifestyle collection"
+            loading="lazy"
+          >
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       TRANSPARENCY
+  ========================================= -->
+
+  <p class="transparency-note">
+    Some links on this page may lead to external partner pages.
+    Availability, eligibility, pricing, promotional details, and terms
+    are determined by the respective provider. We may receive compensation
+    when visitors use certain partner links.
+  </p>
+
+
+</main>
+
+
+<!-- =========================================
+     SHARED FOOTER
+========================================= -->
+
+<script src="footer.js" defer></script>
+
+
+</body>
+</html>

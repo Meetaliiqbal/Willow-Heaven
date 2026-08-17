@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>Quotes Edition — Willow &amp; Heaven</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root{
+  --bg:#f8f7f4;
+  --surface:#ffffff;
+  --surface-alt:#f1efe9;
+  --text:#1a1916;
+  --muted:#6b675e;
+  --accent:#9c6644;
+  --accent-hover:#7f5235;
+  --border:#e4e0d5;
+  --max:1240px;
+}
+
+*, *::before, *::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body{
+  margin:0; padding:0; width:100%; min-width:0; overflow-x:hidden;
+  background:var(--bg); color:var(--text); font-family:'Plus Jakarta Sans',sans-serif; line-height:1.7;
+}
+a{ color:var(--accent); text-decoration:none; transition:color 0.2s ease; }
+a:hover{ color:var(--accent-hover); }
+
+/* Page Header */
+.niche-header{
+  width:100%; max-width:var(--max); margin:0 auto; padding:60px 24px 40px; text-align:center;
+  border-bottom:1px solid var(--border);
+}
+.niche-tag{
+  color:var(--accent); font-size:12px; font-weight:600; letter-spacing:2.5px;
+  text-transform:uppercase; margin-bottom:14px; display:inline-block;
+  background:rgba(156, 102, 68, 0.08); padding:6px 18px; border-radius:50px;
+  border:1px solid rgba(156, 102, 68, 0.18);
+}
+.niche-header h1{
+  font-family:'Instrument Serif',Georgia,serif; font-size:clamp(42px, 6vw, 64px);
+  line-height:1.1; margin:0 0 16px; color:var(--text); font-weight:400;
+}
+.niche-header p{
+  color:var(--muted); font-size:16px; max-width:640px; margin:0 auto; font-weight:300; line-height:1.7;
+}
+
+/* Grid Layout */
+.articles-container{
+  width:100%; max-width:var(--max); margin:0 auto; padding:60px 24px 100px;
+}
+.articles-grid{
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(360px, 1fr)); gap:32px;
+}
+
+/* Article Card */
+.article-card{
+  background:var(--surface); border:1px solid var(--border); border-radius:16px;
+  overflow:hidden; display:flex; flex-direction:column;
+  transition:transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.article-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 16px 32px rgba(0,0,0,0.04);
+  border-color:#d4cfc2;
+}
+.article-img-wrapper{
+  width:100%; height:220px; background:var(--surface-alt); position:relative; overflow:hidden;
+}
+.article-img-wrapper img{
+  width:100%; height:100%; object-fit:cover; transition:transform 0.5s ease;
+}
+.article-card:hover .article-img-wrapper img{
+  transform:scale(1.03);
+}
+.article-badge{
+  position:absolute; top:16px; left:16px; background:rgba(26, 25, 22, 0.85);
+  backdrop-filter:blur(8px); color:#ffffff; font-size:11px; font-weight:500;
+  padding:4px 12px; border-radius:50px; letter-spacing:0.5px;
+}
+.article-body{
+  padding:28px; display:flex; flex-direction:column; flex-grow:1;
+}
+.article-meta{
+  font-size:12px; color:var(--accent); font-weight:600; text-transform:uppercase;
+  letter-spacing:1px; margin-bottom:10px;
+}
+.article-title{
+  font-family:'Instrument Serif',Georgia,serif; font-size:26px; line-height:1.25;
+  color:var(--text); margin:0 0 12px; font-weight:400;
+}
+.article-title a{
+  color:inherit; text-decoration:none; transition:color 0.2s ease;
+}
+.article-title a:hover{
+  color:var(--accent);
+}
+.article-excerpt{
+  color:var(--muted); font-size:14.5px; font-weight:300; line-height:1.7;
+  margin:0 0 20px; flex-grow:1;
+}
+.article-footer{
+  display:flex; align-items:center; justify-content:space-between;
+  border-top:1px solid var(--surface-alt); padding-top:16px; margin-top:auto;
+}
+.article-read-time{
+  font-size:12px; color:#858074; font-weight:400;
+}
+.article-read-btn{
+  font-size:13px; font-weight:600; color:var(--text); display:inline-flex;
+  align-items:center; gap:6px; transition:color 0.2s ease; text-decoration:none;
+}
+.article-read-btn:hover{
+  color:var(--accent);
+}
+
+@media(max-width:768px){
+  .articles-grid{ grid-template-columns:1fr; gap:24px; }
+  .niche-header{ padding:40px 20px 30px; }
+  .articles-container{ padding:40px 20px 70px; }
+}
+</style>
+</head>
+
+<body>
+
+  <script src="header.js" defer></script>
+
+  <header class="niche-header">
+    <span class="niche-tag">Editorial Edition</span>
+    <h1>The Quotes Journal</h1>
+    <p>A curated collection of profound prose, poetic reflections, and timeless philosophical words designed to inspire mindful living.</p>
+  </header>
+
+  <main class="articles-container">
+    <div class="articles-grid">
+
+      <!-- Article 1 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Reflection</span>
+          <img src="https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?auto=format&fit=crop&w=800&q=80" alt="Quotes reflection" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Philosophy</div>
+          <h2 class="article-title"><a href="article-1.html">The Quiet Power of Unspoken Words in Modern Life</a></h2>
+          <p class="article-excerpt">Exploring how silence and measured articulation cultivate deeper emotional resonance and interpersonal clarity in a noisy digital landscape.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="article-1.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Wisdom</span>
+          <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80" alt="Writing desk" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Literature</div>
+          <h2 class="article-title"><a href="article-2.html">Timeless Epigraphs That Shape Intentional Architecture</a></h2>
+          <p class="article-excerpt">How historical literary quotes translate directly into spatial harmony, material selection, and atmospheric design choices within the home.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="article-2.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Poetry</span>
+          <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?auto=format&fit=crop&w=800&q=80" alt="Minimalist study" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Poetics</div>
+          <h2 class="article-title"><a href="article-3.html">Verses for the Solitary Mind: Finding Solace in Solitude</a></h2>
+          <p class="article-excerpt">An editorial anthology celebrating the beauty of solitude, introspection, and the quiet hours before dawn when creativity peaks.</p>
+          <div class="article-footer">
+            <span class="article-read-time">6 min read</span>
+            <a href="article-3.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 4 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Journal</span>
+          <img src="https://images.unsplash.com/photo-1519791883288-dc8bd696e667?auto=format&fit=crop&w=800&q=80" alt="Open journal" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Mindfulness</div>
+          <h2 class="article-title"><a href="article-4.html">The Art of Morning Pages: Translating Thought to Paper</a></h2>
+          <p class="article-excerpt">Unlocking mental clarity through the therapeutic discipline of stream-of-consciousness journaling every single morning.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="article-4.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 5 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Aphorisms</span>
+          <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=80" alt="Typewriter keys" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Classics</div>
+          <h2 class="article-title"><a href="article-5.html">Stoic Maxims for Navigating the Speed of Contemporary Life</a></h2>
+          <p class="article-excerpt">Revisiting ancient philosophical aphorisms that offer grounding principles and emotional resilience against modern fatigue.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="article-5.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 6 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Dialogue</span>
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Meaningful conversation" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Connection</div>
+          <h2 class="article-title"><a href="article-6.html">The Lost Art of Epistolary Correspondence and Letter Writing</a></h2>
+          <p class="article-excerpt">Why handwritten letters create lasting emotional bonds that fleeting digital messages simply cannot replicate.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="article-6.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 7 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Essays</span>
+          <img src="https://images.unsplash.com/photo-1471107340929-a87ba0f55bfc?auto=format&fit=crop&w=800&q=80" alt="Bookshelf library" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Books</div>
+          <h2 class="article-title"><a href="article-7.html">Anthology of the Open Horizon: Quotes on Travel and Discovery</a></h2>
+          <p class="article-excerpt">Capturing the wanderlust of iconic thinkers who viewed physical journeys as spiritual transformations.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="article-7.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 8 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Reflections</span>
+          <img src="https://images.unsplash.com/photo-1507842229497-238dff122174?auto=format&fit=crop&w=800&q=80" alt="Quiet study room" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Mindset</div>
+          <h2 class="article-title"><a href="article-8.html">Words That Heal: Therapeutic Quotes for Emotional Renewal</a></h2>
+          <p class="article-excerpt">Curated sayings from psychological masters and poets designed to soothe periods of transition and uncertainty.</p>
+          <div class="article-footer">
+            <span class="article-read-time">6 min read</span>
+            <a href="article-8.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 9 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Inspiration</span>
+          <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&q=80" alt="Library interior" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Creation</div>
+          <h2 class="article-title"><a href="article-9.html">The Creative Spark: What Great Artists Said About Inspiration</a></h2>
+          <p class="article-excerpt">Delving into the personal journals and interviews of legendary painters, sculptors, and writers on cultivating inspiration.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="article-9.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 10 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Focus</span>
+          <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80" alt="Reading corner" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Simplicity</div>
+          <h2 class="article-title"><a href="article-10.html">Minimalist Living Through the Eyes of Eastern Philosophers</a></h2>
+          <p class="article-excerpt">How ancient Zen sayings guide us toward uncluttered spaces, mindful routines, and profound inner peace.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="article-10.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 11 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Legacy</span>
+          <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80" alt="Classic books" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">History</div>
+          <h2 class="article-title"><a href="article-11.html">Letters of Note: Epistles That Changed the Course of History</a></h2>
+          <p class="article-excerpt">Examining pivotal historical correspondence that altered political landscapes and personal destinies alike.</p>
+          <div class="article-footer">
+            <span class="article-read-time">6 min read</span>
+            <a href="article-11.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 12 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Solitude</span>
+          <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=800&q=80" alt="Forest mist" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Nature</div>
+          <h2 class="article-title"><a href="article-12.html">Nature's Lexicon: Romantic Poets on the Wilderness Within</a></h2>
+          <p class="article-excerpt">How Wordsworth, Keats, and Emerson translated natural landscapes into universal emotional sanctuaries.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="article-12.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 13 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Clarity</span>
+          <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=800&q=80" alt="Mountain view" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Mindfulness</div>
+          <h2 class="article-title"><a href="article-13.html">The Poetics of Stillness: Quotes on Pausing in a Fast World</a></h2>
+          <p class="article-excerpt">Meditations on the radical act of pausing, breathing, and refusing to rush through meaningful experiences.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="article-13.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 14 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Wisdom</span>
+          <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80" alt="Stacked books" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Philosophy</div>
+          <h2 class="article-title"><a href="article-14.html">Timeless Axioms on Perseverance Through Creative Blocks</a></h2>
+          <p class="article-excerpt">Encouraging words from master craftsmen who viewed resistance not as a barrier, but as a compass.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="article-14.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 15 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Curated</span>
+          <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80" alt="Cozy armchair" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Anthology</div>
+          <h2 class="article-title"><a href="article-15.html">The Weekly Ledger: Essential Quotes for Intentional Living</a></h2>
+          <p class="article-excerpt">Our editors' absolute favorite reflections compiled into a definitive guide for slow living and mindful reflection.</p>
+          <div class="article-footer">
+            <span class="article-read-time">6 min read</span>
+            <a href="article-15.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <script src="footer.js" defer></script>
+
+</body>
+</html>

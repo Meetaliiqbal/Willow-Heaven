@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>Fashion Edition — Willow &amp; Heaven</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root{
+  --bg:#f8f7f4;
+  --surface:#ffffff;
+  --surface-alt:#f1efe9;
+  --text:#1a1916;
+  --muted:#6b675e;
+  --accent:#9c6644;
+  --accent-hover:#7f5235;
+  --border:#e4e0d5;
+  --max:1240px;
+}
+
+*, *::before, *::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body{
+  margin:0; padding:0; width:100%; min-width:0; overflow-x:hidden;
+  background:var(--bg); color:var(--text); font-family:'Plus Jakarta Sans',sans-serif; line-height:1.7;
+}
+a{ color:var(--accent); text-decoration:none; transition:color 0.2s ease; }
+a:hover{ color:var(--accent-hover); }
+
+/* Page Header */
+.niche-header{
+  width:100%; max-width:var(--max); margin:0 auto; padding:60px 24px 40px; text-align:center;
+  border-bottom:1px solid var(--border);
+}
+.niche-tag{
+  color:var(--accent); font-size:12px; font-weight:600; letter-spacing:2.5px;
+  text-transform:uppercase; margin-bottom:14px; display:inline-block;
+  background:rgba(156, 102, 68, 0.08); padding:6px 18px; border-radius:50px;
+  border:1px solid rgba(156, 102, 68, 0.18);
+}
+.niche-header h1{
+  font-family:'Instrument Serif',Georgia,serif; font-size:clamp(42px, 6vw, 64px);
+  line-height:1.1; margin:0 0 16px; color:var(--text); font-weight:400;
+}
+.niche-header p{
+  color:var(--muted); font-size:16px; max-width:640px; margin:0 auto; font-weight:300; line-height:1.7;
+}
+
+/* Grid Layout */
+.articles-container{
+  width:100%; max-width:var(--max); margin:0 auto; padding:60px 24px 100px;
+}
+.articles-grid{
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(360px, 1fr)); gap:32px;
+}
+
+/* Article Card */
+.article-card{
+  background:var(--surface); border:1px solid var(--border); border-radius:16px;
+  overflow:hidden; display:flex; flex-direction:column;
+  transition:transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.article-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 16px 32px rgba(0,0,0,0.04);
+  border-color:#d4cfc2;
+}
+.article-img-wrapper{
+  width:100%; height:220px; background:var(--surface-alt); position:relative; overflow:hidden;
+}
+.article-img-wrapper img{
+  width:100%; height:100%; object-fit:cover; transition:transform 0.5s ease;
+}
+.article-card:hover .article-img-wrapper img{
+  transform:scale(1.03);
+}
+.article-badge{
+  position:absolute; top:16px; left:16px; background:rgba(26, 25, 22, 0.85);
+  backdrop-filter:blur(8px); color:#ffffff; font-size:11px; font-weight:500;
+  padding:4px 12px; border-radius:50px; letter-spacing:0.5px;
+}
+.article-body{
+  padding:28px; display:flex; flex-direction:column; flex-grow:1;
+}
+.article-meta{
+  font-size:12px; color:var(--accent); font-weight:600; text-transform:uppercase;
+  letter-spacing:1px; margin-bottom:10px;
+}
+.article-title{
+  font-family:'Instrument Serif',Georgia,serif; font-size:26px; line-height:1.25;
+  color:var(--text); margin:0 0 12px; font-weight:400;
+}
+.article-title a{
+  color:inherit; text-decoration:none; transition:color 0.2s ease;
+}
+.article-title a:hover{
+  color:var(--accent);
+}
+.article-excerpt{
+  color:var(--muted); font-size:14.5px; font-weight:300; line-height:1.7;
+  margin:0 0 20px; flex-grow:1;
+}
+.article-footer{
+  display:flex; align-items:center; justify-content:space-between;
+  border-top:1px solid var(--surface-alt); padding-top:16px; margin-top:auto;
+}
+.article-read-time{
+  font-size:12px; color:#858074; font-weight:400;
+}
+.article-read-btn{
+  font-size:13px; font-weight:600; color:var(--text); display:inline-flex;
+  align-items:center; gap:6px; transition:color 0.2s ease; text-decoration:none;
+}
+.article-read-btn:hover{
+  color:var(--accent);
+}
+
+@media(max-width:768px){
+  .articles-grid{ grid-template-columns:1fr; gap:24px; }
+  .niche-header{ padding:40px 20px 30px; }
+  .articles-container{ padding:40px 20px 70px; }
+}
+</style>
+</head>
+
+<body>
+
+  <script src="header.js" defer></script>
+
+  <header class="niche-header">
+    <span class="niche-tag">Atelier Edition</span>
+    <h1>The Fashion Journal</h1>
+    <p>A curated study of quiet luxury, timeless silhouettes, and sustainable textiles for the intentional wardrobe.</p>
+  </header>
+
+  <main class="articles-container">
+    <div class="articles-grid">
+
+      <!-- Article 1 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Capsule</span>
+          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80" alt="Minimalist fashion" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Wardrobe</div>
+          <h2 class="article-title"><a href="fashion-1.html">The Art of the Capsule Wardrobe: 12 Pieces for Infinite Looks</a></h2>
+          <p class="article-excerpt">Streamlining your daily attire through high-quality tailoring, neutral tones, and versatile layering essentials.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="fashion-1.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Textiles</span>
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" alt="Linen fabric" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Materials</div>
+          <h2 class="article-title"><a href="fashion-2.html">In Praise of Pure Flax: Why Linen Dominates Sustainable Style</a></h2>
+          <p class="article-excerpt">Exploring the breathability, durability, and effortless drape of organic linen garments across seasons.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="fashion-2.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Tailoring</span>
+          <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80" alt="Tailored coat" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Outerwear</div>
+          <h2 class="article-title"><a href="fashion-3.html">The Anatomy of a Perfect Trench Coat and Wool Overcoat</a></h2>
+          <p class="article-excerpt">Investing in heritage outerwear pieces defined by structured shoulders, heavy gabardine, and clean lines.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="fashion-3.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 4 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Palette</span>
+          <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80" alt="Monochrome styling" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Aesthetics</div>
+          <h2 class="article-title"><a href="fashion-4.html">Monochrome Mastery: Styling Tonal Neutrals for Maximum Impact</a></h2>
+          <p class="article-excerpt">How pairing ecru, camel, stone, and espresso creates sophisticated depth without vibrant color splashes.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="fashion-4.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 5 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Craft</span>
+          <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80" alt="Handmade garment" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Slow Fashion</div>
+          <h2 class="article-title"><a href="fashion-5.html">The Slow Fashion Revolution: Valuing Artisan Handcraft Over Trends</a></h2>
+          <p class="article-excerpt">Supporting small-scale ateliers that practice ethical production, hand-weaving, and zero-waste tailoring.</p>
+          <div class="article-footer">
+            <span class="article-read-time">6 min read</span>
+            <a href="fashion-5.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 6 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Footwear</span>
+          <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=80" alt="Leather footwear" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Accessories</div>
+          <h2 class="article-title"><a href="fashion-6.html">Foundational Footwear: Leather Loafers and Minimalist Mules</a></h2>
+          <p class="article-excerpt">The enduring appeal of supple leather slip-ons that bridge casual daytime errands and evening elegance.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="fashion-6.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 7 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Denim</span>
+          <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=80" alt="Raw denim" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Vintage</div>
+          <h2 class="article-title"><a href="fashion-7.html">The Perfect Fit: Finding and Caring for Vintage Japanese Denim</a></h2>
+          <p class="article-excerpt">Why selvedge denim improves with age, molding uniquely to your body over years of faithful wear.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="fashion-7.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 8 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Knitwear</span>
+          <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80" alt="Cashmere sweater" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Cashmere</div>
+          <h2 class="article-title"><a href="fashion-8.html">The Cashmere Guide: Sourcing, Combing, and Proper Garment Care</a></h2>
+          <p class="article-excerpt">How to distinguish high-grade Mongolian wool and keep your knitwear soft and pilling-free for decades.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="fashion-8.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 9 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Details</span>
+          <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=800&q=80" alt="Gold jewelry" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Jewelry</div>
+          <h2 class="article-title"><a href="fashion-9.html">Understated Accents: Sculptural Gold Rings and Silk Scarves</a></h2>
+          <p class="article-excerpt">Elevating a simple white tee and trousers combination with refined metallic hardware and knotted silk.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="fashion-9.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 10 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Leather</span>
+          <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80" alt="Leather tote bag" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Bags</div>
+          <h2 class="article-title"><a href="fashion-10.html">The Everyday Carry: Vegetable-Tanned Leather Tote Bags</a></h2>
+          <p class="article-excerpt">The beauty of natural hide that darkens, softens, and develops a rich patina with every journey.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="fashion-10.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 11 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Draping</span>
+          <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80" alt="Draped silk dress" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Silks</div>
+          <h2 class="article-title"><a href="fashion-11.html">The Fluid Silhouette: Bias-Cut Silk Slips and Lightweight Wraps</a></h2>
+          <p class="article-excerpt">Mastering the effortless movement of bias-cut garments that hug the body with fluid grace.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="fashion-11.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 12 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Atelier</span>
+          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80" alt="Tailor studio" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Craft</div>
+          <h2 class="article-title"><a href="fashion-12.html">The Power of Tailoring: Why Alterations Make Off-the-Rack Luxe</a></h2>
+          <p class="article-excerpt">How minor adjustments to sleeve lengths, hems, and waists transform standard clothing into bespoke couture.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="fashion-12.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 13 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Purity</span>
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" alt="Organic cotton" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Cotton</div>
+          <h2 class="article-title"><a href="fashion-13.html">Organic Cotton Essentials: The Foundation of Clean Daily Dress</a></h2>
+          <p class="article-excerpt">Why chemical-free, heavyweight cotton tees and trousers feel better against the skin and last longer.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="fashion-13.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 14 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Eyewear</span>
+          <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=800&q=80" alt="Vintage sunglasses" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Accessories</div>
+          <h2 class="article-title"><a href="fashion-14.html">Architectural Frames: Tortoiseshell Acetate and Wire Eyewear</a></h2>
+          <p class="article-excerpt">Choosing classic eyewear shapes that frame facial structures with timeless intellectual elegance.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="fashion-14.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 15 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Philosophy</span>
+          <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80" alt="Intentional fashion" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Atelier</div>
+          <h2 class="article-title"><a href="fashion-15.html">Curating Uniformity: The Freedom of Wearing a Signature Style</a></h2>
+          <p class="article-excerpt">How simplifying your wardrobe choices frees mental bandwidth for deeper creative pursuits.</p>
+          <div class="article-footer">
+            <span class="article-read-time">6 min read</span>
+            <a href="fashion-15.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <script src="footer.js" defer></script>
+
+</body>
+</html>

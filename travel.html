@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>Travel Edition — Willow &amp; Heaven</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root{
+  --bg:#f8f7f4;
+  --surface:#ffffff;
+  --surface-alt:#f1efe9;
+  --text:#1a1916;
+  --muted:#6b675e;
+  --accent:#9c6644;
+  --accent-hover:#7f5235;
+  --border:#e4e0d5;
+  --max:1240px;
+}
+
+*, *::before, *::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body{
+  margin:0; padding:0; width:100%; min-width:0; overflow-x:hidden;
+  background:var(--bg); color:var(--text); font-family:'Plus Jakarta Sans',sans-serif; line-height:1.7;
+}
+a{ color:var(--accent); text-decoration:none; transition:color 0.2s ease; }
+a:hover{ color:var(--accent-hover); }
+
+/* Page Header */
+.niche-header{
+  width:100%; max-width:var(--max); margin:0 auto; padding:60px 24px 40px; text-align:center;
+  border-bottom:1px solid var(--border);
+}
+.niche-tag{
+  color:var(--accent); font-size:12px; font-weight:600; letter-spacing:2.5px;
+  text-transform:uppercase; margin-bottom:14px; display:inline-block;
+  background:rgba(156, 102, 68, 0.08); padding:6px 18px; border-radius:50px;
+  border:1px solid rgba(156, 102, 68, 0.18);
+}
+.niche-header h1{
+  font-family:'Instrument Serif',Georgia,serif; font-size:clamp(42px, 6vw, 64px);
+  line-height:1.1; margin:0 0 16px; color:var(--text); font-weight:400;
+}
+.niche-header p{
+  color:var(--muted); font-size:16px; max-width:640px; margin:0 auto; font-weight:300; line-height:1.7;
+}
+
+/* Grid Layout */
+.articles-container{
+  width:100%; max-width:var(--max); margin:0 auto; padding:60px 24px 100px;
+}
+.articles-grid{
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(360px, 1fr)); gap:32px;
+}
+
+/* Article Card */
+.article-card{
+  background:var(--surface); border:1px solid var(--border); border-radius:16px;
+  overflow:hidden; display:flex; flex-direction:column;
+  transition:transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.article-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 16px 32px rgba(0,0,0,0.04);
+  border-color:#d4cfc2;
+}
+.article-img-wrapper{
+  width:100%; height:220px; background:var(--surface-alt); position:relative; overflow:hidden;
+}
+.article-img-wrapper img{
+  width:100%; height:100%; object-fit:cover; transition:transform 0.5s ease;
+}
+.article-card:hover .article-img-wrapper img{
+  transform:scale(1.03);
+}
+.article-badge{
+  position:absolute; top:16px; left:16px; background:rgba(26, 25, 22, 0.85);
+  backdrop-filter:blur(8px); color:#ffffff; font-size:11px; font-weight:500;
+  padding:4px 12px; border-radius:50px; letter-spacing:0.5px;
+}
+.article-body{
+  padding:28px; display:flex; flex-direction:column; flex-grow:1;
+}
+.article-meta{
+  font-size:12px; color:var(--accent); font-weight:600; text-transform:uppercase;
+  letter-spacing:1px; margin-bottom:10px;
+}
+.article-title{
+  font-family:'Instrument Serif',Georgia,serif; font-size:26px; line-height:1.25;
+  color:var(--text); margin:0 0 12px; font-weight:400;
+}
+.article-title a{
+  color:inherit; text-decoration:none; transition:color 0.2s ease;
+}
+.article-title a:hover{
+  color:var(--accent);
+}
+.article-excerpt{
+  color:var(--muted); font-size:14.5px; font-weight:300; line-height:1.7;
+  margin:0 0 20px; flex-grow:1;
+}
+.article-footer{
+  display:flex; align-items:center; justify-content:space-between;
+  border-top:1px solid var(--surface-alt); padding-top:16px; margin-top:auto;
+}
+.article-read-time{
+  font-size:12px; color:#858074; font-weight:400;
+}
+.article-read-btn{
+  font-size:13px; font-weight:600; color:var(--text); display:inline-flex;
+  align-items:center; gap:6px; transition:color 0.2s ease; text-decoration:none;
+}
+.article-read-btn:hover{
+  color:var(--accent);
+}
+
+@media(max-width:768px){
+  .articles-grid{ grid-template-columns:1fr; gap:24px; }
+  .niche-header{ padding:40px 20px 30px; }
+  .articles-container{ padding:40px 20px 70px; }
+}
+</style>
+</head>
+
+<body>
+
+  <script src="header.js" defer></script>
+
+  <header class="niche-header">
+    <span class="niche-tag">Voyage Edition</span>
+    <h1>The Travel Journal</h1>
+    <p>A curated chronicle of slow journeys, secluded hideaways, and architectural wonders across the globe.</p>
+  </header>
+
+  <main class="articles-container">
+    <div class="articles-grid">
+
+      <!-- Article 1 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Sanctuary</span>
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Tropical coast" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Mediterranean</div>
+          <h2 class="article-title"><a href="travel-1.html">Slow Travel in Paros: Discovering Secret Coves and Cycladic Stone</a></h2>
+          <p class="article-excerpt">Escaping the heavy crowds to explore whitewashed alleys, quiet fishing ports, and secluded Aegean shores.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="travel-1.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Hideaway</span>
+          <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Alpine chalet" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Alps</div>
+          <h2 class="article-title"><a href="travel-2.html">Mountain Silence: Staying in Timber-Framed Alpine Refuges</a></h2>
+          <p class="article-excerpt">Breathing crisp high-altitude air and unwinding by open hearths in remote Swiss valley retreats.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="travel-2.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Culture</span>
+          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80" alt="Japanese temple" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Kyoto</div>
+          <h2 class="article-title"><a href="travel-3.html">Kyoto in Monotone: Bamboo Groves, Moss Gardens, and Tea Houses</a></h2>
+          <p class="article-excerpt">A meditative walk through historic wooden machiya districts and tranquil Zen temple courtyards.</p>
+          <div class="article-footer">
+            <span class="article-read-time">6 min read</span>
+            <a href="travel-3.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 4 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Coastal</span>
+          <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80" alt="Amalfi coast" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Italy</div>
+          <h2 class="article-title"><a href="travel-4.html">Beyond the Postcard: Quiet Corners of the Amalfi Coast</a></h2>
+          <p class="article-excerpt">Navigating terraced lemon groves, cliffside footpaths, and family-run trattorias away from the tour buses.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="travel-4.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 5 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Desert</span>
+          <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80" alt="Desert dunes" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Morocco</div>
+          <h2 class="article-title"><a href="travel-5.html">The Sahara Silence: Stargazing and Nomad Culture in Erg Chebbi</a></h2>
+          <p class="article-excerpt">Experiencing the profound stillness, shifting copper dunes, and starlit nights of the Moroccan desert.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="travel-5.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 6 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Nordic</span>
+          <img src="https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?auto=format&fit=crop&w=800&q=80" alt="Nordic fjord" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Norway</div>
+          <h2 class="article-title"><a href="travel-6.html">Fjord &amp; Granite: A Road Trip Through Western Norway</a></h2>
+          <p class="article-excerpt">Driving past glassy glacial waters, cascading waterfalls, and striking modern architecture.</p>
+          <div class="article-footer">
+            <span class="article-read-time">6 min read</span>
+            <a href="travel-6.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 7 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Island</span>
+          <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=800&q=80" alt="Icelandic landscape" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Iceland</div>
+          <h2 class="article-title"><a href="travel-7.html">Volcanic Solitude: Black Sand Beaches and Hot Springs in Iceland</a></h2>
+          <p class="article-excerpt">Embracing the raw, untamed elements across Iceland's dramatic geothermal landscapes.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="travel-7.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 8 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Countryside</span>
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Tuscany fields" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Tuscany</div>
+          <h2 class="article-title"><a href="travel-8.html">The Tuscan Rolling Hills: Stone Farmhouses and Olive Harvests</a></h2>
+          <p class="article-excerpt">Savoring slow afternoons, cypress-lined driveways, and organic wine tastings in central Italy.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="travel-8.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 9 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Architecture</span>
+          <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80" alt="London streets" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">London</div>
+          <h2 class="article-title"><a href="travel-9.html">Victorian Mews and Independent Bookshops in West London</a></h2>
+          <p class="article-excerpt">A quiet walking guide through cobbled mews, pastel townhouses, and hidden literary cafes.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="travel-9.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 10 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Tropical</span>
+          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80" alt="Bali rice terrace" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Bali</div>
+          <h2 class="article-title"><a href="travel-10.html">Ubud's Green Heart: Jungle Villas and Artisanal Pottery Studios</a></h2>
+          <p class="article-excerpt">Finding sanctuary among emerald rice paddies, holistic wellness spaces, and master carvers.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="travel-10.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 11 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Historic</span>
+          <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80" alt="Rome alley" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Rome</div>
+          <h2 class="article-title"><a href="travel-11.html">Early Morning Rome: Pavement Cafes Before the City Wakes</a></h2>
+          <p class="article-excerpt">Experiencing ancient piazzas, baroque fountains, and espresso bars in pristine morning light.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="travel-11.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 12 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Pacific</span>
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Pacific Northwest" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Pacific Northwest</div>
+          <h2 class="article-title"><a href="travel-12.html">Mist and Pine: Cabin Retreats in the Pacific Northwest Rainforest</a></h2>
+          <p class="article-excerpt">A misty coastal escape among towering redwoods, mossy floors, and dramatic ocean cliffs.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="travel-12.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 13 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Province</span>
+          <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=800&q=80" alt="Provence lavender" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">France</div>
+          <h2 class="article-title"><a href="travel-13.html">Provence in Lavender Season: Stone Villages and Local Markets</a></h2>
+          <p class="article-excerpt">Wandering through medieval hilltop hamlets, antique markets, and fragrant purple fields.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="travel-13.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 14 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Highland</span>
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Scottish Highlands" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Scotland</div>
+          <h2 class="article-title"><a href="travel-14.html">Mist on the Lochs: A Journey Through the Scottish Highlands</a></h2>
+          <p class="article-excerpt">Discovering moody landscapes, ancient stone castles, and warm hearths in remote highland pubs.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="travel-14.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 15 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Philosophy</span>
+          <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80" alt="Wanderlust travel" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Atelier</div>
+          <h2 class="article-title"><a href="travel-15.html">The Art of Packing Light: 10 Essentials for Intentional Nomads</a></h2>
+          <p class="article-excerpt">How traveling with only a single carry-on transforms your mindset and lightens your journey.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="travel-15.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <script src="footer.js" defer></script>
+
+</body>
+</html>

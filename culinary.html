@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>Culinary Edition — Willow &amp; Heaven</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root{
+  --bg:#f8f7f4;
+  --surface:#ffffff;
+  --surface-alt:#f1efe9;
+  --text:#1a1916;
+  --muted:#6b675e;
+  --accent:#9c6644;
+  --accent-hover:#7f5235;
+  --border:#e4e0d5;
+  --max:1240px;
+}
+
+*, *::before, *::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body{
+  margin:0; padding:0; width:100%; min-width:0; overflow-x:hidden;
+  background:var(--bg); color:var(--text); font-family:'Plus Jakarta Sans',sans-serif; line-height:1.7;
+}
+a{ color:var(--accent); text-decoration:none; transition:color 0.2s ease; }
+a:hover{ color:var(--accent-hover); }
+
+/* Page Header */
+.niche-header{
+  width:100%; max-width:var(--max); margin:0 auto; padding:60px 24px 40px; text-align:center;
+  border-bottom:1px solid var(--border);
+}
+.niche-tag{
+  color:var(--accent); font-size:12px; font-weight:600; letter-spacing:2.5px;
+  text-transform:uppercase; margin-bottom:14px; display:inline-block;
+  background:rgba(156, 102, 68, 0.08); padding:6px 18px; border-radius:50px;
+  border:1px solid rgba(156, 102, 68, 0.18);
+}
+.niche-header h1{
+  font-family:'Instrument Serif',Georgia,serif; font-size:clamp(42px, 6vw, 64px);
+  line-height:1.1; margin:0 0 16px; color:var(--text); font-weight:400;
+}
+.niche-header p{
+  color:var(--muted); font-size:16px; max-width:640px; margin:0 auto; font-weight:300; line-height:1.7;
+}
+
+/* Grid Layout */
+.articles-container{
+  width:100%; max-width:var(--max); margin:0 auto; padding:60px 24px 100px;
+}
+.articles-grid{
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(360px, 1fr)); gap:32px;
+}
+
+/* Article Card */
+.article-card{
+  background:var(--surface); border:1px solid var(--border); border-radius:16px;
+  overflow:hidden; display:flex; flex-direction:column;
+  transition:transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.article-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 16px 32px rgba(0,0,0,0.04);
+  border-color:#d4cfc2;
+}
+.article-img-wrapper{
+  width:100%; height:220px; background:var(--surface-alt); position:relative; overflow:hidden;
+}
+.article-img-wrapper img{
+  width:100%; height:100%; object-fit:cover; transition:transform 0.5s ease;
+}
+.article-card:hover .article-img-wrapper img{
+  transform:scale(1.03);
+}
+.article-badge{
+  position:absolute; top:16px; left:16px; background:rgba(26, 25, 22, 0.85);
+  backdrop-filter:blur(8px); color:#ffffff; font-size:11px; font-weight:500;
+  padding:4px 12px; border-radius:50px; letter-spacing:0.5px;
+}
+.article-body{
+  padding:28px; display:flex; flex-direction:column; flex-grow:1;
+}
+.article-meta{
+  font-size:12px; color:var(--accent); font-weight:600; text-transform:uppercase;
+  letter-spacing:1px; margin-bottom:10px;
+}
+.article-title{
+  font-family:'Instrument Serif',Georgia,serif; font-size:26px; line-height:1.25;
+  color:var(--text); margin:0 0 12px; font-weight:400;
+}
+.article-title a{
+  color:inherit; text-decoration:none; transition:color 0.2s ease;
+}
+.article-title a:hover{
+  color:var(--accent);
+}
+.article-excerpt{
+  color:var(--muted); font-size:14.5px; font-weight:300; line-height:1.7;
+  margin:0 0 20px; flex-grow:1;
+}
+.article-footer{
+  dir:ltr; display:flex; align-items:center; justify-content:space-between;
+  border-top:1px solid var(--surface-alt); padding-top:16px; margin-top:auto;
+}
+.article-read-time{
+  font-size:12px; color:#858074; font-weight:400;
+}
+.article-read-btn{
+  font-size:13px; font-weight:600; color:var(--text); display:inline-flex;
+  align-items:center; gap:6px; transition:color 0.2s ease; text-decoration:none;
+}
+.article-read-btn:hover{
+  color:var(--accent);
+}
+
+@media(max-width:768px){
+  .articles-grid{ grid-template-columns:1fr; gap:24px; }
+  .niche-header{ padding:40px 20px 30px; }
+  .articles-container{ padding:40px 20px 70px; }
+}
+</style>
+</head>
+
+<body>
+
+  <script src="header.js" defer></script>
+
+  <header class="niche-header">
+    <span class="niche-tag">Gastronomy Edition</span>
+    <h1>The Culinary Journal</h1>
+    <p>A curated celebration of seasonal ingredients, artisanal baking, and the mindful ritual of shared meals.</p>
+  </header>
+
+  <main class="articles-container">
+    <div class="articles-grid">
+
+      <!-- Article 1 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Sourdough</span>
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" alt="Artisan bread" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Baking</div>
+          <h2 class="article-title"><a href="culinary-1.html">The Rhythm of Fermentation: Mastering Country Sourdough</a></h2>
+          <p class="article-excerpt">Understanding flour hydration, wild yeast cultivation, and achieving the ultimate crisp, blistered crust.</p>
+          <div class="article-footer">
+            <span class="article-read-time">6 min read</span>
+            <a href="culinary-1.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Produce</span>
+          <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80" alt="Fresh harvest" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Farm-to-Table</div>
+          <h2 class="article-title"><a href="culinary-2.html">Cooking with the Seasons: Elevating Simple Root Vegetables</a></h2>
+          <p class="article-excerpt">Transforming humble carrots, parsnips, and beets through high-heat roasting and herb-infused oils.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="culinary-2.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Pasta</span>
+          <img src="https://images.unsplash.com/photo-1556761223-4c4282c73f77?auto=format&fit=crop&w=800&q=80" alt="Handmade pasta" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Italian</div>
+          <h2 class="article-title"><a href="culinary-3.html">The Art of Pasta Fresca: Rolling Semolina Dough by Hand</a></h2>
+          <p class="article-excerpt">A tactile guide to crafting silky tagliatelle, filled agnolotti, and rich slow-simmered ragùs.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="culinary-3.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 4 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Pantry</span>
+          <img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=800&q=80" alt="Olive oil and herbs" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Essentials</div>
+          <h2 class="article-title"><a href="culinary-4.html">Liquid Gold: Choosing and Cooking with Single-Estate Olive Oils</a></h2>
+          <p class="article-excerpt">Why unrefined, cold-pressed extra virgin olive oil dictates the depth and brightness of every dish.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="culinary-4.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 5 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Herbs</span>
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" alt="Fresh herbs and botanicals" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Garden</div>
+          <h2 class="article-title"><a href="culinary-5.html">The Herbarium Kitchen: Preserving Summer Flavors in Salt and Oil</a></h2>
+          <p class="article-excerpt">Locking in the essence of rosemary, thyme, and basil for rich winter cooking.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="culinary-5.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 6 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Coffee</span>
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Pour over coffee" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Ritual</div>
+          <h2 class="article-title"><a href="culinary-6.html">Morning Extraction: The Slow Chemistry of Pour-Over Coffee</a></h2>
+          <p class="article-excerpt">Dialing in water temperature, grind size, and extraction times for the ultimate morning cup.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="culinary-6.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 7 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Ferment</span>
+          <img src="https://images.unsplash.com/photo-1582284540020-8acbe03f4924?auto=format&fit=crop&w=800&q=80" alt="Fermented vegetables" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Pantry</div>
+          <h2 class="article-title"><a href="culinary-7.html">Wild Fermentation: Crafting Quick Pickles, Krauts, and Kimchi</a></h2>
+          <p class="article-excerpt">Exploring lacto-fermentation to add complex acidity and gut-health benefits to everyday meals.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="culinary-7.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 8 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Roasting</span>
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Roast chicken" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Technique</div>
+          <h2 class="article-title"><a href="culinary-8.html">The Perfect Roast Chicken: Butter, Garlic, and Cast Iron</a></h2>
+          <p class="article-excerpt">Achieving crisp skin and succulent meat through proper drying, seasoning, and roasting technique.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="culinary-8.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 9 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Tea</span>
+          <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80" alt="Ceremonial tea" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Infusion</div>
+          <h2 class="article-title"><a href="culinary-9.html">The Afternoon Ritual: Brewing Loose-Leaf Teas and Tisanes</a></h2>
+          <p class="article-excerpt">A mindful exploration of green teas, oolongs, and calming chamomile infusions.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="culinary-9.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 10 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Pastry</span>
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" alt="Rustic galette" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Dessert</div>
+          <h2 class="article-title"><a href="culinary-10.html">Rustic Galettes: Flaky Butter Crusts and Stone Fruit Fillings</a></h2>
+          <p class="article-excerpt">Embracing imperfect beauty with free-form fruit pastries that celebrate seasonal harvests.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="culinary-10.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 11 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Stew</span>
+          <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80" alt="Slow cooked stew" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Braised</div>
+          <h2 class="article-title"><a href="culinary-11.html">Slow Braises: Deep Flavors from Cast Iron and Low Heat</a></h2>
+          <p class="article-excerpt">How long, gentle simmering breaks down connective tissues for meltingly tender dishes.</p>
+          <div class="article-footer">
+            <span class="article-read-time">6 min read</span>
+            <a href="culinary-11.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 12 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Table</span>
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Dinner party table" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Hosting</div>
+          <h2 class="article-title"><a href="culinary-12.html">The Gathering Table: Linen Runners, Candles, and Simple Feasts</a></h2>
+          <p class="article-excerpt">Setting an inviting atmosphere that prioritizes warmth, conversation, and shared plates.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="culinary-12.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 13 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Broth</span>
+          <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80" alt="Bone broth" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Stock</div>
+          <h2 class="article-title"><a href="culinary-13.html">The 24-Hour Bone Broth: Collagen, Minerals, and Simmering Time</a></h2>
+          <p class="article-excerpt">Extracting rich nutrition and deep umami from roasted bones, aromatics, and apple cider vinegar.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="culinary-13.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 14 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Citrus</span>
+          <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80" alt="Citrus fruits" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Flavor</div>
+          <h2 class="article-title"><a href="culinary-14.html">Acid and Balance: Using Citrus Zest and Vinegar to Finish Dishes</a></h2>
+          <p class="article-excerpt">The secret culinary technique of brightening heavy sauces and rich proteins just before serving.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="culinary-14.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 15 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Philosophy</span>
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" alt="Mindful cooking" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Atelier</div>
+          <h2 class="article-title"><a href="culinary-15.html">The Mindful Kitchen: Cooking as Daily Meditative Practice</a></h2>
+          <p class="article-excerpt">Slowing down kitchen movements to find peace and presence through chopping, stirring, and tasting.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="culinary-15.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <script src="footer.js" defer></script>
+
+</body>
+</html>

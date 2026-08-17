@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>Nature &amp; Outdoors Edition — Willow &amp; Heaven</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root{
+  --bg:#f8f7f4;
+  --surface:#ffffff;
+  --surface-alt:#f1efe9;
+  --text:#1a1916;
+  --muted:#6b675e;
+  --accent:#9c6644;
+  --accent-hover:#7f5235;
+  --border:#e4e0d5;
+  --max:1240px;
+}
+
+*, *::before, *::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body{
+  margin:0; padding:0; width:100%; min-width:0; overflow-x:hidden;
+  background:var(--bg); color:var(--text); font-family:'Plus Jakarta Sans',sans-serif; line-height:1.7;
+}
+a{ color:var(--accent); text-decoration:none; transition:color 0.2s ease; }
+a:hover{ color:var(--accent-hover); }
+
+/* Page Header */
+.niche-header{
+  width:100%; max-width:var(--max); margin:0 auto; padding:60px 24px 40px; text-align:center;
+  border-bottom:1px solid var(--border);
+}
+.niche-tag{
+  color:var(--accent); font-size:12px; font-weight:600; letter-spacing:2.5px;
+  text-transform:uppercase; margin-bottom:14px; display:inline-block;
+  background:rgba(156, 102, 68, 0.08); padding:6px 18px; border-radius:50px;
+  border:1px solid rgba(156, 102, 68, 0.18);
+}
+.niche-header h1{
+  font-family:'Instrument Serif',Georgia,serif; font-size:clamp(42px, 6vw, 64px);
+  line-height:1.1; margin:0 0 16px; color:var(--text); font-weight:400;
+}
+.niche-header p{
+  color:var(--muted); font-size:16px; max-width:640px; margin:0 auto; font-weight:300; line-height:1.7;
+}
+
+/* Grid Layout */
+.articles-container{
+  width:100%; max-width:var(--max); margin:0 auto; padding:60px 24px 100px;
+}
+.articles-grid{
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(360px, 1fr)); gap:32px;
+}
+
+/* Article Card */
+.article-card{
+  background:var(--surface); border:1px solid var(--border); border-radius:16px;
+  overflow:hidden; display:flex; flex-direction:column;
+  transition:transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.article-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 16px 32px rgba(0,0,0,0.04);
+  border-color:#d4cfc2;
+}
+.article-img-wrapper{
+  width:100%; height:220px; background:var(--surface-alt); position:relative; overflow:hidden;
+}
+.article-img-wrapper img{
+  width:100%; height:100%; object-fit:cover; transition:transform 0.5s ease;
+}
+.article-card:hover .article-img-wrapper img{
+  transform:scale(1.03);
+}
+.article-badge{
+  position:absolute; top:16px; left:16px; background:rgba(26, 25, 22, 0.85);
+  backdrop-filter:blur(8px); color:#ffffff; font-size:11px; font-weight:500;
+  padding:4px 12px; border-radius:50px; letter-spacing:0.5px;
+}
+.article-body{
+  padding:28px; display:flex; flex-direction:column; flex-grow:1;
+}
+.article-meta{
+  font-size:12px; color:var(--accent); font-weight:600; text-transform:uppercase;
+  letter-spacing:1px; margin-bottom:10px;
+}
+.article-title{
+  font-family:'Instrument Serif',Georgia,serif; font-size:26px; line-height:1.25;
+  color:var(--text); margin:0 0 12px; font-weight:400;
+}
+.article-title a{
+  color:inherit; text-decoration:none; transition:color 0.2s ease;
+}
+.article-title a:hover{
+  color:var(--accent);
+}
+.article-excerpt{
+  color:var(--muted); font-size:14.5px; font-weight:300; line-height:1.7;
+  margin:0 0 20px; flex-grow:1;
+}
+.article-footer{
+  display:flex; align-items:center; justify-content:space-between;
+  border-top:1px solid var(--surface-alt); padding-top:16px; margin-top:auto;
+}
+.article-read-time{
+  font-size:12px; color:#858074; font-weight:400;
+}
+.article-read-btn{
+  font-size:13px; font-weight:600; color:var(--text); display:inline-flex;
+  align-items:center; gap:6px; transition:color 0.2s ease; text-decoration:none;
+}
+.article-read-btn:hover{
+  color:var(--accent);
+}
+
+@media(max-width:768px){
+  .articles-grid{ grid-template-columns:1fr; gap:24px; }
+  .niche-header{ padding:40px 20px 30px; }
+  .articles-container{ padding:40px 20px 70px; }
+}
+</style>
+</head>
+
+<body>
+
+  <script src="header.js" defer></script>
+
+  <header class="niche-header">
+    <span class="niche-tag">Wilderness Edition</span>
+    <h1>Nature &amp; Outdoors</h1>
+    <p>Immersive explorations of wild landscapes, ancient forests, quiet coastlines, and the restorative power of the natural world.</p>
+  </header>
+
+  <main class="articles-container">
+    <div class="articles-grid">
+
+      <!-- Article 1 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Forest</span>
+          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80" alt="Misty forest canopy" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Silvotherapy</div>
+          <h2 class="article-title"><a href="nature-1.html">Shinrin-Yoku: The Healing Art of Immersing in Ancient Woodlands</a></h2>
+          <p class="article-excerpt">How quiet walks beneath towering green canopies lower cortisol, sharpen focus, and restore inner peace.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="nature-1.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Wildflower</span>
+          <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80" alt="Alpine meadow" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Meadows</div>
+          <h2 class="article-title"><a href="nature-2.html">High-Altitude Blooms: A Naturalist’s Guide to Summer Alpine Meadows</a></h2>
+          <p class="article-excerpt">Discovering vibrant pockets of native wildflowers thriving against rugged mountain peaks.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="nature-2.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Coastline</span>
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Wild rocky shore" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Ocean Tides</div>
+          <h2 class="article-title"><a href="nature-3.html">Tidal Pools and Salt Air: Exploring Untamed Rocky Shorelines</a></h2>
+          <p class="article-excerpt">Observing resilient marine life and listening to the rhythmic crashing of distant ocean waves.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="nature-3.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 4 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Rivers</span>
+          <img src="https://images.unsplash.com/photo-1432821596592-e2c18b78144f?auto=format&fit=crop&w=800&q=80" alt="Mountain stream" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Waterways</div>
+          <h2 class="article-title"><a href="nature-4.html">Following the Current: The Ecology and Calm of Clear Mountain Streams</a></h2>
+          <p class="article-excerpt">Tracing cold, rushing headwaters through smooth river stones and mossy canyon walls.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="nature-4.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 5 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Botany</span>
+          <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=800&q=80" alt="Ferns and moss" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Undergrowth</div>
+          <h2 class="article-title"><a href="nature-5.html">The Microscopic Jungle: Velvet Mosses, Ferns, and Ancient Spores</a></h2>
+          <p class="article-excerpt">A closer look at the intricate, moisture-loving ground cover that sustains forest ecosystems.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="nature-5.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 6 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Stargazing</span>
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Night sky over wilderness" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Dark Skies</div>
+          <h2 class="article-title"><a href="nature-6.html">Beyond City Lights: Finding Sanctuary Under Pristine Dark Skies</a></h2>
+          <p class="article-excerpt">Experiencing the awe of the Milky Way and constellations far away from light pollution.</p>
+          <div class="article-footer">
+            <span class="article-read-time">6 min read</span>
+            <a href="nature-6.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 7 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Valley</span>
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Green valley" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Topography</div>
+          <h2 class="article-title"><a href="nature-7.html">Carved by Glaciers: The Silent Grandeur of U-Shaped Valleys</a></h2>
+          <p class="article-excerpt">Understanding the geological forces that shaped dramatic cliffs and fertile valley floors.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="nature-7.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 8 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Seasons</span>
+          <img src="https://images.unsplash.com/photo-1507371341990-2ffac22467d2?auto=format&fit=crop&w=800&q=80" alt="Autumn foliage" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Autumnal</div>
+          <h2 class="article-title"><a href="nature-8.html">The Copper Shift: Witnessing the Slow Transition of Autumn Canopies</a></h2>
+          <p class="article-excerpt">A journey through amber leaves, crisp morning frosts, and forest preparations for winter.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="nature-8.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 9 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Wildlife</span>
+          <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=800&q=80" alt="Bird watching in nature" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Fauna</div>
+          <h2 class="article-title"><a href="nature-9.html">Dawn Chorus: Tuning Into the Secret Language of Woodland Birds</a></h2>
+          <p class="article-excerpt">Recognizing territorial calls, migratory patterns, and the morning symphony of wild avian species.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="nature-9.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 10 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Geology</span>
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Rocky peaks" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Stone</div>
+          <h2 class="article-title"><a href="nature-10.html">Granite and Time: The Resilient Strength of High Mountain Ridges</a></h2>
+          <p class="article-excerpt">Reflecting on deep time while scaling wind-swept stone ridges and barren summits.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="nature-10.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 11 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Wetlands</span>
+          <img src="https://images.unsplash.com/photo-1511497584788-876761142212?auto=format&fit=crop&w=800&q=80" alt="Misty wetland marsh" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Marshes</div>
+          <h2 class="article-title"><a href="nature-11.html">The Quiet Marshes: Biodiversity and Mist in Protected Wetlands</a></h2>
+          <p class="article-excerpt">Exploring the vital ecological sanctuaries where land meets shallow, nourishing waters.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="nature-11.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 12 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Atmosphere</span>
+          <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80" alt="Golden hour desert or hills" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Light</div>
+          <h2 class="article-title"><a href="nature-12.html">Golden Hour Alchemy: How Low Sunlight Transforms the Outdoors</a></h2>
+          <p class="article-excerpt">Capturing the fleeting, luminous minutes when evening light casts long shadows across the wild.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="nature-12.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 13 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Solitude</span>
+          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80" alt="Starry mountain night" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Wilderness</div>
+          <h2 class="article-title"><a href="nature-13.html">The Psychology of Wilderness: Why Solitude in Nature Heals</a></h2>
+          <p class="article-excerpt">Stepping away from digital noise to reconnect with rhythm, silence, and open horizons.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="nature-13.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 14 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Foraging</span>
+          <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80" alt="Wild berries and plants" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Harvest</div>
+          <h2 class="article-title"><a href="nature-14.html">Ethical Foraging: Wild Berries, Mushrooms, and Seasonal Herbs</a></h2>
+          <p class="article-excerpt">A mindful approach to gathering edible bounties sustainably from healthy woodland floors.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="nature-14.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 15 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Philosophy</span>
+          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80" alt="Sunlight through trees" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Atelier</div>
+          <h2 class="article-title"><a href="nature-15.html">The Earth Charter: Cultivating a Lifetime Connection to the Wild</a></h2>
+          <p class="article-excerpt">Embracing stewardship, outdoor mindfulness, and deep reverence for living ecosystems.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="nature-15.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <script src="footer.js" defer></script>
+
+</body>
+</html>

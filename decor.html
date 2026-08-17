@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>Home Decor Edition — Willow &amp; Heaven</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root{
+  --bg:#f8f7f4;
+  --surface:#ffffff;
+  --surface-alt:#f1efe9;
+  --text:#1a1916;
+  --muted:#6b675e;
+  --accent:#9c6644;
+  --accent-hover:#7f5235;
+  --border:#e4e0d5;
+  --max:1240px;
+}
+
+*, *::before, *::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body{
+  margin:0; padding:0; width:100%; min-width:0; overflow-x:hidden;
+  background:var(--bg); color:var(--text); font-family:'Plus Jakarta Sans',sans-serif; line-height:1.7;
+}
+a{ color:var(--accent); text-decoration:none; transition:color 0.2s ease; }
+a:hover{ color:var(--accent-hover); }
+
+/* Page Header */
+.niche-header{
+  width:100%; max-width:var(--max); margin:0 auto; padding:60px 24px 40px; text-align:center;
+  border-bottom:1px solid var(--border);
+}
+.niche-tag{
+  color:var(--accent); font-size:12px; font-weight:600; letter-spacing:2.5px;
+  text-transform:uppercase; margin-bottom:14px; display:inline-block;
+  background:rgba(156, 102, 68, 0.08); padding:6px 18px; border-radius:50px;
+  border:1px solid rgba(156, 102, 68, 0.18);
+}
+.niche-header h1{
+  font-family:'Instrument Serif',Georgia,serif; font-size:clamp(42px, 6vw, 64px);
+  line-height:1.1; margin:0 0 16px; color:var(--text); font-weight:400;
+}
+.niche-header p{
+  color:var(--muted); font-size:16px; max-width:640px; margin:0 auto; font-weight:300; line-height:1.7;
+}
+
+/* Grid Layout */
+.articles-container{
+  width:100%; max-width:var(--max); margin:0 auto; padding:60px 24px 100px;
+}
+.articles-grid{
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(360px, 1fr)); gap:32px;
+}
+
+/* Article Card */
+.article-card{
+  background:var(--surface); border:1px solid var(--border); border-radius:16px;
+  overflow:hidden; display:flex; flex-direction:column;
+  transition:transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.article-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 16px 32px rgba(0,0,0,0.04);
+  border-color:#d4cfc2;
+}
+.article-img-wrapper{
+  width:100%; height:220px; background:var(--surface-alt); position:relative; overflow:hidden;
+}
+.article-img-wrapper img{
+  width:100%; height:100%; object-fit:cover; transition:transform 0.5s ease;
+}
+.article-card:hover .article-img-wrapper img{
+  transform:scale(1.03);
+}
+.article-badge{
+  position:absolute; top:16px; left:16px; background:rgba(26, 25, 22, 0.85);
+  backdrop-filter:blur(8px); color:#ffffff; font-size:11px; font-weight:500;
+  padding:4px 12px; border-radius:50px; letter-spacing:0.5px;
+}
+.article-body{
+  padding:28px; display:flex; flex-direction:column; flex-grow:1;
+}
+.article-meta{
+  font-size:12px; color:var(--accent); font-weight:600; text-transform:uppercase;
+  letter-spacing:1px; margin-bottom:10px;
+}
+.article-title{
+  font-family:'Instrument Serif',Georgia,serif; font-size:26px; line-height:1.25;
+  color:var(--text); margin:0 0 12px; font-weight:400;
+}
+.article-title a{
+  color:inherit; text-decoration:none; transition:color 0.2s ease;
+}
+.article-title a:hover{
+  color:var(--accent);
+}
+.article-excerpt{
+  color:var(--muted); font-size:14.5px; font-weight:300; line-height:1.7;
+  margin:0 0 20px; flex-grow:1;
+}
+.article-footer{
+  display:flex; align-items:center; justify-content:space-between;
+  border-top:1px solid var(--surface-alt); padding-top:16px; margin-top:auto;
+}
+.article-read-time{
+  font-size:12px; color:#858074; font-weight:400;
+}
+.article-read-btn{
+  font-size:13px; font-weight:600; color:var(--text); display:inline-flex;
+  align-items:center; gap:6px; transition:color 0.2s ease; text-decoration:none;
+}
+.article-read-btn:hover{
+  color:var(--accent);
+}
+
+@media(max-width:768px){
+  .articles-grid{ grid-template-columns:1fr; gap:24px; }
+  .niche-header{ padding:40px 20px 30px; }
+  .articles-container{ padding:40px 20px 70px; }
+}
+</style>
+</head>
+
+<body>
+
+  <script src="header.js" defer></script>
+
+  <header class="niche-header">
+    <span class="niche-tag">Spatial Edition</span>
+    <h1>The Home Decor Journal</h1>
+    <p>A curated exploration of intentional interiors, tactile textures, and earthy palettes designed to cultivate sanctuary at home.</p>
+  </header>
+
+  <main class="articles-container">
+    <div class="articles-grid">
+
+      <!-- Article 1 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Interiors</span>
+          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="Minimalist living room" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Atelier</div>
+          <h2 class="article-title"><a href="decor-1.html">The Warm Minimalist Palette: Earth Tones and Raw Textures</a></h2>
+          <p class="article-excerpt">How to layer linen, travertine, and limewash finishes to create an organic sanctuary of calm and quiet luxury.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="decor-1.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Lighting</span>
+          <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80" alt="Warm ambient lighting" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Atmosphere</div>
+          <h2 class="article-title"><a href="decor-2.html">Architectural Illumination: Layering Light in Open Spaces</a></h2>
+          <p class="article-excerpt">Moving away from harsh overhead glare toward sculptural table lamps, wall sconces, and ambient glow.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="decor-2.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Textiles</span>
+          <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80" alt="Cozy bedroom textiles" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Bedding</div>
+          <h2 class="article-title"><a href="decor-3.html">The Art of the Unmade Bed: Organic Linens for Deep Rest</a></h2>
+          <p class="article-excerpt">Why stonewashed French flax linen transforms both the tactile comfort and visual poetry of your bedroom.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="decor-3.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 4 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Kitchen</span>
+          <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Minimalist kitchen" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Craftsmanship</div>
+          <h2 class="article-title"><a href="decor-4.html">Quiet Kitchens: Concealed Storage and Handcrafted Ceramics</a></h2>
+          <p class="article-excerpt">Embracing functional minimalism by hiding clutter and displaying everyday utility objects as sculptural art.</p>
+          <div class="article-footer">
+            <span class="article-read-time">6 min read</span>
+            <a href="decor-4.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 5 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Botanical</span>
+          <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=800&q=80" alt="Indoor plants" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Nature</div>
+          <h2 class="article-title"><a href="decor-5.html">Biophilic Design: Integrating Living Greenery Into Living Areas</a></h2>
+          <p class="article-excerpt">How oversized olive trees, cascading ivies, and terracotta planters bridge the gap between interior and exterior.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="decor-5.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 6 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Styling</span>
+          <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Coffee table styling" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Surface</div>
+          <h2 class="article-title"><a href="decor-6.html">The Curated Coffee Table: Books, Trays, and Negative Space</a></h2>
+          <p class="article-excerpt">Mastering the balance of height, texture, and editorial restraint when styling central living room surfaces.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="decor-6.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 7 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Bathroom</span>
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Spa bathroom" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Sanctuary</div>
+          <h2 class="article-title"><a href="decor-7.html">The At-Home Spa: Waffle Towels, Stone Sinks, and Hinoki Wood</a></h2>
+          <p class="article-excerpt">Turning daily hygiene rituals into meditative self-care practices through sensory-rich bathroom styling.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="decor-7.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 8 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Walls</span>
+          <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80" alt="Limewash wall" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Finishes</div>
+          <h2 class="article-title"><a href="decor-8.html">Beyond Flat Paint: Exploring Limewash, Tadelakt, and Plaster</a></h2>
+          <p class="article-excerpt">How tactile wall treatments react to changing daylight and bring an organic, chalky depth to interior rooms.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="decor-8.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 9 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Vintage</span>
+          <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=800&q=80" alt="Vintage interior" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Antiques</div>
+          <h2 class="article-title"><a href="decor-9.html">The Soul of Imperfection: Integrating Antique Wood and Patina</a></h2>
+          <p class="article-excerpt">Why mixing weathered vintage furniture with clean contemporary lines adds character and timeless narrative.</p>
+          <div class="article-footer">
+            <span class="article-read-time">6 min read</span>
+            <a href="decor-9.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 10 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Workspace</span>
+          <img src="https://images.unsplash.com/photo-1593535974222-04e2d37c8626?auto=format&fit=crop&w=800&q=80" alt="Minimalist desk" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Study</div>
+          <h2 class="article-title"><a href="decor-10.html">The Mindful Home Office: Ergonomics Meet Aesthetic Calm</a></h2>
+          <p class="article-excerpt">Designing a productive work nook that eliminates visual clutter and fosters sustained deep focus.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="decor-10.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 11 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Rugs</span>
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Vintage rug" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Flooring</div>
+          <h2 class="article-title"><a href="decor-11.html">Underfoot Architecture: Choosing Natural Jute and Wool Rugs</a></h2>
+          <p class="article-excerpt">How area rugs anchor furniture groupings, dampen sound, and add rich textural warmth to bare floors.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="decor-11.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 12 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Gallery</span>
+          <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80" alt="Gallery wall" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Art</div>
+          <h2 class="article-title"><a href="decor-12.html">Curating a Minimalist Gallery Wall Without Visual Chaos</a></h2>
+          <p class="article-excerpt">A thoughtful guide to framing neutral prints, balancing negative space, and hanging art with intention.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="decor-12.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 13 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Lighting</span>
+          <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80" alt="Pendant light" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Design</div>
+          <h2 class="article-title"><a href="decor-13.html">Sculptural Pendants: Statement Lighting as Functional Art</a></h2>
+          <p class="article-excerpt">How oversized paper lanterns and ceramic fixtures cast poetic shadows and define room focal points.</p>
+          <div class="article-footer">
+            <span class="article-read-time">5 min read</span>
+            <a href="decor-13.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 14 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Balcony</span>
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Outdoor patio" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Outdoor</div>
+          <h2 class="article-title"><a href="decor-14.html">The Micro-Sanctuary: Styling Small Balconies and Patios</a></h2>
+          <p class="article-excerpt">Transforming compact outdoor footprints into lush, private retreats with weather-resistant textiles and flora.</p>
+          <div class="article-footer">
+            <span class="article-read-time">4 min read</span>
+            <a href="decor-14.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 15 -->
+      <article class="article-card">
+        <div class="article-img-wrapper">
+          <span class="article-badge">Slow Living</span>
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Slow living interior" loading="lazy">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Atelier</div>
+          <h2 class="article-title"><a href="decor-15.html">The Essential Home: 10 Principles of Intentional Interiors</a></h2>
+          <p class="article-excerpt">A masterclass in editing your belongings, honoring natural light, and designing spaces that breathe.</p>
+          <div class="article-footer">
+            <span class="article-read-time">6 min read</span>
+            <a href="decor-15.html" class="article-read-btn">Read Edition &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <script src="footer.js" defer></script>
+
+</body>
+</html>
