@@ -517,7 +517,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 
+
+  /* =========================
+     ADSTERRA SOCIAL BAR
+  ========================= */
+
+  if (!document.querySelector('script[data-adsterra-social-bar]')) {
+
+    const adsterraSocialBar = document.createElement("script");
+
+    adsterraSocialBar.src =
+      "https://pl31595914.profitableratecpmnetwork.com/a3/6c/32/a36c326dea721065bee7af7dacf2459d.js";
+
+    adsterraSocialBar.setAttribute(
+      "data-adsterra-social-bar",
+      "true"
+    );
+
+    document.body.appendChild(adsterraSocialBar);
+
+  }
+
 });
+
+
 // =========================
 // WILLOW & HEAVEN FAVICON
 // =========================
