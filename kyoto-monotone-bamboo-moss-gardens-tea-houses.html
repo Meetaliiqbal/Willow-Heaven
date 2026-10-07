@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+
+<title>Kyoto in Monotone: Bamboo Groves, Moss Gardens, and Tea Houses — Willow &amp; Heaven</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root{
+  --bg:#f8f7f4;
+  --surface:#ffffff;
+  --surface-alt:#f1efe9;
+  --text:#1a1916;
+  --muted:#6b675e;
+  --accent:#9c6644;
+  --accent-hover:#7f5235;
+  --border:#e4e0d5;
+  --max:780px;
+}
+
+*, *::before, *::after{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  padding:0;
+  width:100%;
+  min-width:0;
+  overflow-x:hidden;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Plus Jakarta Sans',sans-serif;
+  line-height:1.8;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+a,
+button{
+  -webkit-tap-highlight-color:transparent;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:999;
+  width:100%;
+  background:rgba(248,247,244,.94);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+
+.header-inner{
+  width:100%;
+  max-width:1150px;
+  height:76px;
+  margin:0 auto;
+  padding:0 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand-logo{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:27px;
+  font-weight:400;
+  color:var(--text);
+  letter-spacing:.8px;
+  white-space:nowrap;
+}
+
+.brand-logo span{
+  color:var(--accent);
+  font-style:italic;
+}
+
+.header-nav{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  font-size:13px;
+  font-weight:500;
+  color:var(--muted);
+}
+
+.header-nav a{
+  color:var(--muted);
+  white-space:nowrap;
+  transition:color .2s ease;
+}
+
+.header-nav a:hover{
+  color:var(--accent);
+}
+
+.header-nav .highlight-btn{
+  background:var(--text);
+  color:#fff;
+  padding:9px 16px;
+  border-radius:6px;
+}
+
+.header-nav .highlight-btn:hover{
+  background:var(--accent);
+  color:#fff;
+}
+
+
+/* =========================
+   ARTICLE CONTAINER
+========================= */
+
+.article-container{
+  width:100%;
+  max-width:var(--max);
+  margin:0 auto;
+  padding:60px 24px 90px;
+}
+
+
+/* =========================
+   ARTICLE HEADER
+========================= */
+
+.article-header{
+  text-align:center;
+  margin-bottom:48px;
+}
+
+.article-tag{
+  display:inline-block;
+  color:var(--accent);
+  font-size:11.5px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  margin-bottom:16px;
+  padding:6px 18px;
+  border-radius:30px;
+  background:rgba(156, 102, 68, 0.08);
+  border:1px solid rgba(156, 102, 68, 0.18);
+}
+
+.article-header h1{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:clamp(38px, 5.5vw, 62px);
+  line-height:1.15;
+  font-weight:400;
+  color:var(--text);
+  margin:0 0 16px;
+}
+
+.article-subtitle{
+  max-width:620px;
+  margin:0 auto 24px;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.7;
+  font-weight:300;
+  font-style:italic;
+}
+
+.article-meta{
+  font-size:12.5px;
+  color:var(--muted);
+  letter-spacing:.5px;
+  font-weight:400;
+}
+
+
+/* =========================
+   FEATURED IMAGE
+========================= */
+
+.article-hero-img{
+  width:100%;
+  height:380px;
+  border-radius:15px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  margin-bottom:50px;
+  background:var(--surface-alt);
+}
+
+.article-hero-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+
+/* =========================
+   ARTICLE BODY CONTENT
+========================= */
+
+.article-body{
+  font-size:16px;
+  color:var(--text);
+  font-weight:300;
+}
+
+.article-body p{
+  margin:0 0 24px;
+  line-height:1.85;
+}
+
+.article-body h2{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:32px;
+  line-height:1.25;
+  font-weight:400;
+  color:var(--text);
+  margin:42px 0 16px;
+}
+
+.article-body blockquote{
+  margin:36px 0;
+  padding:24px 30px;
+  background:var(--surface);
+  border-left:3px solid var(--accent);
+  border-radius:0 12px 12px 0;
+  border-top:1px solid var(--border);
+  border-right:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+
+.article-body blockquote p{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:24px;
+  line-height:1.4;
+  color:var(--text);
+  font-style:italic;
+  margin:0;
+}
+
+.drop-cap::first-letter{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:72px;
+  float:left;
+  line-height:0.8;
+  padding-top:4px;
+  padding-right:12px;
+  padding-bottom:2px;
+  color:var(--accent);
+  font-style:normal;
+}
+
+
+/* =========================
+   IN-ARTICLE CPA CTA BOX
+========================= */
+
+.inline-cpa-box{
+  margin:48px 0;
+  padding:36px 32px;
+  background:linear-gradient(135deg,#f1efe9,#e8e4dc);
+  border:1px solid #d8d2c4;
+  border-radius:16px;
+  text-align:center;
+}
+
+.inline-cpa-tag{
+  color:var(--accent);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:8px;
+  display:inline-block;
+}
+
+.inline-cpa-box h3{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:28px;
+  line-height:1.2;
+  font-weight:400;
+  margin:0 0 10px;
+}
+
+.inline-cpa-box p{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.6;
+  margin:0 0 22px;
+  max-width:540px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.cpa-action-btn{
+  display:inline-block;
+  background:var(--text);
+  color:#fff;
+  padding:13px 26px;
+  border-radius:8px;
+  font-size:13.5px;
+  font-weight:500;
+  transition:background .2s ease, transform .2s ease;
+}
+
+.cpa-action-btn:hover{
+  background:var(--accent);
+  transform:translateY(-2px);
+}
+
+
+/* =========================
+   AUTHOR BIO BOX
+========================= */
+
+.author-box{
+  margin-top:60px;
+  padding:32px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+.author-avatar{
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  overflow:hidden;
+  flex-shrink:0;
+  background:var(--surface-alt);
+  border:1px solid var(--border);
+}
+
+.author-avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.author-info h4{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:22px;
+  font-weight:400;
+  margin:0 0 6px;
+}
+
+.author-info p{
+  margin:0;
+  color:var(--muted);
+  font-size:13.5px;
+  line-height:1.6;
+  font-weight:300;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer{
+  width:100%;
+  border-top:1px solid var(--border);
+  background:var(--surface-alt);
+  padding:50px 24px;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:24px;
+  margin-bottom:18px;
+  font-weight:500;
+}
+
+.footer-links a{
+  color:var(--muted);
+  transition:color .2s ease;
+}
+
+.footer-links a:hover{
+  color:var(--accent);
+}
+
+.disclaimer{
+  max-width:740px;
+  margin:16px auto 0;
+  font-size:11.5px;
+  color:#858074;
+  line-height:1.6;
+  font-weight:300;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:700px){
+
+  .header-inner{
+    height:68px;
+    padding:0 16px;
+  }
+
+  .brand-logo{
+    font-size:24px;
+  }
+
+  .header-nav{
+    gap:10px;
+    font-size:12px;
+  }
+
+  .header-nav a:not(.highlight-btn){
+    display:none;
+  }
+
+  .header-nav .highlight-btn{
+    padding:8px 13px;
+  }
+
+  .article-container{
+    padding:40px 16px 70px;
+  }
+
+  .article-hero-img{
+    height:240px;
+    margin-bottom:36px;
+  }
+
+  .inline-cpa-box{
+    padding:28px 20px;
+  }
+
+  .author-box{
+    flex-direction:column;
+    text-align:center;
+    padding:24px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+<script src="header.js" defer></script>
+
+
+<main class="article-container">
+
+  <!-- ARTICLE HEADER -->
+  <header class="article-header">
+    <span class="article-tag">Kyoto &amp; Quiet Tradition</span>
+
+    <h1>Kyoto in Monotone: Bamboo Groves, Moss Gardens, and Tea Houses</h1>
+
+    <p class="article-subtitle">
+      A meditative walk through historic wooden machiya districts and tranquil Zen temple courtyards.
+    </p>
+
+    <div class="article-meta">
+      Published by Willow &amp; Heaven Archive · Original Kyoto Essay
+    </div>
+  </header>
+
+
+  <!-- FEATURED IMAGE -->
+  <div class="article-hero-img">
+    <img
+      src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80"
+      alt="Traditional Japanese temple and quiet Kyoto landscape"
+      loading="lazy"
+    >
+  </div>
+
+
+  <!-- ARTICLE BODY -->
+  <article class="article-body">
+
+    <p class="drop-cap">
+      Kyoto reveals itself most beautifully when the brighter distractions of travel are allowed to fall away. Beyond the famous sights and busy avenues, the city has a quieter visual language built from weathered timber, stone paths, moss, bamboo, paper screens, and soft natural light. Together, these restrained textures create an atmosphere that feels almost monochromatic, inviting the eye to slow down and notice subtle changes rather than dramatic contrasts.
+    </p>
+
+    <p>
+      The character of an older Kyoto neighborhood often emerges gradually. A narrow lane may lead past a wooden machiya, then open toward a small garden where moss gathers between stones. The effect is not theatrical. Instead, it comes through proportion, patina, shadow, and the careful relationship between built spaces and the surrounding landscape.
+    </p>
+
+    <blockquote>
+      <p>
+        "The quiet beauty of Kyoto is found in the spaces between things: a shaded path, a wooden threshold, a garden waiting in silence."
+      </p>
+    </blockquote>
+
+
+    <h2>The Poetry of Restrained Materials</h2>
+
+    <p>
+      Much of Kyoto's visual calm comes from materials that do not demand immediate attention. Natural wood, muted stone, aged plaster, bamboo, and moss form a palette that changes gently with weather and season.
+    </p>
+
+    <p>
+      <strong>1. Bamboo and Vertical Rhythm:</strong> Bamboo groves create a distinctive sense of movement even when the air is still. Their tall, repeating lines draw the gaze upward while keeping the surrounding palette grounded and understated.
+    </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '5c63a7a89cecfd68333d4268eff805e6',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/5c63a7a89cecfd68333d4268eff805e6/invoke.js"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : 'ae4d7ee19b5fa944210e60c0765961c5',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/ae4d7ee19b5fa944210e60c0765961c5/invoke.js"></script>
+</div>
+
+
+
+    <p>
+      <strong>2. Moss and Softened Stone:</strong> Moss introduces a quiet layer of green across temple gardens and shaded pathways. Against stone surfaces, it creates a contrast that remains gentle rather than vivid.
+    </p>
+
+    <p>
+      <strong>3. Timber and Patina:</strong> Traditional wooden structures gain character through age. Subtle changes in grain, color, and texture make older buildings feel connected to the passage of time.
+    </p>
+
+
+    <!-- IN-ARTICLE CPA OFFER CALL TO ACTION -->
+    <div class="inline-cpa-box">
+
+      <span class="inline-cpa-tag">Curated Travel Edition</span>
+
+      <h3>Find Your Next Peaceful Escape</h3>
+
+      <p>
+        Explore selected travel destinations, relaxing stays, and journey ideas
+        for discovering beautiful places at a slower and more intentional pace.
+      </p>
+
+      <a
+        href="traveloff.html"
+        class="cpa-action-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Explore Travel Offers →
+      </a>
+
+    </div>
+
+
+    <h2>Walking Without a Fixed Agenda</h2>
+
+    <p>
+      Kyoto rewards travelers who leave space between planned destinations. Rather than moving quickly from one landmark to another, a slower walk allows small details to become part of the experience: the sound of footsteps on stone, the shadow of a roofline, or the changing texture of a narrow residential street.
+    </p>
+
+    <p>
+      Early hours can be especially suited to this rhythm. Streets and courtyards often feel more spacious before the day's movement builds, making it easier to appreciate the relationship between architecture, gardens, and surrounding quiet.
+    </p>
+
+    <p>
+      Tea houses offer another expression of this deliberate pace. The ceremony of preparing and sharing tea places attention on simple actions, materials, and gestures. Even outside a formal tea experience, the idea of pausing for something warm can become a useful counterpoint to a full day of walking.
+    </p>
+
+
+    <h2>Finding Stillness in the Details</h2>
+
+    <p>
+      The most memorable Kyoto moments do not always belong to its grandest landmarks. They can appear in modest spaces where composition feels almost accidental: a timber doorway beside a stone wall, a patch of moss beneath a maple, or a quiet garden framed by an open wooden threshold.
+    </p>
+
+    <p>
+      This is what makes the city's restrained aesthetic so compelling. It does not rely on excess. Instead, it encourages attention to texture, proportion, shadow, and the gentle marks left by time.
+    </p>
+
+    <p>
+      To experience Kyoto in this way is to accept a slower form of travel. Walk with fewer destinations, pause without needing to photograph every moment, and allow the city's quieter materials to become the story. In the spaces between its famous sights, Kyoto offers something much less tangible but equally memorable: room to observe.
+    </p>
+
+  </article>
+
+
+  <!-- AUTHOR BIO -->
+  <div class="author-box">
+
+    <div class="author-avatar">
+      <img
+        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+        alt="Author portrait"
+        loading="lazy"
+      >
+    </div>
+
+    <div class="author-info">
+      <h4>About the Author</h4>
+
+      <p>
+        Written by the editorial collective at Willow &amp; Heaven, exploring
+        the intersections of travel, architecture, cultural landscapes, and
+        mindful living in contemporary society.
+      </p>
+    </div>
+
+  </div>
+
+</main>
+
+
+<!-- FOOTER -->
+<script src="footer.js" defer></script>
+
+
+</body>
+</html>

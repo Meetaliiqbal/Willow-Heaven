@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+
+<title>The Warm Minimalist Palette: Earth Tones and Raw Textures — Willow &amp; Heaven</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root{
+  --bg:#f8f7f4;
+  --surface:#ffffff;
+  --surface-alt:#f1efe9;
+  --text:#1a1916;
+  --muted:#6b675e;
+  --accent:#9c6644;
+  --accent-hover:#7f5235;
+  --border:#e4e0d5;
+  --max:780px;
+}
+
+*, *::before, *::after{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  padding:0;
+  width:100%;
+  min-width:0;
+  overflow-x:hidden;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Plus Jakarta Sans',sans-serif;
+  line-height:1.8;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+a,
+button{
+  -webkit-tap-highlight-color:transparent;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:999;
+  width:100%;
+  background:rgba(248,247,244,.94);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+
+.header-inner{
+  width:100%;
+  max-width:1150px;
+  height:76px;
+  margin:0 auto;
+  padding:0 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand-logo{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:27px;
+  font-weight:400;
+  color:var(--text);
+  letter-spacing:.8px;
+  white-space:nowrap;
+}
+
+.brand-logo span{
+  color:var(--accent);
+  font-style:italic;
+}
+
+.header-nav{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  font-size:13px;
+  font-weight:500;
+  color:var(--muted);
+}
+
+.header-nav a{
+  color:var(--muted);
+  white-space:nowrap;
+  transition:color .2s ease;
+}
+
+.header-nav a:hover{
+  color:var(--accent);
+}
+
+.header-nav .highlight-btn{
+  background:var(--text);
+  color:#fff;
+  padding:9px 16px;
+  border-radius:6px;
+}
+
+.header-nav .highlight-btn:hover{
+  background:var(--accent);
+  color:#fff;
+}
+
+
+/* =========================
+   ARTICLE CONTAINER
+========================= */
+
+.article-container{
+  width:100%;
+  max-width:var(--max);
+  margin:0 auto;
+  padding:60px 24px 90px;
+}
+
+
+/* =========================
+   ARTICLE HEADER
+========================= */
+
+.article-header{
+  text-align:center;
+  margin-bottom:48px;
+}
+
+.article-tag{
+  display:inline-block;
+  color:var(--accent);
+  font-size:11.5px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  margin-bottom:16px;
+  padding:6px 18px;
+  border-radius:30px;
+  background:rgba(156, 102, 68, 0.08);
+  border:1px solid rgba(156, 102, 68, 0.18);
+}
+
+.article-header h1{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:clamp(38px, 5.5vw, 62px);
+  line-height:1.15;
+  font-weight:400;
+  color:var(--text);
+  margin:0 0 16px;
+}
+
+.article-subtitle{
+  max-width:620px;
+  margin:0 auto 24px;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.7;
+  font-weight:300;
+  font-style:italic;
+}
+
+.article-meta{
+  font-size:12.5px;
+  color:var(--muted);
+  letter-spacing:.5px;
+  font-weight:400;
+}
+
+
+/* =========================
+   FEATURED IMAGE
+========================= */
+
+.article-hero-img{
+  width:100%;
+  height:380px;
+  border-radius:15px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  margin-bottom:50px;
+  background:var(--surface-alt);
+}
+
+.article-hero-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+
+/* =========================
+   ARTICLE BODY CONTENT
+========================= */
+
+.article-body{
+  font-size:16px;
+  color:var(--text);
+  font-weight:300;
+}
+
+.article-body p{
+  margin:0 0 24px;
+  line-height:1.85;
+}
+
+.article-body h2{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:32px;
+  line-height:1.25;
+  font-weight:400;
+  color:var(--text);
+  margin:42px 0 16px;
+}
+
+.article-body blockquote{
+  margin:36px 0;
+  padding:24px 30px;
+  background:var(--surface);
+  border-left:3px solid var(--accent);
+  border-radius:0 12px 12px 0;
+  border-top:1px solid var(--border);
+  border-right:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+
+.article-body blockquote p{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:24px;
+  line-height:1.4;
+  color:var(--text);
+  font-style:italic;
+  margin:0;
+}
+
+.drop-cap::first-letter{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:72px;
+  float:left;
+  line-height:0.8;
+  padding-top:4px;
+  padding-right:12px;
+  padding-bottom:2px;
+  color:var(--accent);
+  font-style:normal;
+}
+
+
+/* =========================
+   IN-ARTICLE CPA CTA BOX
+========================= */
+
+.inline-cpa-box{
+  margin:48px 0;
+  padding:36px 32px;
+  background:linear-gradient(135deg,#f1efe9,#e8e4dc);
+  border:1px solid #d8d2c4;
+  border-radius:16px;
+  text-align:center;
+}
+
+.inline-cpa-tag{
+  color:var(--accent);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:8px;
+  display:inline-block;
+}
+
+.inline-cpa-box h3{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:28px;
+  line-height:1.2;
+  font-weight:400;
+  margin:0 0 10px;
+}
+
+.inline-cpa-box p{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.6;
+  margin:0 0 22px;
+  max-width:540px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.cpa-action-btn{
+  display:inline-block;
+  background:var(--text);
+  color:#fff;
+  padding:13px 26px;
+  border-radius:8px;
+  font-size:13.5px;
+  font-weight:500;
+  transition:background .2s ease, transform .2s ease;
+}
+
+.cpa-action-btn:hover{
+  background:var(--accent);
+  transform:translateY(-2px);
+}
+
+
+/* =========================
+   AUTHOR BIO BOX
+========================= */
+
+.author-box{
+  margin-top:60px;
+  padding:32px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+.author-avatar{
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  overflow:hidden;
+  flex-shrink:0;
+  background:var(--surface-alt);
+  border:1px solid var(--border);
+}
+
+.author-avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.author-info h4{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:22px;
+  font-weight:400;
+  margin:0 0 6px;
+}
+
+.author-info p{
+  margin:0;
+  color:var(--muted);
+  font-size:13.5px;
+  line-height:1.6;
+  font-weight:300;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer{
+  width:100%;
+  border-top:1px solid var(--border);
+  background:var(--surface-alt);
+  padding:50px 24px;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:24px;
+  margin-bottom:18px;
+  font-weight:500;
+}
+
+.footer-links a{
+  color:var(--muted);
+  transition:color .2s ease;
+}
+
+.footer-links a:hover{
+  color:var(--accent);
+}
+
+.disclaimer{
+  max-width:740px;
+  margin:16px auto 0;
+  font-size:11.5px;
+  color:#858074;
+  line-height:1.6;
+  font-weight:300;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:700px){
+
+  .header-inner{
+    height:68px;
+    padding:0 16px;
+  }
+
+  .brand-logo{
+    font-size:24px;
+  }
+
+  .header-nav{
+    gap:10px;
+    font-size:12px;
+  }
+
+  .header-nav a:not(.highlight-btn){
+    display:none;
+  }
+
+  .header-nav .highlight-btn{
+    padding:8px 13px;
+  }
+
+  .article-container{
+    padding:40px 16px 70px;
+  }
+
+  .article-hero-img{
+    height:240px;
+    margin-bottom:36px;
+  }
+
+  .inline-cpa-box{
+    padding:28px 20px;
+  }
+
+  .author-box{
+    flex-direction:column;
+    text-align:center;
+    padding:24px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+<script src="header.js" defer></script>
+
+
+<main class="article-container">
+
+  <!-- ARTICLE HEADER -->
+  <header class="article-header">
+    <span class="article-tag">Atelier &amp; Interior Architecture</span>
+    <h1>The Warm Minimalist Palette: Earth Tones and Raw Textures</h1>
+    <p class="article-subtitle">How to layer linen, travertine, and limewash finishes to create an organic sanctuary of calm and quiet luxury.</p>
+    <div class="article-meta">Published by Willow &amp; Heaven Archive · Original Design Essay</div>
+  </header>
+
+
+  <!-- FEATURED IMAGE -->
+  <div class="article-hero-img">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Warm minimalist interior architecture and natural textures" loading="lazy">
+  </div>
+
+
+  <!-- ARTICLE BODY -->
+  <article class="article-body">
+
+    <p class="drop-cap">True minimalism is not about sterile surfaces, cold whites, or the absence of soul; rather, it is the deliberate cultivation of space through honest, touchable materials. In an era dominated by digital noise and rapid visual consumption, the warm minimalist aesthetic offers a quiet architectural retreat. By anchoring our living spaces in grounded earth tones and raw textures, we transform a standard room into a living sanctuary of calm.</p>
+
+    <p>The secret to achieving quiet luxury lies in the interplay of light against imperfect surfaces. When synthetic shine is replaced by the matte chalkiness of limewash, the porous veins of honed travertine, and the relaxed weave of unbleached linen, rooms begin to breathe. The environment stops feeling curated for display and starts feeling lived-in, grounded, and deeply restorative.</p>
+
+    <blockquote>
+      <p>"Quiet luxury is found not in excess, but in the tactile honesty of materials that grow more beautiful with time."</p>
+    </blockquote>
+
+    <h2>The Architectural Trio: Limewash, Travertine, and Linen</h2>
+
+    <p>Creating depth within a restrained monochromatic palette requires layering finishes that catch natural light differently. Each element contributes a distinct vibrational weight to the room:</p>
+
+    <p><strong>1. Limewash Walls:</strong> Unlike flat synthetic emulsions, mineral-based limewash paints create a cloudy, cloud-like movement across vertical planes, shifting gently as daylight transitions from morning amber to evening dusk.</p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '5c63a7a89cecfd68333d4268eff805e6',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/5c63a7a89cecfd68333d4268eff805e6/invoke.js"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : 'ae4d7ee19b5fa944210e60c0765961c5',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/ae4d7ee19b5fa944210e60c0765961c5/invoke.js"></script>
+</div>
+
+
+
+    <p><strong>2. Honed Travertine:</strong> The porous, organic cavities of unfilled travertine introduce geological history into furniture and flooring, grounding the room with cool, tactile substance.</p>
+
+    <p><strong>3. Relaxed Linen:</strong> Draped across seating or windows, stone-washed linen softens the harder architectural lines of stone and plaster, inviting physical touch and effortless ease.</p>
+
+
+    <!-- IN-ARTICLE HOME DECOR OFFER CTA -->
+<div class="inline-cpa-box">
+  <span class="inline-cpa-tag">Home &amp; Interior Selection</span>
+
+  <h3>Discover Thoughtful Home Decor Finds</h3>
+
+  <p>
+    Explore a curated selection of decorative accents, practical home
+    essentials, and timeless pieces designed to bring more character
+    and comfort to your space.
+  </p>
+
+  <a 
+    href="decooff.html" 
+    class="cpa-action-btn"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <span>Explore Home &amp; Decor Finds</span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <line x1="5" y1="12" x2="19" y2="12"></line>
+      <polyline points="12 5 19 12 12 19"></polyline>
+    </svg>
+  </a>
+</div>
+
+
+    <h2>Designing for Stillness and Proportion</h2>
+
+    <p>To bring this tactile palette together successfully in your own space, focus on three fundamental pillars of warm minimalist design:</p>
+
+    <p><strong>1. Restrained Palette:</strong> Stick to a cohesive spectrum of chalk, sand, warm clay, and raw umber. Let nature's existing hues dictate the room's boundary.</p>
+
+    <p><strong>2. Negative Space:</strong> Allow walls and floors to remain open. Uncrowded rooms give the eye and mind room to rest, reinforcing the feeling of sanctuary.</p>
+
+    <p><strong>3. Tactile Contrast:</strong> Pair rough plaster with smooth wood, or heavy stone with airy textiles, creating a balanced sensory dialogue throughout the home.</p>
+
+    <p>Ultimately, a warm minimalist home is an exercise in intentional restraint. By letting raw textures and grounded earth tones speak for themselves, we build spaces that quiet the mind and celebrate the quiet luxury of everyday living.</p>
+
+  </article>
+
+
+  <!-- AUTHOR BIO -->
+  <div class="author-box">
+    <div class="author-avatar">
+      <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Author portrait" loading="lazy">
+    </div>
+    <div class="author-info">
+      <h4>About the Author</h4>
+      <p>Written by the editorial collective at Willow &amp; Heaven, exploring the intersections of interior architecture, material culture, and mindful living in contemporary society.</p>
+    </div>
+  </div>
+
+</main>
+
+
+<!-- FOOTER -->
+<script src="footer.js" defer></script>
+
+
+</body>
+</html>

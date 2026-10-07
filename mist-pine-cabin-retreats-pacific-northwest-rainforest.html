@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="referrer" content="no-referrer">
+
+<title>Mist and Pine: Cabin Retreats in the Pacific Northwest Rainforest — Willow &amp; Heaven</title>
+
+<meta
+  name="description"
+  content="A misty coastal escape among towering redwoods, mossy floors, and dramatic ocean cliffs."
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<style id="a2aju8">
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root{
+  --bg:#f8f7f4;
+  --surface:#ffffff;
+  --surface-alt:#f1efe9;
+  --text:#1a1916;
+  --muted:#6b675e;
+  --accent:#9c6644;
+  --accent-hover:#7f5235;
+  --border:#e4e0d5;
+  --max:780px;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-weight:400;
+  line-height:1.8;
+}
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(248,247,244,.94);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+}
+
+.header-inner{
+  max-width:1150px;
+  height:76px;
+  margin:0 auto;
+  padding:0 28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand-logo{
+  font-family:'Instrument Serif',serif;
+  font-size:27px;
+  color:var(--text);
+  text-decoration:none;
+  letter-spacing:-.3px;
+}
+
+.header-nav{
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+
+.header-nav a{
+  color:var(--text);
+  text-decoration:none;
+  font-size:13px;
+  font-weight:500;
+  transition:color .2s ease;
+}
+
+.header-nav a:hover{
+  color:var(--accent);
+}
+
+.article-container{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:60px 24px 90px;
+}
+
+.article-header{
+  text-align:center;
+  margin-bottom:44px;
+}
+
+.article-tag{
+  display:inline-block;
+  margin-bottom:18px;
+  color:var(--accent);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.article-header h1{
+  margin:0 auto 20px;
+  max-width:760px;
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(38px,6vw,62px);
+  font-weight:400;
+  line-height:1.02;
+  letter-spacing:-1.2px;
+}
+
+.article-subtitle{
+  max-width:650px;
+  margin:0 auto 18px;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.7;
+}
+
+.article-meta{
+  color:var(--muted);
+  font-size:12px;
+}
+
+.article-hero-img{
+  width:100%;
+  height:380px;
+  display:block;
+  object-fit:cover;
+  border-radius:15px;
+  margin-bottom:48px;
+}
+
+.article-body{
+  font-size:16px;
+}
+
+.article-body p{
+  margin:0 0 25px;
+}
+
+.article-body h2{
+  margin:52px 0 20px;
+  font-family:'Instrument Serif',serif;
+  font-size:34px;
+  font-weight:400;
+  line-height:1.15;
+  letter-spacing:-.4px;
+}
+
+.article-body blockquote{
+  margin:40px 0;
+  padding:8px 0 8px 25px;
+  border-left:2px solid var(--accent);
+  color:var(--muted);
+  font-family:'Instrument Serif',serif;
+  font-size:25px;
+  font-style:italic;
+  line-height:1.4;
+}
+
+.drop-cap::first-letter{
+  float:left;
+  margin:5px 9px 0 0;
+  font-family:'Instrument Serif',serif;
+  font-size:68px;
+  line-height:.75;
+  color:var(--accent);
+}
+
+.inline-cpa-box{
+  margin:45px 0;
+  padding:32px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:15px;
+}
+
+.inline-cpa-tag{
+  display:block;
+  margin-bottom:10px;
+  color:var(--accent);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+}
+
+.inline-cpa-box h3{
+  margin:0 0 12px;
+  font-family:'Instrument Serif',serif;
+  font-size:31px;
+  font-weight:400;
+  line-height:1.15;
+}
+
+.inline-cpa-box p{
+  margin-bottom:22px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.cpa-action-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:13px 20px;
+  background:var(--text);
+  color:#fff;
+  text-decoration:none;
+  border-radius:7px;
+  font-size:12px;
+  font-weight:600;
+  transition:background .2s ease;
+}
+
+.cpa-action-btn:hover{
+  background:var(--accent);
+}
+
+.author-box{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-top:65px;
+  padding-top:30px;
+  border-top:1px solid var(--border);
+}
+
+.author-box img{
+  width:62px;
+  height:62px;
+  flex:0 0 62px;
+  object-fit:cover;
+  border-radius:50%;
+}
+
+.author-box strong{
+  display:block;
+  margin-bottom:4px;
+  font-size:13px;
+}
+
+.author-box p{
+  margin:0;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.6;
+}
+
+@media(max-width:700px){
+
+  .header-inner{
+    height:68px;
+    padding:0 18px;
+  }
+
+  .brand-logo{
+    font-size:24px;
+  }
+
+  .header-nav{
+    gap:12px;
+  }
+
+  .header-nav a{
+    display:none;
+  }
+
+  .header-nav .highlight-btn{
+    display:inline-flex;
+  }
+
+  .article-container{
+    padding:42px 18px 65px;
+  }
+
+  .article-header{
+    margin-bottom:32px;
+  }
+
+  .article-header h1{
+    font-size:42px;
+  }
+
+  .article-subtitle{
+    font-size:14px;
+  }
+
+  .article-hero-img{
+    height:240px;
+    border-radius:12px;
+    margin-bottom:36px;
+  }
+
+  .article-body{
+    font-size:15px;
+    line-height:1.75;
+  }
+
+  .article-body h2{
+    margin-top:42px;
+    font-size:30px;
+  }
+
+  .article-body blockquote{
+    font-size:22px;
+    margin:32px 0;
+  }
+
+  .inline-cpa-box{
+    padding:25px;
+  }
+
+  .inline-cpa-box h3{
+    font-size:28px;
+  }
+
+  .author-box{
+    align-items:flex-start;
+  }
+
+}
+
+</style>
+
+<script src="header.js" defer></script>
+
+</head>
+
+<body>
+
+<main class="article-container">
+
+  <header class="article-header">
+
+    <div class="article-tag">
+      Forest &amp; Coastal Retreats
+    </div>
+
+    <h1>
+      Mist and Pine: Cabin Retreats in the Pacific Northwest Rainforest
+    </h1>
+
+    <p class="article-subtitle">
+      A misty coastal escape among towering redwoods, mossy floors, and dramatic ocean cliffs.
+    </p>
+
+    <div class="article-meta">
+      Willow &amp; Heaven · Travel
+    </div>
+
+  </header>
+
+  <img
+    class="article-hero-img"
+    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+    alt="Pacific Northwest"
+  >
+
+  <article class="article-body">
+
+    <p class="drop-cap">
+      There are landscapes where weather is not an interruption but part of the experience. Along the Pacific Northwest coast, mist moves through dense forests, rain darkens tree trunks, and low clouds soften the edges of the mountains. A cabin hidden within this environment can feel less like an escape from nature and more like a place to observe it closely.
+    </p>
+
+    <p>
+      The rainforest landscape is defined by scale and texture. Towering trees rise above moss-covered ground, fallen branches become part of the forest floor, and streams move quietly through shaded clearings. Even a short walk can feel immersive because the vegetation surrounds the path from every direction.
+    </p>
+
+    <h2>
+      A Cabin Among the Trees
+    </h2>
+
+    <p>
+      The appeal of a forest cabin is often its simplicity. Timber, stone, glass, and warm interior light create a natural contrast with the darker landscape outside. Large windows can turn changing weather into part of the room, while a sheltered porch provides a place to listen to rain without needing to leave.
+    </p>
+
+    <p>
+      A good retreat does not need an elaborate programme. A slow breakfast, a walk through the forest, and an afternoon spent reading beside a window can be enough. The surrounding landscape provides the activity.
+    </p>
+
+    <blockquote>
+      “Some places invite you to do less simply by making the world outside worth watching.”
+    </blockquote>
+
+    <h2>
+      Walking Through Moss and Pine
+    </h2>
+
+    <p>
+      Forest trails are particularly atmospheric after rainfall. Moss becomes more vivid, leaves collect droplets, and the air feels cool and dense. The pace naturally slows because there is always something to notice at ground level or above the path.
+    </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '5c63a7a89cecfd68333d4268eff805e6',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/5c63a7a89cecfd68333d4268eff805e6/invoke.js"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : 'ae4d7ee19b5fa944210e60c0765961c5',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/ae4d7ee19b5fa944210e60c0765961c5/invoke.js"></script>
+</div>
+
+
+
+    <p>
+      Rather than treating every walk as a route toward a destination, take time to observe the forest itself. The shapes of trunks, patterns in bark, small streams, and fallen trees create a landscape that changes with every few steps.
+    </p>
+
+    <div class="inline-cpa-box">
+
+      <span class="inline-cpa-tag">
+        Curated Travel Edition
+      </span>
+
+      <h3>
+        Discover the Nature Escape &amp; Getaway Collection
+      </h3>
+
+      <p>
+        Explore selected nature destinations, peaceful stays, and travel ideas designed for forest retreats, scenic escapes, and memorable journeys.
+      </p>
+
+      <a
+        class="cpa-action-btn"
+        href="traveloff.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Explore Travel Offers
+        <span aria-hidden="true">→</span>
+      </a>
+
+    </div>
+
+    <h2>
+      When the Coast Appears
+    </h2>
+
+    <p>
+      Forest and ocean meet dramatically along sections of the Pacific Northwest coast. Trails can move from dense woodland toward open viewpoints where cliffs, beaches, and dark water suddenly replace the enclosed atmosphere of the trees.
+    </p>
+
+    <p>
+      These transitions are part of what makes the region compelling. The forest feels intimate and sheltered, while the coastline introduces a much larger sense of scale. Mist can connect the two environments, hiding distant features and revealing them gradually as conditions change.
+    </p>
+
+    <h2>
+      The Comfort of Weather
+    </h2>
+
+    <p>
+      Rainy weather is often considered something to escape while travelling, but a cabin retreat changes the perspective. Wet conditions become a reason to stay indoors, make something warm, and watch the landscape transform outside the window.
+    </p>
+
+    <p>
+      Dry days offer their own reward, particularly for longer walks, but changing weather keeps the experience varied. A morning of rain followed by a clearing sky can make the forest feel completely different within the same afternoon.
+    </p>
+
+    <h2>
+      A Retreat Without Distraction
+    </h2>
+
+    <p>
+      The deepest appeal of these places is the reduction of unnecessary noise. There may be no reason to check the time constantly or move quickly from one attraction to another. The forest establishes its own rhythm through rainfall, wind, birdsong, and the changing light.
+    </p>
+
+    <p>
+      By evening, the cabin becomes a natural centre of the experience. Outside, the forest grows darker and quieter. Inside, warm light and simple comforts create a sheltered space for reflection. It is a kind of travel that asks very little from the traveller and gives attention back in return.
+    </p>
+
+    <div class="author-box">
+
+      <img
+        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+        alt="Author portrait"
+      >
+
+      <div>
+        <strong>Willow &amp; Heaven Editorial</strong>
+
+        <p>
+          Written by the editorial collective at Willow &amp; Heaven, exploring the intersections of travel, landscape, architecture, and mindful living in contemporary journeys.
+        </p>
+      </div>
+
+    </div>
+
+  </article>
+
+</main>
+
+<script src="footer.js" defer></script>
+
+</body>
+</html>

@@ -63,16 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   /* =========================
-     HEADER CSS (Matches Willow & Heaven Atelier Theme)
+     HEADER CSS
   ========================= */
 
   const headerCSS = document.createElement("style");
 
   headerCSS.textContent = `
-
-    /* =========================
-       HEADER
-    ========================= */
 
     .site-header{
       position:sticky;
@@ -80,9 +76,9 @@ document.addEventListener("DOMContentLoaded", function () {
       z-index:9999;
       width:100%;
       background:rgba(248, 247, 244, 0.90);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid #e4e0d5;
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+      border-bottom:1px solid #e4e0d5;
     }
 
     .header-inner{
@@ -156,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
       padding:11px 22px;
       border-radius:50px;
       font-weight:500;
-      transition:background .2s ease, transform .2s ease;
+      transition:background .2s ease,transform .2s ease;
     }
 
     .header-nav .highlight-btn:hover{
@@ -192,6 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       position:relative;
       z-index:10002;
+
       box-shadow:0 4px 12px rgba(0,0,0,0.03);
     }
 
@@ -213,7 +210,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ========================= */
 
     .mobile-nav{
-
       display:block;
 
       position:fixed;
@@ -241,13 +237,15 @@ document.addEventListener("DOMContentLoaded", function () {
       transform:translateX(100%);
 
       transition:
-        transform .3s cubic-bezier(0.16, 1, 0.3, 1);
+        transform .3s cubic-bezier(0.16,1,0.3,1);
 
       z-index:10000;
     }
 
 
-    /* Drawer visible */
+    /* =========================
+       DRAWER VISIBLE
+    ========================= */
 
     .site-header.menu-open .mobile-nav{
       transform:translateX(0);
@@ -303,11 +301,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =========================
-       MEMBER VAULT
+       CURATED ARCHIVE
     ========================= */
 
     .mobile-nav .mobile-vault-btn{
-
       margin-top:28px;
 
       padding:14px 20px;

@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+
+<title>Volcanic Solitude: Black Sand Beaches and Hot Springs in Iceland — Willow &amp; Heaven</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root{
+  --bg:#f8f7f4;
+  --surface:#ffffff;
+  --surface-alt:#f1efe9;
+  --text:#1a1916;
+  --muted:#6b675e;
+  --accent:#9c6644;
+  --accent-hover:#7f5235;
+  --border:#e4e0d5;
+  --max:780px;
+}
+
+*, *::before, *::after{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  padding:0;
+  width:100%;
+  min-width:0;
+  overflow-x:hidden;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Plus Jakarta Sans',sans-serif;
+  line-height:1.8;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+a,
+button{
+  -webkit-tap-highlight-color:transparent;
+}
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:999;
+  width:100%;
+  background:rgba(248,247,244,.94);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+
+.header-inner{
+  width:100%;
+  max-width:1150px;
+  height:76px;
+  margin:0 auto;
+  padding:0 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand-logo{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:27px;
+  font-weight:400;
+  color:var(--text);
+  letter-spacing:.8px;
+  white-space:nowrap;
+}
+
+.brand-logo span{
+  color:var(--accent);
+  font-style:italic;
+}
+
+.header-nav{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  font-size:13px;
+  font-weight:500;
+  color:var(--muted);
+}
+
+.header-nav a{
+  color:var(--muted);
+  white-space:nowrap;
+  transition:color .2s ease;
+}
+
+.header-nav a:hover{
+  color:var(--accent);
+}
+
+.header-nav .highlight-btn{
+  background:var(--text);
+  color:#fff;
+  padding:9px 16px;
+  border-radius:6px;
+}
+
+.header-nav .highlight-btn:hover{
+  background:var(--accent);
+  color:#fff;
+}
+
+.article-container{
+  width:100%;
+  max-width:var(--max);
+  margin:0 auto;
+  padding:60px 24px 90px;
+}
+
+.article-header{
+  text-align:center;
+  margin-bottom:48px;
+}
+
+.article-tag{
+  display:inline-block;
+  color:var(--accent);
+  font-size:11.5px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  margin-bottom:16px;
+  padding:6px 18px;
+  border-radius:30px;
+  background:rgba(156,102,68,.08);
+  border:1px solid rgba(156,102,68,.18);
+}
+
+.article-header h1{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:clamp(38px,5.5vw,62px);
+  line-height:1.15;
+  font-weight:400;
+  color:var(--text);
+  margin:0 0 16px;
+}
+
+.article-subtitle{
+  max-width:620px;
+  margin:0 auto 24px;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.7;
+  font-weight:300;
+  font-style:italic;
+}
+
+.article-meta{
+  font-size:12.5px;
+  color:var(--muted);
+  letter-spacing:.5px;
+  font-weight:400;
+}
+
+.article-hero-img{
+  width:100%;
+  height:380px;
+  border-radius:15px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  margin-bottom:50px;
+  background:var(--surface-alt);
+}
+
+.article-hero-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.article-body{
+  font-size:16px;
+  color:var(--text);
+  font-weight:300;
+}
+
+.article-body p{
+  margin:0 0 24px;
+  line-height:1.85;
+}
+
+.article-body h2{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:32px;
+  line-height:1.25;
+  font-weight:400;
+  color:var(--text);
+  margin:42px 0 16px;
+}
+
+.article-body blockquote{
+  margin:36px 0;
+  padding:24px 30px;
+  background:var(--surface);
+  border-left:3px solid var(--accent);
+  border-radius:0 12px 12px 0;
+  border-top:1px solid var(--border);
+  border-right:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+
+.article-body blockquote p{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:24px;
+  line-height:1.4;
+  color:var(--text);
+  font-style:italic;
+  margin:0;
+}
+
+.drop-cap::first-letter{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:72px;
+  float:left;
+  line-height:.8;
+  padding-top:4px;
+  padding-right:12px;
+  padding-bottom:2px;
+  color:var(--accent);
+  font-style:normal;
+}
+
+.inline-cpa-box{
+  margin:48px 0;
+  padding:36px 32px;
+  background:linear-gradient(135deg,#f1efe9,#e8e4dc);
+  border:1px solid #d8d2c4;
+  border-radius:16px;
+  text-align:center;
+}
+
+.inline-cpa-tag{
+  color:var(--accent);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:8px;
+  display:inline-block;
+}
+
+.inline-cpa-box h3{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:28px;
+  line-height:1.2;
+  font-weight:400;
+  margin:0 0 10px;
+}
+
+.inline-cpa-box p{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.6;
+  margin:0 0 22px;
+  max-width:540px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.cpa-action-btn{
+  display:inline-block;
+  background:var(--text);
+  color:#fff;
+  padding:13px 26px;
+  border-radius:8px;
+  font-size:13.5px;
+  font-weight:500;
+  transition:background .2s ease,transform .2s ease;
+}
+
+.cpa-action-btn:hover{
+  background:var(--accent);
+  transform:translateY(-2px);
+}
+
+.author-box{
+  margin-top:60px;
+  padding:32px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+.author-avatar{
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  overflow:hidden;
+  flex-shrink:0;
+  background:var(--surface-alt);
+  border:1px solid var(--border);
+}
+
+.author-avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.author-info h4{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:22px;
+  font-weight:400;
+  margin:0 0 6px;
+}
+
+.author-info p{
+  margin:0;
+  color:var(--muted);
+  font-size:13.5px;
+  line-height:1.6;
+  font-weight:300;
+}
+
+.site-footer{
+  width:100%;
+  border-top:1px solid var(--border);
+  background:var(--surface-alt);
+  padding:50px 24px;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:24px;
+  margin-bottom:18px;
+  font-weight:500;
+}
+
+.footer-links a{
+  color:var(--muted);
+  transition:color .2s ease;
+}
+
+.footer-links a:hover{
+  color:var(--accent);
+}
+
+.disclaimer{
+  max-width:740px;
+  margin:16px auto 0;
+  font-size:11.5px;
+  color:#858074;
+  line-height:1.6;
+  font-weight:300;
+}
+
+@media(max-width:700px){
+
+  .header-inner{
+    height:68px;
+    padding:0 16px;
+  }
+
+  .brand-logo{
+    font-size:24px;
+  }
+
+  .header-nav{
+    gap:10px;
+    font-size:12px;
+  }
+
+  .header-nav a:not(.highlight-btn){
+    display:none;
+  }
+
+  .header-nav .highlight-btn{
+    padding:8px 13px;
+  }
+
+  .article-container{
+    padding:40px 16px 70px;
+  }
+
+  .article-hero-img{
+    height:240px;
+    margin-bottom:36px;
+  }
+
+  .inline-cpa-box{
+    padding:28px 20px;
+  }
+
+  .author-box{
+    flex-direction:column;
+    text-align:center;
+    padding:24px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<script src="header.js" defer></script>
+
+<main class="article-container">
+
+  <header class="article-header">
+    <span class="article-tag">Iceland &amp; Elemental Landscapes</span>
+
+    <h1>Volcanic Solitude: Black Sand Beaches and Hot Springs in Iceland</h1>
+
+    <p class="article-subtitle">
+      Embracing the raw, untamed elements across Iceland's dramatic geothermal landscapes.
+    </p>
+
+    <div class="article-meta">
+      Published by Willow &amp; Heaven Archive · Original Iceland Essay
+    </div>
+  </header>
+
+  <div class="article-hero-img">
+    <img
+      src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80"
+      alt="Dramatic Icelandic landscape with volcanic terrain"
+      loading="lazy"
+    >
+  </div>
+
+  <article class="article-body">
+
+    <p class="drop-cap">
+      Iceland has a way of making the landscape feel larger than expected. Dark volcanic ground, open coastlines, distant mountains, and geothermal water combine into scenery that often feels both severe and deeply calming. The island's beauty is not built around softness; it comes from the contrast between powerful natural elements and the quiet spaces between them.
+    </p>
+
+    <p>
+      Along the southern coast, black sand creates a striking visual relationship with the ocean. The dark shore, pale sky, and shifting water form a restrained palette that changes continuously with the weather. Farther inland, geothermal landscapes introduce another expression of the island's elemental character.
+    </p>
+
+    <blockquote>
+      <p>
+        "Iceland does not ask the landscape to be gentle; it asks you to stand still long enough to notice its strength."
+      </p>
+    </blockquote>
+
+    <h2>The Beauty of Volcanic Contrast</h2>
+
+    <p>
+      The Icelandic landscape becomes especially compelling when contrasting textures appear together. Rough volcanic rock, smooth water, mist, snow, and moss can occupy the same view, creating a scene that feels almost abstract.
+    </p>
+
+    <p>
+      <strong>1. Black Sand Shores:</strong> Dark coastal sands create a dramatic foundation for wide ocean views and changing northern light.
+    </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '5c63a7a89cecfd68333d4268eff805e6',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/5c63a7a89cecfd68333d4268eff805e6/invoke.js"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : 'ae4d7ee19b5fa944210e60c0765961c5',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/ae4d7ee19b5fa944210e60c0765961c5/invoke.js"></script>
+</div>
+
+
+
+    <p>
+      <strong>2. Geothermal Warmth:</strong> Hot springs provide a striking contrast to the cooler atmosphere, offering moments of warmth within a landscape defined by exposed elements.
+    </p>
+
+    <p>
+      <strong>3. Open Horizons:</strong> The broad scale of Iceland encourages travelers to look beyond individual landmarks and appreciate the relationship between sky, terrain, and distance.
+    </p>
+
+    <div class="inline-cpa-box">
+
+      <span class="inline-cpa-tag">Curated Travel Edition</span>
+
+      <h3>Discover Your Next Wild Escape</h3>
+
+      <p>
+        Explore selected destinations, peaceful stays, and travel ideas for
+        scenic landscapes, outdoor journeys, and memorable escapes.
+      </p>
+
+      <a
+        href="traveloff.html"
+        class="cpa-action-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Explore Travel Offers →
+      </a>
+
+    </div>
+
+    <h2>Making Space for the Weather</h2>
+
+    <p>
+      Iceland is a destination where weather naturally becomes part of the experience. Rather than treating changing conditions as an inconvenience, a slower journey can allow the landscape to reveal different moods throughout the day.
+    </p>
+
+    <p>
+      Mist can soften distant mountains, sunlight can transform dark surfaces, and passing clouds can alter the entire character of a coastline. This constant movement makes repeated observation more rewarding than trying to capture one perfect view.
+    </p>
+
+    <h2>A Journey Shaped by the Elements</h2>
+
+    <p>
+      The most memorable Icelandic experiences often come from the balance between exposure and retreat. A long stretch beside a windswept coast can be followed by a quiet indoor space, while a day spent exploring volcanic terrain can end with the simple comfort of warm water.
+    </p>
+
+    <p>
+      That rhythm creates a distinctive kind of travel. Instead of separating nature from relaxation, Iceland allows both to become part of the same journey.
+    </p>
+
+    <p>
+      Volcanic solitude ultimately offers a reminder that beauty does not always need to be delicate. Sometimes it exists in dark sand, rough stone, cold air, and immense open space. To experience Iceland slowly is to let those elements speak for themselves.
+    </p>
+
+  </article>
+
+  <div class="author-box">
+
+    <div class="author-avatar">
+      <img
+        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+        alt="Author portrait"
+        loading="lazy"
+      >
+    </div>
+
+    <div class="author-info">
+      <h4>About the Author</h4>
+
+      <p>
+        Written by the editorial collective at Willow &amp; Heaven, exploring
+        the intersections of travel, landscapes, cultural spaces, and mindful
+        living in contemporary society.
+      </p>
+    </div>
+
+  </div>
+
+</main>
+
+<script src="footer.js" defer></script>
+
+</body>
+</html>

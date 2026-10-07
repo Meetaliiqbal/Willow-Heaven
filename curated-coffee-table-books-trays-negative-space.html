@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+
+<title>The Curated Coffee Table: Books, Trays, and Negative Space — Willow &amp; Heaven</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root{
+  --bg:#f8f7f4;
+  --surface:#ffffff;
+  --surface-alt:#f1efe9;
+  --text:#1a1916;
+  --muted:#6b675e;
+  --accent:#9c6644;
+  --accent-hover:#7f5235;
+  --border:#e4e0d5;
+  --max:780px;
+}
+
+*, *::before,*::after{box-sizing:border-box;}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  padding:0;
+  width:100%;
+  min-width:0;
+  overflow-x:hidden;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Plus Jakarta Sans',sans-serif;
+  line-height:1.8;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+a,button{
+  -webkit-tap-highlight-color:transparent;
+}
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:999;
+  width:100%;
+  background:rgba(248,247,244,.94);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+
+.header-inner{
+  width:100%;
+  max-width:1150px;
+  height:76px;
+  margin:0 auto;
+  padding:0 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand-logo{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:27px;
+  font-weight:400;
+  color:var(--text);
+  letter-spacing:.8px;
+  white-space:nowrap;
+}
+
+.brand-logo span{
+  color:var(--accent);
+  font-style:italic;
+}
+
+.header-nav{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  font-size:13px;
+  font-weight:500;
+  color:var(--muted);
+}
+
+.header-nav a{
+  color:var(--muted);
+  white-space:nowrap;
+  transition:color .2s ease;
+}
+
+.header-nav a:hover{
+  color:var(--accent);
+}
+
+.header-nav .highlight-btn{
+  background:var(--text);
+  color:#fff;
+  padding:9px 16px;
+  border-radius:6px;
+}
+
+.header-nav .highlight-btn:hover{
+  background:var(--accent);
+  color:#fff;
+}
+
+.article-container{
+  width:100%;
+  max-width:var(--max);
+  margin:0 auto;
+  padding:60px 24px 90px;
+}
+
+.article-header{
+  text-align:center;
+  margin-bottom:48px;
+}
+
+.article-tag{
+  display:inline-block;
+  color:var(--accent);
+  font-size:11.5px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  margin-bottom:16px;
+  padding:6px 18px;
+  border-radius:30px;
+  background:rgba(156,102,68,.08);
+  border:1px solid rgba(156,102,68,.18);
+}
+
+.article-header h1{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:clamp(38px,5.5vw,62px);
+  line-height:1.15;
+  font-weight:400;
+  color:var(--text);
+  margin:0 0 16px;
+}
+
+.article-subtitle{
+  max-width:620px;
+  margin:0 auto 24px;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.7;
+  font-weight:300;
+  font-style:italic;
+}
+
+.article-meta{
+  font-size:12.5px;
+  color:var(--muted);
+  letter-spacing:.5px;
+  font-weight:400;
+}
+
+.article-hero-img{
+  width:100%;
+  height:380px;
+  border-radius:15px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  margin-bottom:50px;
+  background:var(--surface-alt);
+}
+
+.article-hero-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.article-body{
+  font-size:16px;
+  color:var(--text);
+  font-weight:300;
+}
+
+.article-body p{
+  margin:0 0 24px;
+  line-height:1.85;
+}
+
+.article-body h2{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:32px;
+  line-height:1.25;
+  font-weight:400;
+  color:var(--text);
+  margin:42px 0 16px;
+}
+
+.article-body blockquote{
+  margin:36px 0;
+  padding:24px 30px;
+  background:var(--surface);
+  border-left:3px solid var(--accent);
+  border-radius:0 12px 12px 0;
+  border-top:1px solid var(--border);
+  border-right:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+
+.article-body blockquote p{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:24px;
+  line-height:1.4;
+  color:var(--text);
+  font-style:italic;
+  margin:0;
+}
+
+.drop-cap::first-letter{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:72px;
+  float:left;
+  line-height:.8;
+  padding-top:4px;
+  padding-right:12px;
+  padding-bottom:2px;
+  color:var(--accent);
+  font-style:normal;
+}
+
+.inline-cpa-box{
+  margin:48px 0;
+  padding:36px 32px;
+  background:linear-gradient(135deg,#f1efe9,#e8e4dc);
+  border:1px solid #d8d2c4;
+  border-radius:16px;
+  text-align:center;
+}
+
+.inline-cpa-tag{
+  color:var(--accent);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:8px;
+  display:inline-block;
+}
+
+.inline-cpa-box h3{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:28px;
+  line-height:1.2;
+  font-weight:400;
+  margin:0 0 10px;
+}
+
+.inline-cpa-box p{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.6;
+  margin:0 0 22px;
+  max-width:540px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.cpa-action-btn{
+  display:inline-block;
+  background:var(--text);
+  color:#fff;
+  padding:13px 26px;
+  border-radius:8px;
+  font-size:13.5px;
+  font-weight:500;
+  transition:background .2s ease,transform .2s ease;
+}
+
+.cpa-action-btn:hover{
+  background:var(--accent);
+  transform:translateY(-2px);
+}
+
+.author-box{
+  margin-top:60px;
+  padding:32px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+.author-avatar{
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  overflow:hidden;
+  flex-shrink:0;
+  background:var(--surface-alt);
+  border:1px solid var(--border);
+}
+
+.author-avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.author-info h4{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:22px;
+  font-weight:400;
+  margin:0 0 6px;
+}
+
+.author-info p{
+  margin:0;
+  color:var(--muted);
+  font-size:13.5px;
+  line-height:1.6;
+  font-weight:300;
+}
+
+.site-footer{
+  width:100%;
+  border-top:1px solid var(--border);
+  background:var(--surface-alt);
+  padding:50px 24px;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:24px;
+  margin-bottom:18px;
+  font-weight:500;
+}
+
+.footer-links a{
+  color:var(--muted);
+  transition:color .2s ease;
+}
+
+.footer-links a:hover{
+  color:var(--accent);
+}
+
+.disclaimer{
+  max-width:740px;
+  margin:16px auto 0;
+  font-size:11.5px;
+  color:#858074;
+  line-height:1.6;
+  font-weight:300;
+}
+
+@media(max-width:700px){
+
+  .header-inner{
+    height:68px;
+    padding:0 16px;
+  }
+
+  .brand-logo{
+    font-size:24px;
+  }
+
+  .header-nav{
+    gap:10px;
+    font-size:12px;
+  }
+
+  .header-nav a:not(.highlight-btn){
+    display:none;
+  }
+
+  .header-nav .highlight-btn{
+    padding:8px 13px;
+  }
+
+  .article-container{
+    padding:40px 16px 70px;
+  }
+
+  .article-hero-img{
+    height:240px;
+    margin-bottom:36px;
+  }
+
+  .inline-cpa-box{
+    padding:28px 20px;
+  }
+
+  .author-box{
+    flex-direction:column;
+    text-align:center;
+    padding:24px;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<script src="header.js" defer></script>
+
+<main class="article-container">
+
+  <header class="article-header">
+
+    <span class="article-tag">Styling &amp; Material Culture</span>
+
+    <h1>The Curated Coffee Table: Books, Trays, and Negative Space</h1>
+
+    <p class="article-subtitle">
+      Mastering the balance of height, texture, and editorial restraint when styling central living room surfaces.
+    </p>
+
+    <div class="article-meta">
+      Published by Willow &amp; Heaven Archive · Original Design Essay
+    </div>
+
+  </header>
+
+  <div class="article-hero-img">
+
+    <img
+      src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80"
+      alt="Thoughtfully styled coffee table in a calm living room"
+      loading="lazy"
+    >
+
+  </div>
+
+  <article class="article-body">
+
+    <p class="drop-cap">
+      The coffee table occupies a curious position in the home. It is practical enough to hold a cup, a book, or a pair of glasses, yet central enough to influence the character of an entire living room. When thoughtfully arranged, it becomes a small landscape of objects rather than a surface that simply happens to be filled.
+    </p>
+
+    <p>
+      Good styling begins with restraint. A few objects with different proportions and textures can create more visual interest than a crowded arrangement. Books establish weight, trays create boundaries, and negative space gives the composition enough room to breathe.
+    </p>
+
+    <blockquote>
+      <p>
+        “The beauty of a curated surface is found as much in what remains empty as in what is displayed.”
+      </p>
+    </blockquote>
+
+    <h2>Start With One Strong Foundation</h2>
+
+    <p>
+      A stack of books is often the easiest foundation for a coffee table composition. Large-format volumes provide a broad visual base and introduce a sense of depth without requiring elaborate decoration. Their covers can also quietly reference the colours and materials already present in the room.
+    </p>
+
+    <p>
+      Rather than creating a tall tower, two or three books can establish a low horizontal layer. This keeps the overall arrangement connected to the tabletop while leaving enough open space for practical use.
+    </p>
+
+    <p>
+      A tray can perform a similar architectural function. It gathers smaller objects into one defined area, making the arrangement feel intentional while allowing everything to be moved easily when the table is needed for everyday activities.
+    </p>
+
+    <div class="inline-cpa-box">
+
+      <span class="inline-cpa-tag">Home &amp; Interior Selection</span>
+
+      <h3>Find Pieces for a Considered Living Space</h3>
+
+      <p>
+        Browse thoughtfully selected home accents and everyday decor pieces that can bring texture, function, and quiet character to your interiors.
+      </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '5c63a7a89cecfd68333d4268eff805e6',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/5c63a7a89cecfd68333d4268eff805e6/invoke.js"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : 'ae4d7ee19b5fa944210e60c0765961c5',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/ae4d7ee19b5fa944210e60c0765961c5/invoke.js"></script>
+</div>
+
+
+
+      <a
+        class="cpa-action-btn"
+        href="decooff.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Explore Home &amp; Decor Finds
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          style="vertical-align:-2px;margin-left:6px;"
+        >
+          <path d="M5 12h14"></path>
+          <path d="M13 6l6 6-6 6"></path>
+        </svg>
+      </a>
+
+    </div>
+
+    <h2>Build Contrast Through Height and Texture</h2>
+
+    <p>
+      Once the foundation is established, the next consideration is variation. Objects that share exactly the same height can create a rigid visual line, while dramatic differences can make the arrangement feel disconnected. A gentle progression of heights usually creates the most natural rhythm.
+    </p>
+
+    <p>
+      A low stack of books can sit beside a ceramic vessel, while a small sculptural object introduces another point of interest. The contrast does not need to be dramatic. A difference in surface texture, silhouette, or material can be enough to prevent the arrangement from becoming visually flat.
+    </p>
+
+    <p>
+      Natural materials work particularly well in restrained interiors. Paper, wood, stone, ceramic, and woven fibres each catch light differently. Their subtle differences become more noticeable when the surrounding palette remains quiet.
+    </p>
+
+    <h2>The Importance of Negative Space</h2>
+
+    <p>
+      Perhaps the most overlooked element of coffee table styling is empty space. It provides the visual pause that allows individual objects to be understood. Without it, even beautiful pieces can become part of an indistinct cluster.
+    </p>
+
+    <p>
+      Leaving a generous portion of the tabletop clear also preserves the practical purpose of the furniture. A coffee table should still accommodate conversation, reading, serving, and the ordinary movements of daily life.
+    </p>
+
+    <p>
+      Negative space also changes how the room feels. Open areas around a carefully selected group of objects make the entire living space appear calmer, while densely decorated surfaces can introduce a sense of visual pressure.
+    </p>
+
+    <h2>Styling for Everyday Life</h2>
+
+    <p>
+      The best coffee table arrangements are not museum displays. They are designed to be touched, moved, and occasionally disrupted. A book should be easy to pick up. A tray should be light enough to move. A vessel should sit securely rather than demanding constant adjustment.
+    </p>
+
+    <p>
+      This practical quality is part of what makes a curated interior feel authentic. The arrangement can remain visually composed while still accommodating the small unpredictabilities of everyday life.
+    </p>
+
+    <p>
+      Over time, the objects may change naturally. A book moves from one room to another, flowers are replaced, and seasonal pieces appear briefly. The composition remains coherent because its underlying principles are simple: proportion, texture, function, and space.
+    </p>
+
+    <h2>A Small Composition With a Larger Effect</h2>
+
+    <p>
+      A coffee table may be only one small element within a room, but it sits at the centre of daily attention. Styling it thoughtfully can therefore influence the atmosphere of the entire living area.
+    </p>
+
+    <p>
+      The aim is not perfection. It is clarity. Choose a few pieces that feel useful or meaningful, give them room to exist, and allow the surrounding emptiness to become part of the design.
+    </p>
+
+    <p>
+      In a considered home, even an ordinary tabletop can become a quiet expression of how we want to live: with enough objects to make a space personal, and enough space to let those objects be appreciated.
+    </p>
+
+  </article>
+
+  <div class="author-box">
+
+    <div class="author-avatar">
+
+      <img
+        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+        alt="Author portrait"
+        loading="lazy"
+      >
+
+    </div>
+
+    <div class="author-info">
+
+      <h4>About the Author</h4>
+
+      <p>
+        Written by the editorial collective at Willow &amp; Heaven, exploring the intersections of interior architecture, material culture, and mindful living in contemporary society.
+      </p>
+
+    </div>
+
+  </div>
+
+</main>
+
+<script src="footer.js" defer></script>
+
+</body>
+</html>

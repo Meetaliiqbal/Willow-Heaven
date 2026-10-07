@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+
+<title>Curating a Minimalist Gallery Wall Without Visual Chaos — Willow &amp; Heaven</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root{
+  --bg:#f8f7f4;
+  --surface:#ffffff;
+  --surface-alt:#f1efe9;
+  --text:#1a1916;
+  --muted:#6b675e;
+  --accent:#9c6644;
+  --accent-hover:#7f5235;
+  --border:#e4e0d5;
+  --max:780px;
+}
+
+*, *::before,*::after{box-sizing:border-box;}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  padding:0;
+  width:100%;
+  min-width:0;
+  overflow-x:hidden;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Plus Jakarta Sans',sans-serif;
+  line-height:1.8;
+}
+
+a{color:inherit;text-decoration:none;}
+a,button{-webkit-tap-highlight-color:transparent;}
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:999;
+  width:100%;
+  background:rgba(248,247,244,.94);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+
+.header-inner{
+  width:100%;
+  max-width:1150px;
+  height:76px;
+  margin:0 auto;
+  padding:0 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand-logo{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:27px;
+  font-weight:400;
+  color:var(--text);
+  letter-spacing:.8px;
+  white-space:nowrap;
+}
+
+.brand-logo span{
+  color:var(--accent);
+  font-style:italic;
+}
+
+.header-nav{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  font-size:13px;
+  font-weight:500;
+  color:var(--muted);
+}
+
+.header-nav a{
+  color:var(--muted);
+  white-space:nowrap;
+  transition:color .2s ease;
+}
+
+.header-nav a:hover{color:var(--accent);}
+
+.header-nav .highlight-btn{
+  background:var(--text);
+  color:#fff;
+  padding:9px 16px;
+  border-radius:6px;
+}
+
+.header-nav .highlight-btn:hover{
+  background:var(--accent);
+  color:#fff;
+}
+
+.article-container{
+  width:100%;
+  max-width:var(--max);
+  margin:0 auto;
+  padding:60px 24px 90px;
+}
+
+.article-header{
+  text-align:center;
+  margin-bottom:48px;
+}
+
+.article-tag{
+  display:inline-block;
+  color:var(--accent);
+  font-size:11.5px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  margin-bottom:16px;
+  padding:6px 18px;
+  border-radius:30px;
+  background:rgba(156,102,68,.08);
+  border:1px solid rgba(156,102,68,.18);
+}
+
+.article-header h1{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:clamp(38px,5.5vw,62px);
+  line-height:1.15;
+  font-weight:400;
+  color:var(--text);
+  margin:0 0 16px;
+}
+
+.article-subtitle{
+  max-width:620px;
+  margin:0 auto 24px;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.7;
+  font-weight:300;
+  font-style:italic;
+}
+
+.article-meta{
+  font-size:12.5px;
+  color:var(--muted);
+  letter-spacing:.5px;
+  font-weight:400;
+}
+
+.article-hero-img{
+  width:100%;
+  height:380px;
+  border-radius:15px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  margin-bottom:50px;
+  background:var(--surface-alt);
+}
+
+.article-hero-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.article-body{
+  font-size:16px;
+  color:var(--text);
+  font-weight:300;
+}
+
+.article-body p{
+  margin:0 0 24px;
+  line-height:1.85;
+}
+
+.article-body h2{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:32px;
+  line-height:1.25;
+  font-weight:400;
+  color:var(--text);
+  margin:42px 0 16px;
+}
+
+.article-body blockquote{
+  margin:36px 0;
+  padding:24px 30px;
+  background:var(--surface);
+  border-left:3px solid var(--accent);
+  border-radius:0 12px 12px 0;
+  border-top:1px solid var(--border);
+  border-right:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+
+.article-body blockquote p{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:24px;
+  line-height:1.4;
+  color:var(--text);
+  font-style:italic;
+  margin:0;
+}
+
+.drop-cap::first-letter{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:72px;
+  float:left;
+  line-height:.8;
+  padding-top:4px;
+  padding-right:12px;
+  padding-bottom:2px;
+  color:var(--accent);
+  font-style:normal;
+}
+
+.inline-cpa-box{
+  margin:48px 0;
+  padding:36px 32px;
+  background:linear-gradient(135deg,#f1efe9,#e8e4dc);
+  border:1px solid #d8d2c4;
+  border-radius:16px;
+  text-align:center;
+}
+
+.inline-cpa-tag{
+  color:var(--accent);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:8px;
+  display:inline-block;
+}
+
+.inline-cpa-box h3{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:28px;
+  line-height:1.2;
+  font-weight:400;
+  margin:0 0 10px;
+}
+
+.inline-cpa-box p{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.6;
+  margin:0 0 22px;
+  max-width:540px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.cpa-action-btn{
+  display:inline-block;
+  background:var(--text);
+  color:#fff;
+  padding:13px 26px;
+  border-radius:8px;
+  font-size:13.5px;
+  font-weight:500;
+  transition:background .2s ease,transform .2s ease;
+}
+
+.cpa-action-btn:hover{
+  background:var(--accent);
+  transform:translateY(-2px);
+}
+
+.author-box{
+  margin-top:60px;
+  padding:32px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+.author-avatar{
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  overflow:hidden;
+  flex-shrink:0;
+  background:var(--surface-alt);
+  border:1px solid var(--border);
+}
+
+.author-avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.author-info h4{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:22px;
+  font-weight:400;
+  margin:0 0 6px;
+}
+
+.author-info p{
+  margin:0;
+  color:var(--muted);
+  font-size:13.5px;
+  line-height:1.6;
+  font-weight:300;
+}
+
+.site-footer{
+  width:100%;
+  border-top:1px solid var(--border);
+  background:var(--surface-alt);
+  padding:50px 24px;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:24px;
+  margin-bottom:18px;
+  font-weight:500;
+}
+
+.footer-links a{
+  color:var(--muted);
+  transition:color .2s ease;
+}
+
+.footer-links a:hover{color:var(--accent);}
+
+.disclaimer{
+  max-width:740px;
+  margin:16px auto 0;
+  font-size:11.5px;
+  color:#858074;
+  line-height:1.6;
+  font-weight:300;
+}
+
+@media(max-width:700px){
+
+  .header-inner{
+    height:68px;
+    padding:0 16px;
+  }
+
+  .brand-logo{font-size:24px;}
+
+  .header-nav{
+    gap:10px;
+    font-size:12px;
+  }
+
+  .header-nav a:not(.highlight-btn){display:none;}
+
+  .header-nav .highlight-btn{padding:8px 13px;}
+
+  .article-container{padding:40px 16px 70px;}
+
+  .article-hero-img{
+    height:240px;
+    margin-bottom:36px;
+  }
+
+  .inline-cpa-box{padding:28px 20px;}
+
+  .author-box{
+    flex-direction:column;
+    text-align:center;
+    padding:24px;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<script src="header.js" defer></script>
+
+<main class="article-container">
+
+  <header class="article-header">
+
+    <span class="article-tag">Art &amp; Interior Curation</span>
+
+    <h1>Curating a Minimalist Gallery Wall Without Visual Chaos</h1>
+
+    <p class="article-subtitle">
+      A thoughtful guide to framing neutral prints, balancing negative space, and hanging art with intention.
+    </p>
+
+    <div class="article-meta">
+      Published by Willow &amp; Heaven Archive · Original Design Essay
+    </div>
+
+  </header>
+
+  <div class="article-hero-img">
+
+    <img
+      src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1200&q=80"
+      alt="Curated artwork arranged within a calm interior"
+      loading="lazy"
+    >
+
+  </div>
+
+  <article class="article-body">
+
+    <p class="drop-cap">
+      A gallery wall can give a room personality, but more artwork does not necessarily create a stronger composition. Without enough structure, several frames can quickly become visual noise. A minimalist approach begins with the understanding that empty space is not wasted space; it is part of the arrangement.
+    </p>
+
+    <p>
+      The most successful collections feel intentional without appearing overly calculated. Different images can coexist when there is a clear relationship between their scale, framing, colour, and placement.
+    </p>
+
+    <blockquote>
+      <p>
+        “Good curation is often less about adding another piece and more about knowing where to leave space.”
+      </p>
+    </blockquote>
+
+    <h2>Start With a Visual Language</h2>
+
+    <p>
+      Before selecting individual pieces, consider what connects the collection. A restrained palette can provide cohesion even when the artwork itself varies considerably.
+    </p>
+
+    <p>
+      Neutral prints, monochromatic photography, drawings, and softly coloured artwork can share a wall comfortably when their surrounding frames create continuity. The objective is not to make every piece identical, but to give the eye a few recurring elements to follow.
+    </p>
+
+    <p>
+      Frame material can become one of those elements. Repeating a similar finish across several pieces creates structure while allowing the artwork itself to remain varied.
+    </p>
+
+    <div class="inline-cpa-box">
+
+      <span class="inline-cpa-tag">Home &amp; Interior Selection</span>
+
+      <h3>Find Considered Decorative Details</h3>
+
+      <p>
+        Explore thoughtfully selected home accents that can complement curated walls, calm palettes, and carefully layered interiors.
+      </p>
+
+      <a
+        class="cpa-action-btn"
+        href="decooff.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Explore Home &amp; Decor Finds
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          style="vertical-align:-2px;margin-left:6px;"
+        >
+          <path d="M5 12h14"></path>
+          <path d="M13 6l6 6-6 6"></path>
+        </svg>
+      </a>
+
+    </div>
+
+    <h2>The Importance of Negative Space</h2>
+
+    <p>
+      Negative space gives each piece room to breathe. When frames are placed too closely together, individual works can lose their visual identity and the entire wall may feel crowded.
+    </p>
+
+    <p>
+      Leaving measured gaps between pieces creates rhythm. The exact distance can vary depending on the size of the wall and the scale of the artwork, but consistency helps the arrangement feel composed.
+    </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '5c63a7a89cecfd68333d4268eff805e6',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/5c63a7a89cecfd68333d4268eff805e6/invoke.js"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : 'ae4d7ee19b5fa944210e60c0765961c5',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/ae4d7ee19b5fa944210e60c0765961c5/invoke.js"></script>
+</div>
+
+
+
+    <p>
+      Negative space also extends beyond the gaps between frames. The relationship between the gallery wall and nearby furniture matters just as much. A little breathing room around the collection can make it feel more architectural.
+    </p>
+
+    <h2>Balancing Scale</h2>
+
+    <p>
+      A successful gallery wall usually contains variation in scale, but the distribution should feel balanced. One larger piece can establish an anchor while smaller works provide supporting rhythm around it.
+    </p>
+
+    <p>
+      If every frame has the same dimensions, the arrangement can become predictable. Conversely, too many different proportions can make the wall feel unsettled. A limited selection of sizes often creates the most harmonious result.
+    </p>
+
+    <p>
+      The furniture below the artwork should also be considered. A large sofa or console creates a visual base, and the artwork should relate to that foundation rather than floating independently above it.
+    </p>
+
+    <h2>Frames as Architectural Details</h2>
+
+    <p>
+      Frames are often treated as secondary, but they have considerable influence on the overall composition. A simple frame can quietly support the artwork, while a more substantial profile can give the wall a stronger architectural presence.
+    </p>
+
+    <p>
+      Repeating one frame material across a collection can unify pieces from different sources. Another approach is to combine two related finishes while keeping the overall palette restrained.
+    </p>
+
+    <p>
+      The wall itself should remain part of the composition. A soft neutral background can allow the artwork to become the focal point without creating unnecessary contrast around every frame.
+    </p>
+
+    <h2>Hanging With Intention</h2>
+
+    <p>
+      Placement changes how a gallery wall is experienced. Artwork should relate to the scale of the room and the furniture beneath it, rather than being positioned according to an arbitrary centre point.
+    </p>
+
+    <p>
+      A useful way to think about the arrangement is as one visual object rather than a collection of separate frames. Step back regularly and assess the overall silhouette. If one side feels visually heavy, adjusting the surrounding pieces may restore balance.
+    </p>
+
+    <p>
+      The arrangement should also feel comfortable at eye level. The purpose is not simply to fill a wall, but to create a relationship between the artwork and the people who inhabit the space.
+    </p>
+
+    <h2>A Collection That Can Breathe</h2>
+
+    <p>
+      Minimalist gallery walls are not defined by having very little artwork. They are defined by the space given to each piece and the clarity of the relationship between them.
+    </p>
+
+    <p>
+      Neutral tones, thoughtful framing, varied scale, and generous negative space can turn a group of individual works into a unified architectural feature.
+    </p>
+
+    <p>
+      The final composition should feel collected rather than crowded. When every piece has a reason to be present and enough space to be appreciated, the wall becomes a quiet expression of personality rather than a source of visual distraction.
+    </p>
+
+  </article>
+
+  <div class="author-box">
+
+    <div class="author-avatar">
+
+      <img
+        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+        alt="Author portrait"
+        loading="lazy"
+      >
+
+    </div>
+
+    <div class="author-info">
+
+      <h4>About the Author</h4>
+
+      <p>
+        Written by the editorial collective at Willow &amp; Heaven, exploring the intersections of interior architecture, material culture, and mindful living in contemporary society.
+      </p>
+
+    </div>
+
+  </div>
+
+</main>
+
+<script src="footer.js" defer></script>
+
+</body>
+</html>

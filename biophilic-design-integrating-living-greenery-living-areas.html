@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+
+<title>Biophilic Design: Integrating Living Greenery Into Living Areas — Willow &amp; Heaven</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root{
+  --bg:#f8f7f4;
+  --surface:#ffffff;
+  --surface-alt:#f1efe9;
+  --text:#1a1916;
+  --muted:#6b675e;
+  --accent:#9c6644;
+  --accent-hover:#7f5235;
+  --border:#e4e0d5;
+  --max:780px;
+}
+
+*, *::before, *::after{box-sizing:border-box;}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  padding:0;
+  width:100%;
+  min-width:0;
+  overflow-x:hidden;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Plus Jakarta Sans',sans-serif;
+  line-height:1.8;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+a,button{
+  -webkit-tap-highlight-color:transparent;
+}
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:999;
+  width:100%;
+  background:rgba(248,247,244,.94);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+
+.header-inner{
+  width:100%;
+  max-width:1150px;
+  height:76px;
+  margin:0 auto;
+  padding:0 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand-logo{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:27px;
+  font-weight:400;
+  color:var(--text);
+  letter-spacing:.8px;
+  white-space:nowrap;
+}
+
+.brand-logo span{
+  color:var(--accent);
+  font-style:italic;
+}
+
+.header-nav{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  font-size:13px;
+  font-weight:500;
+  color:var(--muted);
+}
+
+.header-nav a{
+  color:var(--muted);
+  white-space:nowrap;
+  transition:color .2s ease;
+}
+
+.header-nav a:hover{
+  color:var(--accent);
+}
+
+.header-nav .highlight-btn{
+  background:var(--text);
+  color:#fff;
+  padding:9px 16px;
+  border-radius:6px;
+}
+
+.header-nav .highlight-btn:hover{
+  background:var(--accent);
+  color:#fff;
+}
+
+.article-container{
+  width:100%;
+  max-width:var(--max);
+  margin:0 auto;
+  padding:60px 24px 90px;
+}
+
+.article-header{
+  text-align:center;
+  margin-bottom:48px;
+}
+
+.article-tag{
+  display:inline-block;
+  color:var(--accent);
+  font-size:11.5px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  margin-bottom:16px;
+  padding:6px 18px;
+  border-radius:30px;
+  background:rgba(156,102,68,.08);
+  border:1px solid rgba(156,102,68,.18);
+}
+
+.article-header h1{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:clamp(38px,5.5vw,62px);
+  line-height:1.15;
+  font-weight:400;
+  color:var(--text);
+  margin:0 0 16px;
+}
+
+.article-subtitle{
+  max-width:620px;
+  margin:0 auto 24px;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.7;
+  font-weight:300;
+  font-style:italic;
+}
+
+.article-meta{
+  font-size:12.5px;
+  color:var(--muted);
+  letter-spacing:.5px;
+  font-weight:400;
+}
+
+.article-hero-img{
+  width:100%;
+  height:380px;
+  border-radius:15px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  margin-bottom:50px;
+  background:var(--surface-alt);
+}
+
+.article-hero-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.article-body{
+  font-size:16px;
+  color:var(--text);
+  font-weight:300;
+}
+
+.article-body p{
+  margin:0 0 24px;
+  line-height:1.85;
+}
+
+.article-body h2{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:32px;
+  line-height:1.25;
+  font-weight:400;
+  color:var(--text);
+  margin:42px 0 16px;
+}
+
+.article-body blockquote{
+  margin:36px 0;
+  padding:24px 30px;
+  background:var(--surface);
+  border-left:3px solid var(--accent);
+  border-radius:0 12px 12px 0;
+  border-top:1px solid var(--border);
+  border-right:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+
+.article-body blockquote p{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:24px;
+  line-height:1.4;
+  color:var(--text);
+  font-style:italic;
+  margin:0;
+}
+
+.drop-cap::first-letter{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:72px;
+  float:left;
+  line-height:.8;
+  padding-top:4px;
+  padding-right:12px;
+  padding-bottom:2px;
+  color:var(--accent);
+  font-style:normal;
+}
+
+.inline-cpa-box{
+  margin:48px 0;
+  padding:36px 32px;
+  background:linear-gradient(135deg,#f1efe9,#e8e4dc);
+  border:1px solid #d8d2c4;
+  border-radius:16px;
+  text-align:center;
+}
+
+.inline-cpa-tag{
+  color:var(--accent);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:8px;
+  display:inline-block;
+}
+
+.inline-cpa-box h3{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:28px;
+  line-height:1.2;
+  font-weight:400;
+  margin:0 0 10px;
+}
+
+.inline-cpa-box p{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.6;
+  margin:0 0 22px;
+  max-width:540px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.cpa-action-btn{
+  display:inline-block;
+  background:var(--text);
+  color:#fff;
+  padding:13px 26px;
+  border-radius:8px;
+  font-size:13.5px;
+  font-weight:500;
+  transition:background .2s ease,transform .2s ease;
+}
+
+.cpa-action-btn:hover{
+  background:var(--accent);
+  transform:translateY(-2px);
+}
+
+.author-box{
+  margin-top:60px;
+  padding:32px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+.author-avatar{
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  overflow:hidden;
+  flex-shrink:0;
+  background:var(--surface-alt);
+  border:1px solid var(--border);
+}
+
+.author-avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.author-info h4{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:22px;
+  font-weight:400;
+  margin:0 0 6px;
+}
+
+.author-info p{
+  margin:0;
+  color:var(--muted);
+  font-size:13.5px;
+  line-height:1.6;
+  font-weight:300;
+}
+
+.site-footer{
+  width:100%;
+  border-top:1px solid var(--border);
+  background:var(--surface-alt);
+  padding:50px 24px;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:24px;
+  margin-bottom:18px;
+  font-weight:500;
+}
+
+.footer-links a{
+  color:var(--muted);
+  transition:color .2s ease;
+}
+
+.footer-links a:hover{
+  color:var(--accent);
+}
+
+.disclaimer{
+  max-width:740px;
+  margin:16px auto 0;
+  font-size:11.5px;
+  color:#858074;
+  line-height:1.6;
+  font-weight:300;
+}
+
+@media(max-width:700px){
+
+  .header-inner{
+    height:68px;
+    padding:0 16px;
+  }
+
+  .brand-logo{
+    font-size:24px;
+  }
+
+  .header-nav{
+    gap:10px;
+    font-size:12px;
+  }
+
+  .header-nav a:not(.highlight-btn){
+    display:none;
+  }
+
+  .header-nav .highlight-btn{
+    padding:8px 13px;
+  }
+
+  .article-container{
+    padding:40px 16px 70px;
+  }
+
+  .article-hero-img{
+    height:240px;
+    margin-bottom:36px;
+  }
+
+  .inline-cpa-box{
+    padding:28px 20px;
+  }
+
+  .author-box{
+    flex-direction:column;
+    text-align:center;
+    padding:24px;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<script src="header.js" defer></script>
+
+<main class="article-container">
+
+  <header class="article-header">
+
+    <span class="article-tag">Biophilic Interior Design</span>
+
+    <h1>Biophilic Design: Integrating Living Greenery Into Living Areas</h1>
+
+    <p class="article-subtitle">
+      How oversized olive trees, cascading ivies, and terracotta planters bridge the gap between interior and exterior.
+    </p>
+
+    <div class="article-meta">
+      Published by Willow &amp; Heaven Archive · Original Design Essay
+    </div>
+
+  </header>
+
+  <div class="article-hero-img">
+
+    <img
+      src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=1200&q=80"
+      alt="Indoor plants integrated into a calm living interior"
+      loading="lazy"
+    >
+
+  </div>
+
+  <article class="article-body">
+
+    <p class="drop-cap">
+      There is something instinctively comforting about bringing living greenery into a room. A plant introduces movement where architecture is still, softness where surfaces are hard, and a visible connection to the natural world within an enclosed space. In a considered interior, greenery becomes more than decoration; it becomes part of the atmosphere.
+    </p>
+
+    <p>
+      Biophilic design approaches this relationship with intention. Rather than placing a small plant on every available shelf, the idea is to create meaningful moments where foliage, natural materials, daylight, and architecture can exist together. The result can feel organic without becoming visually busy.
+    </p>
+
+    <blockquote>
+      <p>
+        “A living plant changes the room simply by continuing to grow inside it.”
+      </p>
+    </blockquote>
+
+    <h2>Thinking Beyond the Decorative Plant</h2>
+
+    <p>
+      One of the simplest ways to strengthen a connection with nature is to consider scale. A substantial plant can alter the perception of an entire corner, while a collection of smaller plants can create a layered botanical composition. The right choice depends on the architecture, available light, and the visual rhythm of the room.
+    </p>
+
+    <p>
+      An oversized olive tree can become a sculptural focal point beside a sofa or reading chair. Its branches create an open silhouette rather than a dense block of foliage, allowing the surrounding architecture to remain visible. Elsewhere, cascading greenery can soften shelves, ledges, or high cabinetry by introducing a gentle vertical movement.
+    </p>
+
+    <p>
+      Placement matters as much as the plant itself. Greenery can frame a window, soften an empty wall, or create a transition between living and dining areas. Instead of being treated as an afterthought, it becomes another element in the composition of the room.
+    </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '5c63a7a89cecfd68333d4268eff805e6',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/5c63a7a89cecfd68333d4268eff805e6/invoke.js"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : 'ae4d7ee19b5fa944210e60c0765961c5',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/ae4d7ee19b5fa944210e60c0765961c5/invoke.js"></script>
+</div>
+
+
+
+    <div class="inline-cpa-box">
+
+      <span class="inline-cpa-tag">Home &amp; Interior Selection</span>
+
+      <h3>Discover Natural-Inspired Home Pieces</h3>
+
+      <p>
+        Explore considered decor and everyday interior pieces that complement relaxed spaces, natural textures, and a quietly collected aesthetic.
+      </p>
+
+      <a
+        class="cpa-action-btn"
+        href="decooff.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Explore Home &amp; Decor Finds
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          style="vertical-align:-2px;margin-left:6px;"
+        >
+          <path d="M5 12h14"></path>
+          <path d="M13 6l6 6-6 6"></path>
+        </svg>
+      </a>
+
+    </div>
+
+    <h2>Terracotta, Timber, and Living Texture</h2>
+
+    <p>
+      The container can be just as important to the overall composition. Terracotta introduces an earthy warmth that works naturally with timber, stone, linen, and other quiet materials. Its imperfect surface gives a planted arrangement a sense of age and tactility.
+    </p>
+
+    <p>
+      Neutral ceramic planters can create a quieter effect, particularly when the architecture already contains strong material variation. The intention is not to make every planter identical, but to establish enough visual consistency that the greenery feels integrated rather than scattered.
+    </p>
+
+    <p>
+      Natural timber stands can also raise plants into the visual field and create a relationship between furniture and foliage. When combined with soft textiles and restrained colours, these elements can make a living area feel connected to the landscape beyond its walls.
+    </p>
+
+    <h2>Creating a Relationship With Light</h2>
+
+    <p>
+      Daylight gives greenery another dimension. Leaves change character throughout the day as sunlight moves across them, producing shadows and subtle variations that static decorative objects cannot replicate. A plant positioned near a window can therefore become part of the room's changing light composition.
+    </p>
+
+    <p>
+      Sheer curtains can soften strong daylight while preserving the brightness that helps an interior feel open. At other times, evening lamps can illuminate foliage from the side, creating silhouettes against walls and adding depth after sunset.
+    </p>
+
+    <p>
+      This relationship between plants and light is particularly effective in rooms with simple architecture. When there are fewer decorative elements competing for attention, the changing shadows of leaves become a quiet form of movement.
+    </p>
+
+    <h2>Letting Nature Define the Atmosphere</h2>
+
+    <p>
+      The strongest biophilic interiors do not attempt to turn the home into a greenhouse. They use greenery selectively, allowing a few carefully positioned plants to establish a connection with the outdoors.
+    </p>
+
+    <p>
+      A single tree beside a generous window, a trailing plant on an open shelf, or a terracotta planter beside a textured wall can be enough to change the character of a room. What matters is the relationship between the living element and everything around it.
+    </p>
+
+    <p>
+      When greenery is given space to breathe, it becomes part of the architecture rather than an additional layer of decoration. The room feels quieter, more tactile, and subtly connected to the rhythms of the natural world.
+    </p>
+
+  </article>
+
+  <div class="author-box">
+
+    <div class="author-avatar">
+
+      <img
+        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+        alt="Author portrait"
+        loading="lazy"
+      >
+
+    </div>
+
+    <div class="author-info">
+
+      <h4>About the Author</h4>
+
+      <p>
+        Written by the editorial collective at Willow &amp; Heaven, exploring the intersections of interior architecture, material culture, and mindful living in contemporary society.
+      </p>
+
+    </div>
+
+  </div>
+
+</main>
+
+<script src="footer.js" defer></script>
+
+</body>
+</html>

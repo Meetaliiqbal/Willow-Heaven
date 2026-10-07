@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+
+<title>The Essential Home: 10 Principles of Intentional Interiors — Willow &amp; Heaven</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root{
+  --bg:#f8f7f4;
+  --surface:#ffffff;
+  --surface-alt:#f1efe9;
+  --text:#1a1916;
+  --muted:#6b675e;
+  --accent:#9c6644;
+  --accent-hover:#7f5235;
+  --border:#e4e0d5;
+  --max:780px;
+}
+
+*, *::before,*::after{box-sizing:border-box;}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  padding:0;
+  width:100%;
+  min-width:0;
+  overflow-x:hidden;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Plus Jakarta Sans',sans-serif;
+  line-height:1.8;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+a,button{
+  -webkit-tap-highlight-color:transparent;
+}
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:999;
+  width:100%;
+  background:rgba(248,247,244,.94);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+
+.header-inner{
+  width:100%;
+  max-width:1150px;
+  height:76px;
+  margin:0 auto;
+  padding:0 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand-logo{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:27px;
+  font-weight:400;
+  color:var(--text);
+  letter-spacing:.8px;
+  white-space:nowrap;
+}
+
+.brand-logo span{
+  color:var(--accent);
+  font-style:italic;
+}
+
+.header-nav{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  font-size:13px;
+  font-weight:500;
+  color:var(--muted);
+}
+
+.header-nav a{
+  color:var(--muted);
+  white-space:nowrap;
+  transition:color .2s ease;
+}
+
+.header-nav a:hover{
+  color:var(--accent);
+}
+
+.header-nav .highlight-btn{
+  background:var(--text);
+  color:#fff;
+  padding:9px 16px;
+  border-radius:6px;
+}
+
+.header-nav .highlight-btn:hover{
+  background:var(--accent);
+  color:#fff;
+}
+
+.article-container{
+  width:100%;
+  max-width:var(--max);
+  margin:0 auto;
+  padding:60px 24px 90px;
+}
+
+.article-header{
+  text-align:center;
+  margin-bottom:48px;
+}
+
+.article-tag{
+  display:inline-block;
+  color:var(--accent);
+  font-size:11.5px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  margin-bottom:16px;
+  padding:6px 18px;
+  border-radius:30px;
+  background:rgba(156,102,68,.08);
+  border:1px solid rgba(156,102,68,.18);
+}
+
+.article-header h1{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:clamp(38px,5.5vw,62px);
+  line-height:1.15;
+  font-weight:400;
+  color:var(--text);
+  margin:0 0 16px;
+}
+
+.article-subtitle{
+  max-width:620px;
+  margin:0 auto 24px;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.7;
+  font-weight:300;
+  font-style:italic;
+}
+
+.article-meta{
+  font-size:12.5px;
+  color:var(--muted);
+  letter-spacing:.5px;
+  font-weight:400;
+}
+
+.article-hero-img{
+  width:100%;
+  height:380px;
+  border-radius:15px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  margin-bottom:50px;
+  background:var(--surface-alt);
+}
+
+.article-hero-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.article-body{
+  font-size:16px;
+  color:var(--text);
+  font-weight:300;
+}
+
+.article-body p{
+  margin:0 0 24px;
+  line-height:1.85;
+}
+
+.article-body h2{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:32px;
+  line-height:1.25;
+  font-weight:400;
+  color:var(--text);
+  margin:42px 0 16px;
+}
+
+.article-body blockquote{
+  margin:36px 0;
+  padding:24px 30px;
+  background:var(--surface);
+  border-left:3px solid var(--accent);
+  border-radius:0 12px 12px 0;
+  border-top:1px solid var(--border);
+  border-right:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+
+.article-body blockquote p{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:24px;
+  line-height:1.4;
+  color:var(--text);
+  font-style:italic;
+  margin:0;
+}
+
+.drop-cap::first-letter{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:72px;
+  float:left;
+  line-height:.8;
+  padding-top:4px;
+  padding-right:12px;
+  padding-bottom:2px;
+  color:var(--accent);
+  font-style:normal;
+}
+
+.inline-cpa-box{
+  margin:48px 0;
+  padding:36px 32px;
+  background:linear-gradient(135deg,#f1efe9,#e8e4dc);
+  border:1px solid #d8d2c4;
+  border-radius:16px;
+  text-align:center;
+}
+
+.inline-cpa-tag{
+  color:var(--accent);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:8px;
+  display:inline-block;
+}
+
+.inline-cpa-box h3{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:28px;
+  line-height:1.2;
+  font-weight:400;
+  margin:0 0 10px;
+}
+
+.inline-cpa-box p{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.6;
+  margin:0 0 22px;
+  max-width:540px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.cpa-action-btn{
+  display:inline-block;
+  background:var(--text);
+  color:#fff;
+  padding:13px 26px;
+  border-radius:8px;
+  font-size:13.5px;
+  font-weight:500;
+  transition:background .2s ease,transform .2s ease;
+}
+
+.cpa-action-btn:hover{
+  background:var(--accent);
+  transform:translateY(-2px);
+}
+
+.author-box{
+  margin-top:60px;
+  padding:32px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+.author-avatar{
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  overflow:hidden;
+  flex-shrink:0;
+  background:var(--surface-alt);
+  border:1px solid var(--border);
+}
+
+.author-avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.author-info h4{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:22px;
+  font-weight:400;
+  margin:0 0 6px;
+}
+
+.author-info p{
+  margin:0;
+  color:var(--muted);
+  font-size:13.5px;
+  line-height:1.6;
+  font-weight:300;
+}
+
+.site-footer{
+  width:100%;
+  border-top:1px solid var(--border);
+  background:var(--surface-alt);
+  padding:50px 24px;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:24px;
+  margin-bottom:18px;
+  font-weight:500;
+}
+
+.footer-links a{
+  color:var(--muted);
+  transition:color .2s ease;
+}
+
+.footer-links a:hover{
+  color:var(--accent);
+}
+
+.disclaimer{
+  max-width:740px;
+  margin:16px auto 0;
+  font-size:11.5px;
+  color:#858074;
+  line-height:1.6;
+  font-weight:300;
+}
+
+@media(max-width:700px){
+
+  .header-inner{
+    height:68px;
+    padding:0 16px;
+  }
+
+  .brand-logo{
+    font-size:24px;
+  }
+
+  .header-nav{
+    gap:10px;
+    font-size:12px;
+  }
+
+  .header-nav a:not(.highlight-btn){
+    display:none;
+  }
+
+  .header-nav .highlight-btn{
+    padding:8px 13px;
+  }
+
+  .article-container{
+    padding:40px 16px 70px;
+  }
+
+  .article-hero-img{
+    height:240px;
+    margin-bottom:36px;
+  }
+
+  .inline-cpa-box{
+    padding:28px 20px;
+  }
+
+  .author-box{
+    flex-direction:column;
+    text-align:center;
+    padding:24px;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<script src="header.js" defer></script>
+
+<main class="article-container">
+
+  <header class="article-header">
+
+    <span class="article-tag">Intentional Living &amp; Interior Design</span>
+
+    <h1>The Essential Home: 10 Principles of Intentional Interiors</h1>
+
+    <p class="article-subtitle">
+      A masterclass in editing your belongings, honoring natural light, and designing spaces that breathe.
+    </p>
+
+    <div class="article-meta">
+      Published by Willow &amp; Heaven Archive · Original Design Essay
+    </div>
+
+  </header>
+
+  <div class="article-hero-img">
+
+    <img
+      src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+      alt="Thoughtfully composed interior designed around natural light and calm"
+      loading="lazy"
+    >
+
+  </div>
+
+  <article class="article-body">
+
+    <p class="drop-cap">
+      An intentional home is not defined by a particular style. It is defined by the relationship between the things inside it. Furniture, light, materials, objects, and empty space all contribute to how a room feels and how easily it supports everyday life.
+    </p>
+
+    <p>
+      Designing intentionally means becoming more selective. Instead of filling every corner, the focus shifts toward proportion, usefulness, atmosphere, and the qualities that make a space feel genuinely comfortable.
+    </p>
+
+    <blockquote>
+      <p>
+        “The essential home is not the home with less; it is the home where every element has a reason to remain.”
+      </p>
+    </blockquote>
+
+    <h2>1. Let Natural Light Lead</h2>
+
+    <p>
+      Light is one of the most powerful materials within an interior because it changes continuously. Morning brightness, afternoon warmth, and softer evening illumination can all alter the perception of colour and texture.
+    </p>
+
+    <p>
+      Rather than designing against the natural light of a room, an intentional interior works with it. Furniture placement, reflective surfaces, curtains, and tonal choices can all support the existing qualities of the space.
+    </p>
+
+    <h2>2. Edit Before You Add</h2>
+
+    <p>
+      A room can often become more beautiful through subtraction rather than addition. Removing objects that no longer serve a practical or emotional purpose creates space for the things that genuinely matter.
+    </p>
+
+    <p>
+      Editing does not mean creating an empty interior. It means allowing useful, beautiful, or meaningful objects to become more visible by reducing unnecessary competition around them.
+    </p>
+
+    <h2>3. Build Around Natural Materials</h2>
+
+    <p>
+      Natural materials tend to reveal their character through texture and variation. Timber, stone, linen, ceramics, wool, and woven fibres can introduce depth without requiring strong decorative patterns.
+    </p>
+
+    <p>
+      Combining several natural surfaces creates a layered atmosphere. The room gains richness through differences in touch, grain, weight, and reflectivity rather than through visual excess.
+    </p>
+
+    <div class="inline-cpa-box">
+
+      <span class="inline-cpa-tag">Home &amp; Interior Selection</span>
+
+      <h3>Explore Thoughtful Home Finds</h3>
+
+      <p>
+        Browse considered decor and interior accents selected to complement natural materials, quiet palettes, and intentionally composed spaces.
+      </p>
+
+      <a
+        class="cpa-action-btn"
+        href="decooff.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Explore Home &amp; Decor Finds
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          style="vertical-align:-2px;margin-left:6px;"
+        >
+          <path d="M5 12h14"></path>
+          <path d="M13 6l6 6-6 6"></path>
+        </svg>
+      </a>
+
+    </div>
+
+    <h2>4. Create Breathing Room</h2>
+
+    <p>
+      Empty space gives furniture and objects greater visual clarity. When every surface is occupied, the eye has nowhere to rest and the architecture can become difficult to appreciate.
+    </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '5c63a7a89cecfd68333d4268eff805e6',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/5c63a7a89cecfd68333d4268eff805e6/invoke.js"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : 'ae4d7ee19b5fa944210e60c0765961c5',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/ae4d7ee19b5fa944210e60c0765961c5/invoke.js"></script>
+</div>
+
+
+
+    <p>
+      Leaving open areas around furniture can make a room feel larger and calmer. Negative space should therefore be treated as an active design element rather than something waiting to be filled.
+    </p>
+
+    <h2>5. Respect Proportion</h2>
+
+    <p>
+      The scale of furniture should relate to the architecture around it. A small room can become crowded by oversized pieces, while a large room may require greater visual weight to avoid feeling disconnected.
+    </p>
+
+    <p>
+      Proportion is also about relationships between objects. A table, chair, lamp, artwork, and rug should feel connected even when they are not from the same collection.
+    </p>
+
+    <h2>6. Choose a Restrained Palette</h2>
+
+    <p>
+      A restrained palette allows material differences to become more visible. Soft neutrals can create a calm foundation while subtle changes in tone prevent the room from feeling flat.
+    </p>
+
+    <p>
+      Colour can still be expressive within an intentional interior. The important distinction is between purposeful colour and visual accumulation. A few carefully considered tones often have greater impact than many competing shades.
+    </p>
+
+    <h2>7. Give Objects Meaning</h2>
+
+    <p>
+      The objects we keep influence how a home feels. Books, ceramics, artwork, photographs, and inherited pieces can contribute to a sense of identity when they are displayed with enough space to be appreciated.
+    </p>
+
+    <p>
+      Meaningful objects do not need to be expensive or rare. Their value can come from memory, craftsmanship, usefulness, or simply the pleasure they bring to everyday life.
+    </p>
+
+    <h2>8. Design for Everyday Movement</h2>
+
+    <p>
+      A beautiful room should still be easy to live in. Furniture placement should allow natural movement through the space, while frequently used objects should remain accessible without creating clutter.
+    </p>
+
+    <p>
+      This practical layer is what turns an interior from a visual composition into a home. Comfort and convenience should not be treated as compromises to good design.
+    </p>
+
+    <h2>9. Layer Light</h2>
+
+    <p>
+      A single overhead light rarely creates the most atmospheric environment. Different sources can establish separate levels of illumination, allowing the room to adapt throughout the day.
+    </p>
+
+    <p>
+      Table lamps, floor lamps, wall lighting, and softer ambient sources can highlight different areas while creating depth. The result is an interior that feels more nuanced after sunset.
+    </p>
+
+    <h2>10. Allow the Home to Evolve</h2>
+
+    <p>
+      An intentional interior does not need to be permanently finished. Homes change as routines, interests, relationships, and needs change. A space should have enough flexibility to accommodate those shifts.
+    </p>
+
+    <p>
+      Furniture can move, objects can be exchanged, and new pieces can gradually become part of the environment. This creates a home that feels lived in rather than frozen at the moment of decoration.
+    </p>
+
+    <h2>A Home That Breathes</h2>
+
+    <p>
+      The essential home is ultimately a balance between what is present and what is deliberately left open. Natural light, honest materials, thoughtful objects, useful furniture, and generous breathing room can create an atmosphere that feels calm without becoming impersonal.
+    </p>
+
+    <p>
+      Intentional interiors are not about following a rigid formula. They are about paying attention—to the architecture, to the way people move through rooms, and to the objects that genuinely deserve a place within them.
+    </p>
+
+    <p>
+      When those decisions are made with care, the home begins to feel less like a collection of possessions and more like a quiet framework for everyday life.
+    </p>
+
+  </article>
+
+  <div class="author-box">
+
+    <div class="author-avatar">
+
+      <img
+        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+        alt="Author portrait"
+        loading="lazy"
+      >
+
+    </div>
+
+    <div class="author-info">
+
+      <h4>About the Author</h4>
+
+      <p>
+        Written by the editorial collective at Willow &amp; Heaven, exploring the intersections of interior architecture, material culture, and mindful living in contemporary society.
+      </p>
+
+    </div>
+
+  </div>
+
+</main>
+
+<script src="footer.js" defer></script>
+
+</body>
+</html>

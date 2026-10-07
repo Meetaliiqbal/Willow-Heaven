@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="referrer" content="no-referrer">
+
+<title>The Gathering Table: Linen Runners, Candles, and Simple Feasts — Willow &amp; Heaven</title>
+
+<meta
+  name="description"
+  content="Creating an inviting gathering table with linen runners, candlelight, shared plates, and simple seasonal food."
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<style id="culinary-article-style">
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root{
+  --bg:#f8f7f4;
+  --surface:#ffffff;
+  --surface-alt:#f1efe9;
+  --text:#1a1916;
+  --muted:#6b675e;
+  --accent:#9c6644;
+  --accent-hover:#7f5235;
+  --border:#e4e0d5;
+  --max:780px;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-weight:400;
+  line-height:1.8;
+}
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(248,247,244,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+
+.header-inner{
+  max-width:1150px;
+  height:76px;
+  margin:0 auto;
+  padding:0 28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand-logo{
+  font-family:'Instrument Serif',serif;
+  font-size:27px;
+  color:var(--text);
+  text-decoration:none;
+  letter-spacing:-.3px;
+}
+
+.header-nav{
+  display:flex;
+  align-items:center;
+  gap:26px;
+}
+
+.header-nav a{
+  color:var(--text);
+  text-decoration:none;
+  font-size:13px;
+  font-weight:500;
+  transition:color .2s ease;
+}
+
+.header-nav a:hover{
+  color:var(--accent);
+}
+
+.article-container{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:60px 24px 90px;
+}
+
+.article-header{
+  text-align:center;
+  margin-bottom:42px;
+}
+
+.article-tag{
+  display:inline-block;
+  margin-bottom:18px;
+  padding:7px 13px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  background:var(--surface);
+  color:var(--accent);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.article-header h1{
+  margin:0 auto 20px;
+  max-width:720px;
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(38px,6vw,62px);
+  font-weight:400;
+  line-height:1.03;
+  letter-spacing:-1.5px;
+}
+
+.article-subtitle{
+  max-width:650px;
+  margin:0 auto 20px;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.75;
+  font-weight:300;
+}
+
+.article-meta{
+  color:var(--muted);
+  font-size:11px;
+  letter-spacing:.04em;
+}
+
+.article-hero-img{
+  width:100%;
+  height:380px;
+  object-fit:cover;
+  display:block;
+  border-radius:15px;
+  margin-bottom:48px;
+}
+
+.article-body{
+  font-size:15px;
+  color:#292722;
+}
+
+.article-body p{
+  margin:0 0 25px;
+}
+
+.article-body h2{
+  margin:48px 0 18px;
+  font-family:'Instrument Serif',serif;
+  font-size:34px;
+  line-height:1.15;
+  font-weight:400;
+  letter-spacing:-.5px;
+}
+
+.article-body blockquote{
+  margin:38px 0;
+  padding:5px 0 5px 25px;
+  border-left:2px solid var(--accent);
+  color:var(--muted);
+  font-family:'Instrument Serif',serif;
+  font-size:24px;
+  line-height:1.45;
+}
+
+.drop-cap:first-letter{
+  float:left;
+  font-family:'Instrument Serif',serif;
+  font-size:74px;
+  line-height:.75;
+  padding:7px 9px 0 0;
+  color:var(--accent);
+}
+
+.inline-cpa-box{
+  margin:46px 0;
+  padding:32px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:16px;
+  text-align:center;
+}
+
+.inline-cpa-tag{
+  display:inline-block;
+  margin-bottom:12px;
+  color:var(--accent);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+.inline-cpa-box h3{
+  margin:0 0 12px;
+  font-family:'Instrument Serif',serif;
+  font-size:31px;
+  font-weight:400;
+  line-height:1.15;
+}
+
+.inline-cpa-box p{
+  max-width:570px;
+  margin:0 auto 22px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.7;
+}
+
+.cpa-action-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:12px 20px;
+  border-radius:999px;
+  background:var(--accent);
+  color:#fff;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:600;
+  transition:background .2s ease;
+}
+
+.cpa-action-btn:hover{
+  background:var(--accent-hover);
+}
+
+.author-box{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-top:62px;
+  padding-top:30px;
+  border-top:1px solid var(--border);
+}
+
+.author-box img{
+  width:58px;
+  height:58px;
+  flex:0 0 58px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.author-box p{
+  margin:0;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.65;
+}
+
+@media(max-width:700px){
+
+  .header-inner{
+    height:68px;
+    padding:0 18px;
+  }
+
+  .header-nav{
+    display:none;
+  }
+
+  .article-container{
+    padding:42px 18px 65px;
+  }
+
+  .article-header{
+    margin-bottom:30px;
+  }
+
+  .article-header h1{
+    font-size:42px;
+    letter-spacing:-1px;
+  }
+
+  .article-subtitle{
+    font-size:14px;
+  }
+
+  .article-hero-img{
+    height:240px;
+    border-radius:12px;
+    margin-bottom:35px;
+  }
+
+  .article-body{
+    font-size:14px;
+    line-height:1.8;
+  }
+
+  .article-body h2{
+    margin-top:38px;
+    font-size:30px;
+  }
+
+  .article-body blockquote{
+    font-size:21px;
+    padding-left:18px;
+  }
+
+  .inline-cpa-box{
+    padding:25px 20px;
+  }
+
+  .inline-cpa-box h3{
+    font-size:27px;
+  }
+
+  .author-box{
+    align-items:flex-start;
+  }
+
+}
+
+</style>
+
+<script src="header.js" defer></script>
+
+</head>
+
+<body>
+
+<main class="article-container">
+
+  <header class="article-header">
+
+    <div class="article-tag">
+      Table &amp; Gathering
+    </div>
+
+    <h1>
+      The Gathering Table: Linen Runners, Candles, and Simple Feasts
+    </h1>
+
+    <p class="article-subtitle">
+      Setting an inviting atmosphere that prioritizes warmth, conversation, and shared plates.
+    </p>
+
+    <div class="article-meta">
+      Published by Willow &amp; Heaven Archive · Original Culinary Essay
+    </div>
+
+  </header>
+
+  <img
+    class="article-hero-img"
+    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
+    alt="Dinner party table"
+  >
+
+  <article class="article-body">
+
+    <p class="drop-cap">
+      A memorable meal rarely depends on elaborate decoration. More often, it is the atmosphere around the food that gives a gathering its character: a table that feels comfortable, dishes placed within easy reach, soft light, and enough space for conversation to unfold naturally.
+    </p>
+
+    <p>
+      The gathering table is therefore less about perfect presentation and more about creating a setting that welcomes people to stay. Simple materials such as linen, ceramic, glass, and candlelight can establish a sense of warmth without competing with the meal itself.
+    </p>
+
+    <h2>
+      Beginning With the Table
+    </h2>
+
+    <p>
+      A linen runner provides a quiet visual centre without requiring a completely dressed table. Its natural texture adds softness while leaving much of the underlying surface visible. This relaxed approach can make the setting feel less formal and more connected to everyday dining.
+    </p>
+
+    <p>
+      Plates, glasses, and cutlery can then be arranged according to how the meal will actually unfold. Shared dishes often work particularly well when guests can reach across the table and serve themselves without interrupting the conversation.
+    </p>
+
+    <blockquote>
+      The best table setting does not announce itself; it quietly makes everyone feel at home.
+    </blockquote>
+
+    <h2>
+      The Warmth of Candlelight
+    </h2>
+
+    <p>
+      Candles change the atmosphere of a room without requiring much visual decoration. Several small flames distributed along a table can create a softer sense of light than a single central source, particularly as daylight begins to fade.
+    </p>
+
+    <p>
+      Their placement should remain practical. Candles that are too tall can obstruct conversation, while a simple collection of low vessels can provide warmth without becoming an obstacle between guests.
+    </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '5c63a7a89cecfd68333d4268eff805e6',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/5c63a7a89cecfd68333d4268eff805e6/invoke.js"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : 'ae4d7ee19b5fa944210e60c0765961c5',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/ae4d7ee19b5fa944210e60c0765961c5/invoke.js"></script>
+</div>
+
+
+
+    <div class="inline-cpa-box">
+
+      <div class="inline-cpa-tag">
+        Food &amp; Gathering Selection
+      </div>
+
+      <h3>
+        Find More Ideas for Relaxed Shared Meals
+      </h3>
+
+      <p>
+        Explore selected food resources, meal inspiration, and convenient dining ideas suited to casual gatherings, everyday cooking, and shared occasions.
+      </p>
+
+      <a
+        class="cpa-action-btn"
+        href="foodoff.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Explore Food &amp; Meal Ideas →
+      </a>
+
+    </div>
+
+    <h2>
+      Keeping the Menu Simple
+    </h2>
+
+    <p>
+      Hosting becomes easier when the meal contains a mixture of dishes that can be prepared ahead and elements that need attention close to serving. A roasted vegetable, grain dish, fresh salad, or simple baked preparation can form part of the table without demanding constant supervision.
+    </p>
+
+    <p>
+      Shared plates also change the rhythm of dining. Instead of presenting each course individually, food can remain available in the centre, encouraging guests to take what they like and return for more when they wish.
+    </p>
+
+    <h2>
+      Texture Creates Interest
+    </h2>
+
+    <p>
+      A gathering table becomes visually appealing when materials are allowed to contrast. Smooth ceramics can sit beside textured linen, clear glass can catch candlelight, and wooden serving pieces can introduce another natural surface.
+    </p>
+
+    <p>
+      These differences do not need to be coordinated perfectly. A restrained palette allows texture to become the detail, giving the table a collected rather than overly styled appearance.
+    </p>
+
+    <h2>
+      Leaving Room for Conversation
+    </h2>
+
+    <p>
+      The most important element of a shared meal is often the least visible. People need enough physical and visual space to talk comfortably. Overcrowding the table with decorative objects can make the setting less practical, even when those objects are beautiful.
+    </p>
+
+    <p>
+      A few considered details are usually enough. Once the food arrives and guests begin talking, the table should support the gathering rather than compete with it.
+    </p>
+
+    <h2>
+      The Art of an Uncomplicated Feast
+    </h2>
+
+    <p>
+      There is a particular pleasure in a meal that feels generous without feeling overproduced. Linen, candlelight, shared dishes, and food prepared with care can turn an ordinary evening into something worth remembering.
+    </p>
+
+    <p>
+      Ultimately, the gathering table is an invitation. It says that there is enough food, enough time, and enough room for people to sit together. Everything else is simply there to make that invitation feel natural.
+    </p>
+
+  </article>
+
+  <div class="author-box">
+
+    <img
+      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+      alt="Author portrait"
+    >
+
+    <p>
+      Written by the editorial collective at Willow &amp; Heaven, exploring the intersections of food culture, hospitality, and mindful living in contemporary society.
+    </p>
+
+  </div>
+
+</main>
+
+<script src="footer.js" defer></script>
+
+</body>
+</html>

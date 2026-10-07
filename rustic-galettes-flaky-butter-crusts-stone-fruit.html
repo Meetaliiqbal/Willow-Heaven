@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="referrer" content="no-referrer">
+
+<title>Rustic Galettes: Flaky Butter Crusts and Stone Fruit Fillings — Willow &amp; Heaven</title>
+
+<meta
+  name="description"
+  content="Embracing imperfect beauty with free-form fruit pastries, flaky butter crusts, and seasonal stone fruit."
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<style id="culinary-article-style">
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root{
+  --bg:#f8f7f4;
+  --surface:#ffffff;
+  --surface-alt:#f1efe9;
+  --text:#1a1916;
+  --muted:#6b675e;
+  --accent:#9c6644;
+  --accent-hover:#7f5235;
+  --border:#e4e0d5;
+  --max:780px;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-weight:400;
+  line-height:1.8;
+}
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(248,247,244,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+
+.header-inner{
+  max-width:1150px;
+  height:76px;
+  margin:0 auto;
+  padding:0 28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand-logo{
+  font-family:'Instrument Serif',serif;
+  font-size:27px;
+  color:var(--text);
+  text-decoration:none;
+  letter-spacing:-.3px;
+}
+
+.header-nav{
+  display:flex;
+  align-items:center;
+  gap:26px;
+}
+
+.header-nav a{
+  color:var(--text);
+  text-decoration:none;
+  font-size:13px;
+  font-weight:500;
+  transition:color .2s ease;
+}
+
+.header-nav a:hover{
+  color:var(--accent);
+}
+
+.article-container{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:60px 24px 90px;
+}
+
+.article-header{
+  text-align:center;
+  margin-bottom:42px;
+}
+
+.article-tag{
+  display:inline-block;
+  margin-bottom:18px;
+  padding:7px 13px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  background:var(--surface);
+  color:var(--accent);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.article-header h1{
+  margin:0 auto 20px;
+  max-width:720px;
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(38px,6vw,62px);
+  font-weight:400;
+  line-height:1.03;
+  letter-spacing:-1.5px;
+}
+
+.article-subtitle{
+  max-width:650px;
+  margin:0 auto 20px;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.75;
+  font-weight:300;
+}
+
+.article-meta{
+  color:var(--muted);
+  font-size:11px;
+  letter-spacing:.04em;
+}
+
+.article-hero-img{
+  width:100%;
+  height:380px;
+  object-fit:cover;
+  display:block;
+  border-radius:15px;
+  margin-bottom:48px;
+}
+
+.article-body{
+  font-size:15px;
+  color:#292722;
+}
+
+.article-body p{
+  margin:0 0 25px;
+}
+
+.article-body h2{
+  margin:48px 0 18px;
+  font-family:'Instrument Serif',serif;
+  font-size:34px;
+  line-height:1.15;
+  font-weight:400;
+  letter-spacing:-.5px;
+}
+
+.article-body blockquote{
+  margin:38px 0;
+  padding:5px 0 5px 25px;
+  border-left:2px solid var(--accent);
+  color:var(--muted);
+  font-family:'Instrument Serif',serif;
+  font-size:24px;
+  line-height:1.45;
+}
+
+.drop-cap:first-letter{
+  float:left;
+  font-family:'Instrument Serif',serif;
+  font-size:74px;
+  line-height:.75;
+  padding:7px 9px 0 0;
+  color:var(--accent);
+}
+
+.inline-cpa-box{
+  margin:46px 0;
+  padding:32px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:16px;
+  text-align:center;
+}
+
+.inline-cpa-tag{
+  display:inline-block;
+  margin-bottom:12px;
+  color:var(--accent);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+.inline-cpa-box h3{
+  margin:0 0 12px;
+  font-family:'Instrument Serif',serif;
+  font-size:31px;
+  font-weight:400;
+  line-height:1.15;
+}
+
+.inline-cpa-box p{
+  max-width:570px;
+  margin:0 auto 22px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.7;
+}
+
+.cpa-action-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:12px 20px;
+  border-radius:999px;
+  background:var(--accent);
+  color:#fff;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:600;
+  transition:background .2s ease;
+}
+
+.cpa-action-btn:hover{
+  background:var(--accent-hover);
+}
+
+.author-box{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-top:62px;
+  padding-top:30px;
+  border-top:1px solid var(--border);
+}
+
+.author-box img{
+  width:58px;
+  height:58px;
+  flex:0 0 58px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.author-box p{
+  margin:0;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.65;
+}
+
+@media(max-width:700px){
+
+  .header-inner{
+    height:68px;
+    padding:0 18px;
+  }
+
+  .header-nav{
+    display:none;
+  }
+
+  .article-container{
+    padding:42px 18px 65px;
+  }
+
+  .article-header{
+    margin-bottom:30px;
+  }
+
+  .article-header h1{
+    font-size:42px;
+    letter-spacing:-1px;
+  }
+
+  .article-subtitle{
+    font-size:14px;
+  }
+
+  .article-hero-img{
+    height:240px;
+    border-radius:12px;
+    margin-bottom:35px;
+  }
+
+  .article-body{
+    font-size:14px;
+    line-height:1.8;
+  }
+
+  .article-body h2{
+    margin-top:38px;
+    font-size:30px;
+  }
+
+  .article-body blockquote{
+    font-size:21px;
+    padding-left:18px;
+  }
+
+  .inline-cpa-box{
+    padding:25px 20px;
+  }
+
+  .inline-cpa-box h3{
+    font-size:27px;
+  }
+
+  .author-box{
+    align-items:flex-start;
+  }
+
+}
+
+</style>
+
+<script src="header.js" defer></script>
+
+</head>
+
+<body>
+
+<main class="article-container">
+
+  <header class="article-header">
+
+    <div class="article-tag">
+      Seasonal Baking
+    </div>
+
+    <h1>
+      Rustic Galettes: Flaky Butter Crusts and Stone Fruit Fillings
+    </h1>
+
+    <p class="article-subtitle">
+      Embracing imperfect beauty with free-form fruit pastries that celebrate seasonal harvests.
+    </p>
+
+    <div class="article-meta">
+      Published by Willow &amp; Heaven Archive · Original Culinary Essay
+    </div>
+
+  </header>
+
+  <img
+    class="article-hero-img"
+    src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80"
+    alt="Rustic galette"
+  >
+
+  <article class="article-body">
+
+    <p class="drop-cap">
+      The charm of a galette begins with its lack of precision. Unlike a carefully shaped tart, a galette allows the pastry to fold naturally around its filling, leaving uneven edges, visible fruit, and the unmistakable impression of something made by hand.
+    </p>
+
+    <p>
+      This informality is precisely what makes the dessert so appealing. A good galette does not depend on elaborate decoration. It depends on a crisp, buttery crust, fruit at the right stage of ripeness, and enough restraint to allow both elements to remain recognizable.
+    </p>
+
+    <h2>
+      Building the Flaky Foundation
+    </h2>
+
+    <p>
+      Cold butter is central to a tender pastry crust. As the dough bakes, small pieces of butter melt and create pockets between layers of flour. Keeping the ingredients cool and avoiding excessive handling helps preserve that contrast between crisp exterior pastry and a softer interior.
+    </p>
+
+    <p>
+      The dough should come together without being worked into complete uniformity. A few visible irregularities are useful. They become part of the texture once the galette enters the oven.
+    </p>
+
+    <blockquote>
+      The beauty of a galette is found where precision gives way to the character of the hand.
+    </blockquote>
+
+    <h2>
+      Letting Stone Fruit Lead
+    </h2>
+
+    <p>
+      Peaches, plums, apricots, and nectarines are naturally suited to free-form baking. Their juices soften during cooking while their natural acidity prevents the finished pastry from becoming overwhelmingly sweet.
+    </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '5c63a7a89cecfd68333d4268eff805e6',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/5c63a7a89cecfd68333d4268eff805e6/invoke.js"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : 'ae4d7ee19b5fa944210e60c0765961c5',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/ae4d7ee19b5fa944210e60c0765961c5/invoke.js"></script>
+</div>
+
+
+
+    <p>
+      Fruit should be sliced consistently enough to cook evenly, but there is no need to arrange every piece with mathematical precision. A simple overlapping pattern is sufficient, especially when the fruit is allowed to remain the visual centre of the pastry.
+    </p>
+
+    <div class="inline-cpa-box">
+
+      <div class="inline-cpa-tag">
+        Seasonal Food Selection
+      </div>
+
+      <h3>
+        Explore More Ideas for Simple Seasonal Cooking
+      </h3>
+
+      <p>
+        Discover selected food resources, meal ideas, baking inspiration, and convenient dining options for everyday cooking and relaxed seasonal gatherings.
+      </p>
+
+      <a
+        class="cpa-action-btn"
+        href="foodoff.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Explore Food &amp; Baking Ideas →
+      </a>
+
+    </div>
+
+    <h2>
+      Protecting the Pastry
+    </h2>
+
+    <p>
+      Fruit releases moisture as it cooks, which can soften the pastry beneath it. A thin layer of ground nuts, breadcrumbs, or another dry ingredient can help absorb some of that juice while adding subtle flavour.
+    </p>
+
+    <p>
+      Leaving a clear border around the filling is equally important. Once the fruit is positioned, the exposed pastry can be folded inward in broad sections. There is no need for every fold to match; the irregular shape is part of the finished character.
+    </p>
+
+    <h2>
+      The Final Bake
+    </h2>
+
+    <p>
+      A hot oven gives the butter enough energy to create crisp layers while encouraging the fruit to soften and caramelize around its edges. The pastry should emerge deeply golden rather than pale, with the filling visibly bubbling in places.
+    </p>
+
+    <p>
+      Allowing the galette to rest before slicing gives the juices time to settle. Cutting into it immediately may produce a deliciously messy result, but a short pause makes the slices easier to serve while retaining the contrast between fruit and crust.
+    </p>
+
+    <h2>
+      Imperfection as a Culinary Style
+    </h2>
+
+    <p>
+      Galettes are a reminder that good food does not need to look engineered. Their appeal comes from texture, seasonality, and the visible evidence of preparation. Every fold of pastry can remain slightly different, and every piece of fruit can retain its own shape.
+    </p>
+
+    <p>
+      Served warm or at room temperature, perhaps with something cool alongside it, a rustic galette turns the season's fruit into a dessert that feels generous without becoming complicated. Its imperfections are not something to correct. They are what make it inviting.
+    </p>
+
+  </article>
+
+  <div class="author-box">
+
+    <img
+      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+      alt="Author portrait"
+    >
+
+    <p>
+      Written by the editorial collective at Willow &amp; Heaven, exploring the intersections of seasonal baking, food culture, and mindful living in contemporary society.
+    </p>
+
+  </div>
+
+</main>
+
+<script src="footer.js" defer></script>
+
+</body>
+</html>

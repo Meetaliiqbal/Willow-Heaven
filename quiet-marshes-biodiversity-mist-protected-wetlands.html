@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="referrer" content="no-referrer">
+
+<title>The Quiet Marshes: Biodiversity and Mist in Protected Wetlands — Willow &amp; Heaven</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+  --bg: #f8f7f4;
+  --surface: #ffffff;
+  --surface-alt: #f1efe9;
+  --text: #1a1916;
+  --muted: #6b675e;
+  --accent: #9c6644;
+  --accent-hover: #7f5235;
+  --border: #e4e0d5;
+  --max: 780px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 1.75;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(248,247,244,0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  max-width: 1150px;
+  height: 76px;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-logo {
+  font-family: "Instrument Serif", serif;
+  font-size: 27px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.header-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.header-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.header-nav a:hover {
+  color: var(--text);
+}
+
+.article-container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 72px 24px 90px;
+}
+
+.article-header {
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.article-tag {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 7px 13px;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 auto 20px;
+  max-width: 760px;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(42px, 7vw, 64px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+.article-subtitle {
+  max-width: 650px;
+  margin: 0 auto 22px;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.article-meta {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.article-hero-img {
+  display: block;
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 48px;
+}
+
+.article-body {
+  font-size: 16px;
+}
+
+.article-body p {
+  margin: 0 0 25px;
+}
+
+.article-body h2 {
+  margin: 46px 0 18px;
+  font-family: "Instrument Serif", serif;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.article-body blockquote {
+  margin: 38px 0;
+  padding: 25px 28px;
+  background: var(--surface-alt);
+  border-left: 3px solid var(--accent);
+  color: var(--muted);
+  font-family: "Instrument Serif", serif;
+  font-size: 23px;
+  line-height: 1.45;
+}
+
+.drop-cap::first-letter {
+  float: left;
+  padding-right: 8px;
+  font-family: "Instrument Serif", serif;
+  font-size: 68px;
+  line-height: 0.8;
+}
+
+.inline-cpa-box {
+  margin: 46px 0;
+  padding: 30px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.inline-cpa-tag {
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.inline-cpa-box h3 {
+  margin: 0 0 10px;
+  font-family: "Instrument Serif", serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.inline-cpa-box p {
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.cpa-action-btn {
+  display: inline-block;
+  padding: 12px 18px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.cpa-action-btn:hover {
+  background: var(--accent-hover);
+}
+
+.author-box {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 1px solid var(--border);
+}
+
+.author-box img {
+  width: 58px;
+  height: 58px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.author-box p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 700px) {
+
+  .header-inner {
+    height: 68px;
+    padding: 0 18px;
+  }
+
+  .header-nav {
+    gap: 12px;
+  }
+
+  .header-nav a {
+    font-size: 11px;
+  }
+
+  .article-container {
+    padding: 52px 18px 70px;
+  }
+
+  .article-header {
+    margin-bottom: 32px;
+  }
+
+  h1 {
+    font-size: 43px;
+  }
+
+  .article-subtitle {
+    font-size: 15px;
+  }
+
+  .article-hero-img {
+    height: 240px;
+    border-radius: 14px;
+    margin-bottom: 36px;
+  }
+
+  .article-body {
+    font-size: 15px;
+  }
+
+  .article-body h2 {
+    font-size: 30px;
+  }
+
+  .article-body blockquote {
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  .inline-cpa-box {
+    padding: 24px;
+  }
+
+  .author-box {
+    align-items: flex-start;
+  }
+
+}
+
+</style>
+
+<script src="header.js" defer></script>
+
+</head>
+
+<body>
+
+<main class="article-container">
+
+  <header class="article-header">
+
+    <div class="article-tag">
+      Wetlands &amp; Marshes
+    </div>
+
+    <h1>
+      The Quiet Marshes: Biodiversity and Mist in Protected Wetlands
+    </h1>
+
+    <p class="article-subtitle">
+      Exploring the vital ecological sanctuaries where land meets shallow, nourishing waters.
+    </p>
+
+    <div class="article-meta">
+      Published by Willow &amp; Heaven Archive · Original Wetland Essay
+    </div>
+
+  </header>
+
+  <img
+    class="article-hero-img"
+    src="https://images.unsplash.com/photo-1511497584788-876761142212?auto=format&fit=crop&w=800&q=80"
+    alt="Misty wetland marsh"
+  >
+
+  <article class="article-body">
+
+    <p class="drop-cap">
+      Marshes can seem quiet at first glance. Mist may rest above shallow water, reeds move gently in the breeze, and the surface of a wetland can appear almost still. Beneath that calm, however, is a remarkably active ecosystem.
+    </p>
+
+    <p>
+      Wetlands occupy the meeting place between land and water. Their changing conditions create habitats for plants, insects, birds, amphibians, and countless smaller organisms, making them some of the most varied landscapes to observe.
+    </p>
+
+    <h2>
+      Where Water Shapes the Habitat
+    </h2>
+
+    <p>
+      The character of a marsh depends heavily on water. Some areas remain saturated for long periods, while others become shallower or drier as conditions change. This variation creates different ecological niches within relatively small spaces.
+    </p>
+
+    <p>
+      Plants adapted to wet conditions can stabilize soil, provide cover, and create structure within the landscape. Reeds, grasses, aquatic plants, and other vegetation form a living framework through which wildlife moves.
+    </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '5c63a7a89cecfd68333d4268eff805e6',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/5c63a7a89cecfd68333d4268eff805e6/invoke.js"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : 'ae4d7ee19b5fa944210e60c0765961c5',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/ae4d7ee19b5fa944210e60c0765961c5/invoke.js"></script>
+</div>
+
+
+
+    <blockquote>
+      A marsh may look like a quiet patch of water, but it is better understood as a living landscape in constant exchange.
+    </blockquote>
+
+    <h2>
+      Mist, Birds, and Hidden Movement
+    </h2>
+
+    <p>
+      Early morning can be an especially atmospheric time to visit wetlands. Mist softens distant views while sounds travel across open water. Bird calls may reveal activity that cannot immediately be seen through the vegetation.
+    </p>
+
+    <p>
+      Patient observation often rewards visitors. A ripple may indicate movement below the surface, a sudden flight can reveal a bird hidden among reeds, and small changes in the waterline can show how the landscape is responding to changing conditions.
+    </p>
+
+    <div class="inline-cpa-box">
+
+      <div class="inline-cpa-tag">
+        Wetland Escape Edition
+      </div>
+
+      <h3>
+        Explore Peaceful Waterside Landscapes
+      </h3>
+
+      <p>
+        Discover quiet wetlands, lakeside destinations, nature trails, scenic stays, and outdoor travel ideas for reconnecting with slower landscapes.
+      </p>
+
+      <a
+        class="cpa-action-btn"
+        href="natureoff.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Explore Wetland &amp; Nature Offers →
+      </a>
+
+    </div>
+
+    <h2>
+      Why Protected Wetlands Matter
+    </h2>
+
+    <p>
+      Because wetlands are shaped by delicate relationships between water, soil, plants, and wildlife, disturbance can affect many parts of the system at once. Protected areas provide space for these relationships to continue while giving people opportunities to observe them responsibly.
+    </p>
+
+    <p>
+      Staying on designated routes and respecting access guidance helps protect fragile vegetation and nesting areas. The quieter the visit, the more likely it is that the landscape can continue its natural rhythms undisturbed.
+    </p>
+
+    <h2>
+      Seeing the Wetland as a Whole
+    </h2>
+
+    <p>
+      It is tempting to focus on the most obvious feature, such as a bird or a reflection on the water. Yet the real character of a marsh emerges when these individual details are considered together.
+    </p>
+
+    <p>
+      Water, reeds, mud, insects, birds, mist, and changing light form one connected scene. Spend enough time watching and the apparent stillness begins to reveal itself as movement: quiet, continuous, and full of life.
+    </p>
+
+  </article>
+
+  <section class="author-box">
+
+    <img
+      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+      alt="Willow &amp; Heaven editorial portrait"
+    >
+
+    <p>
+      Written by the editorial collective at Willow &amp; Heaven, exploring wetlands, biodiversity, natural observation, outdoor culture, and mindful relationships with protected landscapes.
+    </p>
+
+  </section>
+
+</main>
+
+<script src="footer.js" defer></script>
+
+</body>
+</html>
