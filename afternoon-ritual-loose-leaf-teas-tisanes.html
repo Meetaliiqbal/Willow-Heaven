@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="referrer" content="no-referrer">
+
+<title>The Afternoon Ritual: Brewing Loose-Leaf Teas and Tisanes — Willow &amp; Heaven</title>
+
+<meta
+  name="description"
+  content="A mindful exploration of green teas, oolongs, and calming chamomile infusions through the quiet ritual of loose-leaf brewing."
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<style id="culinary-article-style">
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root{
+  --bg:#f8f7f4;
+  --surface:#ffffff;
+  --surface-alt:#f1efe9;
+  --text:#1a1916;
+  --muted:#6b675e;
+  --accent:#9c6644;
+  --accent-hover:#7f5235;
+  --border:#e4e0d5;
+  --max:780px;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-weight:400;
+  line-height:1.8;
+}
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(248,247,244,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+
+.header-inner{
+  max-width:1150px;
+  height:76px;
+  margin:0 auto;
+  padding:0 28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand-logo{
+  font-family:'Instrument Serif',serif;
+  font-size:27px;
+  color:var(--text);
+  text-decoration:none;
+  letter-spacing:-.3px;
+}
+
+.header-nav{
+  display:flex;
+  align-items:center;
+  gap:26px;
+}
+
+.header-nav a{
+  color:var(--text);
+  text-decoration:none;
+  font-size:13px;
+  font-weight:500;
+  transition:color .2s ease;
+}
+
+.header-nav a:hover{
+  color:var(--accent);
+}
+
+.article-container{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:60px 24px 90px;
+}
+
+.article-header{
+  text-align:center;
+  margin-bottom:42px;
+}
+
+.article-tag{
+  display:inline-block;
+  margin-bottom:18px;
+  padding:7px 13px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  background:var(--surface);
+  color:var(--accent);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.article-header h1{
+  margin:0 auto 20px;
+  max-width:720px;
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(38px,6vw,62px);
+  font-weight:400;
+  line-height:1.03;
+  letter-spacing:-1.5px;
+}
+
+.article-subtitle{
+  max-width:650px;
+  margin:0 auto 20px;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.75;
+  font-weight:300;
+}
+
+.article-meta{
+  color:var(--muted);
+  font-size:11px;
+  letter-spacing:.04em;
+}
+
+.article-hero-img{
+  width:100%;
+  height:380px;
+  object-fit:cover;
+  display:block;
+  border-radius:15px;
+  margin-bottom:48px;
+}
+
+.article-body{
+  font-size:15px;
+  color:#292722;
+}
+
+.article-body p{
+  margin:0 0 25px;
+}
+
+.article-body h2{
+  margin:48px 0 18px;
+  font-family:'Instrument Serif',serif;
+  font-size:34px;
+  line-height:1.15;
+  font-weight:400;
+  letter-spacing:-.5px;
+}
+
+.article-body blockquote{
+  margin:38px 0;
+  padding:5px 0 5px 25px;
+  border-left:2px solid var(--accent);
+  color:var(--muted);
+  font-family:'Instrument Serif',serif;
+  font-size:24px;
+  line-height:1.45;
+}
+
+.drop-cap:first-letter{
+  float:left;
+  font-family:'Instrument Serif',serif;
+  font-size:74px;
+  line-height:.75;
+  padding:7px 9px 0 0;
+  color:var(--accent);
+}
+
+.inline-cpa-box{
+  margin:46px 0;
+  padding:32px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:16px;
+  text-align:center;
+}
+
+.inline-cpa-tag{
+  display:inline-block;
+  margin-bottom:12px;
+  color:var(--accent);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+.inline-cpa-box h3{
+  margin:0 0 12px;
+  font-family:'Instrument Serif',serif;
+  font-size:31px;
+  font-weight:400;
+  line-height:1.15;
+}
+
+.inline-cpa-box p{
+  max-width:570px;
+  margin:0 auto 22px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.7;
+}
+
+.cpa-action-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:12px 20px;
+  border-radius:999px;
+  background:var(--accent);
+  color:#fff;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:600;
+  transition:background .2s ease;
+}
+
+.cpa-action-btn:hover{
+  background:var(--accent-hover);
+}
+
+.author-box{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-top:62px;
+  padding-top:30px;
+  border-top:1px solid var(--border);
+}
+
+.author-box img{
+  width:58px;
+  height:58px;
+  flex:0 0 58px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.author-box p{
+  margin:0;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.65;
+}
+
+@media(max-width:700px){
+
+  .header-inner{
+    height:68px;
+    padding:0 18px;
+  }
+
+  .header-nav{
+    display:none;
+  }
+
+  .article-container{
+    padding:42px 18px 65px;
+  }
+
+  .article-header{
+    margin-bottom:30px;
+  }
+
+  .article-header h1{
+    font-size:42px;
+    letter-spacing:-1px;
+  }
+
+  .article-subtitle{
+    font-size:14px;
+  }
+
+  .article-hero-img{
+    height:240px;
+    border-radius:12px;
+    margin-bottom:35px;
+  }
+
+  .article-body{
+    font-size:14px;
+    line-height:1.8;
+  }
+
+  .article-body h2{
+    margin-top:38px;
+    font-size:30px;
+  }
+
+  .article-body blockquote{
+    font-size:21px;
+    padding-left:18px;
+  }
+
+  .inline-cpa-box{
+    padding:25px 20px;
+  }
+
+  .inline-cpa-box h3{
+    font-size:27px;
+  }
+
+  .author-box{
+    align-items:flex-start;
+  }
+
+}
+
+</style>
+
+<script src="header.js" defer></script>
+
+</head>
+
+<body>
+
+<main class="article-container">
+
+  <header class="article-header">
+
+    <div class="article-tag">
+      Tea &amp; Mindful Living
+    </div>
+
+    <h1>
+      The Afternoon Ritual: Brewing Loose-Leaf Teas and Tisanes
+    </h1>
+
+    <p class="article-subtitle">
+      A mindful exploration of green teas, oolongs, and calming chamomile infusions.
+    </p>
+
+    <div class="article-meta">
+      Published by Willow &amp; Heaven Archive · Original Culinary Essay
+    </div>
+
+  </header>
+
+  <img
+    class="article-hero-img"
+    src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80"
+    alt="Ceremonial tea"
+  >
+
+  <article class="article-body">
+
+    <p class="drop-cap">
+      Tea has a particular ability to create a pause without demanding one. The kettle begins to warm, leaves are measured into a vessel, water meets them, and a few quiet minutes suddenly have a shape of their own. The afternoon cup can become more than refreshment; it can become a small ceremony between the obligations of one part of the day and the next.
+    </p>
+
+    <p>
+      Loose-leaf brewing makes that ceremony tactile. Instead of opening a prepared sachet and moving immediately toward the finished drink, the process invites attention to the leaf itself, its fragrance, texture, colour, and gradual transformation in hot water.
+    </p>
+
+    <h2>
+      The Character of the Leaf
+    </h2>
+
+    <p>
+      Green tea, oolong, black tea, and herbal tisanes each offer a different sensory experience. Green teas can be delicate and vegetal, while oolongs often reveal layers of floral, toasted, or fruity character. Herbal infusions move into another territory altogether, drawing their personality from ingredients such as chamomile, mint, ginger, or dried flowers.
+    </p>
+
+    <p>
+      Choosing a loose-leaf tea therefore begins with curiosity rather than rules. A quiet afternoon may suit something floral and gentle, while a more focused working session might call for a cup with deeper roasted notes.
+    </p>
+
+    <blockquote>
+      A good cup of tea does not rush the afternoon; it gives the afternoon a moment to breathe.
+    </blockquote>
+
+    <h2>
+      Water Is Part of the Recipe
+    </h2>
+
+    <p>
+      The leaf receives most of the attention, but water plays an equally important role. Very hot water can overwhelm delicate teas, drawing out bitterness before their subtler aromas have time to emerge. Cooler water and shorter steeping can preserve a lighter, more precise character.
+    </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '5c63a7a89cecfd68333d4268eff805e6',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/5c63a7a89cecfd68333d4268eff805e6/invoke.js"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : 'ae4d7ee19b5fa944210e60c0765961c5',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/ae4d7ee19b5fa944210e60c0765961c5/invoke.js"></script>
+</div>
+
+
+
+    <p>
+      The goal is not to memorize a single perfect temperature. It is to observe how the tea responds. If the cup tastes harsh, the next infusion can be shorter or slightly cooler. If it feels thin, more time or a little additional leaf may reveal greater depth.
+    </p>
+
+    <div class="inline-cpa-box">
+
+      <div class="inline-cpa-tag">
+        Curated Food &amp; Drink Selection
+      </div>
+
+      <h3>
+        Discover More Ideas for Slow Everyday Rituals
+      </h3>
+
+      <p>
+        Explore selected food, drink, dining, and everyday meal resources suited to relaxed routines, simple pleasures, and mindful moments at home.
+      </p>
+
+      <a
+        class="cpa-action-btn"
+        href="foodoff.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Explore Food &amp; Drink Ideas →
+      </a>
+
+    </div>
+
+    <h2>
+      Brewing With Attention
+    </h2>
+
+    <p>
+      A simple brewing routine can be enough. Warm the vessel, add the leaves, pour the water gently, and allow the infusion to develop. Watching the leaves unfurl can be surprisingly grounding, particularly when the rest of the day has been filled with screens, notifications, and hurried transitions.
+    </p>
+
+    <p>
+      Loose-leaf tea also rewards repeated infusions. Some leaves change noticeably from one steep to the next, becoming softer, sweeter, or more aromatic. Rather than treating the first cup as the only destination, the process becomes a sequence of small discoveries.
+    </p>
+
+    <h2>
+      Tisanes Without Complexity
+    </h2>
+
+    <p>
+      Herbal tisanes offer the same ritual without relying on traditional tea leaves. Chamomile can bring a soft floral character, while mint creates a cleaner, cooler profile. Dried citrus peel, ginger, or selected flowers can introduce additional fragrance without turning preparation into an elaborate project.
+    </p>
+
+    <p>
+      The most appealing afternoon ritual is often the simplest one: one favourite cup, a familiar ingredient, and enough time to actually notice what is being prepared.
+    </p>
+
+    <h2>
+      Making the Afternoon Feel Deliberate
+    </h2>
+
+    <p>
+      Ritual does not require ceremony in the formal sense. A quiet corner, a favourite cup, and a few uninterrupted minutes can transform an ordinary drink into a useful boundary in the day. The value lies in giving the moment enough attention to register.
+    </p>
+
+    <p>
+      Tea has endured partly because it accommodates this kind of pause so naturally. The leaves do their work slowly, the water cools gradually, and the drink asks to be experienced rather than consumed at speed. In a crowded afternoon, that small resistance to hurry can be its greatest quality.
+    </p>
+
+  </article>
+
+  <div class="author-box">
+
+    <img
+      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+      alt="Author portrait"
+    >
+
+    <p>
+      Written by the editorial collective at Willow &amp; Heaven, exploring the intersections of food culture, seasonal rituals, and mindful living in contemporary society.
+    </p>
+
+  </div>
+
+</main>
+
+<script src="footer.js" defer></script>
+
+</body>
+</html>
